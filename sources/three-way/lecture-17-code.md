@@ -1,0 +1,17 @@
+# L17｜代码讲义 ↔ 完整 Transcript ↔ 教材
+
+这是可执行课堂讲义，使用代码行号而非虚构的 PDF 页码。字幕区间是近似主题定位，嵌套调用可能让文件顺序与讲授顺序不同。全文包含无时间戳续行；未回听音频，也未据此声称 GPU 运行验证。
+
+[固定版本完整讲义](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_17.py) · [教材](../../textbook/17-multimodality.md) · [总入口](../three-way-audit.md)
+
+| 代码行 | 完整 Transcript 定位 | 教材去向 | 核验说明 |
+| --- | --- | --- | --- |
+| [1–45](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_17.py#L1-L45) | 00:00–06:00；72:00–结束 | [1. 语言模型的接口可以接收连续向量](../../textbook/17-multimodality.md#1-语言模型的接口可以接收连续向量) | 已对照代码讲义、完整字幕与教材；输入理解与输出生成两条问题；课程主体是前者 |
+| [48–95](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_17.py#L48-L95) | 03:00–24:00 | [代码讲义核验补充](../../textbook/17-multimodality.md#代码讲义核验补充) | 已对照代码讲义、完整字幕与教材；CLIP 对比目标、假负例、裁剪、ResNet/ViT pooling 区别 |
+| [98–121](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_17.py#L98-L121) | 21:00–28:00 | [代码讲义核验补充](../../textbook/17-multimodality.md#代码讲义核验补充) | 已对照代码讲义、完整字幕与教材；SigLIP 二元目标与负例比例；硬件比较不能混同芯片/核心 |
+| [124–145](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_17.py#L124-L145) | 27:00–36:00 | [5. LLaVA：视觉编码器 + projector + LM](../../textbook/17-multimodality.md#5-llava视觉编码器--projector--lm) | 已对照代码讲义、完整字幕与教材；符号标注生成对话；冻结与训练模块明确，非单一图像向量 |
+| [148–192](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_17.py#L148-L192) | 33:00–45:00 | [6. 高分辨率、视频与动态长度](../../textbook/17-multimodality.md#6-高分辨率视频与动态长度) | 已对照代码讲义、完整字幕与教材；AnyRes、跨图/视频压缩、三阶段及迁移案例 |
+| [195–211](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_17.py#L195-L211) | 45:00–49:00 | [代码讲义核验补充](../../textbook/17-multimodality.md#代码讲义核验补充) | 已对照代码讲义、完整字幕与教材；Qwen-VL 固定 256 与三阶段模块范围 |
+| [214–233](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_17.py#L214-L233) | 48:00–54:00 | [代码讲义核验补充](../../textbook/17-multimodality.md#代码讲义核验补充) | 已对照代码讲义、完整字幕与教材；Qwen2-VL 动态分辨率、64+2 token、MRoPE、DFN 初始化 |
+| [236–265](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_17.py#L236-L265) | 51:00–66:00 | [代码讲义核验补充](../../textbook/17-multimodality.md#代码讲义核验补充) | 已对照代码讲义、完整字幕与教材；Qwen3-VL 频率交错、显式时间戳、DeepStack 和长上下文阶段 |
+| [268–302](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_17.py#L268-L302) | 66:00–结束 | [8. 看图回答与生成图片是不同方向](../../textbook/17-multimodality.md#8-看图回答与生成图片是不同方向) | 已对照代码讲义、完整字幕与教材；Chameleon 离散图像码、VQ 重建、稳定性与信息损失；结尾闭源结构为猜测 |

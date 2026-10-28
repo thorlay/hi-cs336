@@ -1,0 +1,513 @@
+[
+  {
+    "page": 1,
+    "transcript": "00:00–03:00",
+    "section": "7. 如何组合并行",
+    "note": "封面/目标/瓶颈/拓扑；区分容量和算力扩展。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 2,
+    "transcript": "00:00–03:00",
+    "section": "7. 如何组合并行",
+    "note": "封面/目标/瓶颈/拓扑；区分容量和算力扩展。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 3,
+    "transcript": "00:00–03:00",
+    "section": "7. 如何组合并行",
+    "note": "封面/目标/瓶颈/拓扑；区分容量和算力扩展。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 4,
+    "transcript": "00:00–03:00",
+    "section": "7. 如何组合并行",
+    "note": "封面/目标/瓶颈/拓扑；区分容量和算力扩展。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 5,
+    "transcript": "00:00–03:00",
+    "section": "7. 如何组合并行",
+    "note": "封面/目标/瓶颈/拓扑；区分容量和算力扩展。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 6,
+    "transcript": "00:00–03:00",
+    "section": "7. 如何组合并行",
+    "note": "封面/目标/瓶颈/拓扑；区分容量和算力扩展。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 7,
+    "transcript": "02:00–04:00",
+    "section": "逐页核验补充：collective 与通信账本",
+    "note": "all-reduce分解不是root reduce；同字节/同rank口径。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 8,
+    "transcript": "02:00–04:00",
+    "section": "逐页核验补充：collective 与通信账本",
+    "note": "all-reduce分解不是root reduce；同字节/同rank口径。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 9,
+    "transcript": "04:00–11:00",
+    "section": "逐页核验补充：拓扑与代际",
+    "note": "torus、交换网络和大互联域；总功耗与同工作负载能效不是一回事。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 10,
+    "transcript": "04:00–11:00",
+    "section": "逐页核验补充：拓扑与代际",
+    "note": "torus、交换网络和大互联域；总功耗与同工作负载能效不是一回事。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 11,
+    "transcript": "04:00–11:00",
+    "section": "逐页核验补充：拓扑与代际",
+    "note": "torus、交换网络和大互联域；总功耗与同工作负载能效不是一回事。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 12,
+    "transcript": "04:00–11:00",
+    "section": "逐页核验补充：拓扑与代际",
+    "note": "torus、交换网络和大互联域；总功耗与同工作负载能效不是一回事。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 13,
+    "transcript": "04:00–11:00",
+    "section": "逐页核验补充：拓扑与代际",
+    "note": "torus、交换网络和大互联域；总功耗与同工作负载能效不是一回事。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 14,
+    "transcript": "11:00–15:00",
+    "section": "1. DDP 复制了什么",
+    "note": "平均与求和约定、16字节静态账本；本地batch固定与全局固定分开。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 15,
+    "transcript": "11:00–15:00",
+    "section": "1. DDP 复制了什么",
+    "note": "平均与求和约定、16字节静态账本；本地batch固定与全局固定分开。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 16,
+    "transcript": "11:00–15:00",
+    "section": "1. DDP 复制了什么",
+    "note": "平均与求和约定、16字节静态账本；本地batch固定与全局固定分开。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 17,
+    "transcript": "11:00–15:00",
+    "section": "1. DDP 复制了什么",
+    "note": "平均与求和约定、16字节静态账本；本地batch固定与全局固定分开。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 18,
+    "transcript": "15:00–21:00",
+    "section": "2. 三个 stage 分别切什么",
+    "note": "各rank依旧执行完整层；stage1状态与stage2梯度生命周期。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 19,
+    "transcript": "15:00–21:00",
+    "section": "2. 三个 stage 分别切什么",
+    "note": "各rank依旧执行完整层；stage1状态与stage2梯度生命周期。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 20,
+    "transcript": "15:00–21:00",
+    "section": "2. 三个 stage 分别切什么",
+    "note": "各rank依旧执行完整层；stage1状态与stage2梯度生命周期。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 21,
+    "transcript": "15:00–21:00",
+    "section": "2. 三个 stage 分别切什么",
+    "note": "各rank依旧执行完整层；stage1状态与stage2梯度生命周期。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 22,
+    "transcript": "15:00–21:00",
+    "section": "2. 三个 stage 分别切什么",
+    "note": "各rank依旧执行完整层；stage1状态与stage2梯度生命周期。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 23,
+    "transcript": "15:00–21:00",
+    "section": "2. 三个 stage 分别切什么",
+    "note": "各rank依旧执行完整层；stage1状态与stage2梯度生命周期。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 24,
+    "transcript": "20:00–28:00",
+    "section": "逐页核验补充：FSDP 的时序图",
+    "note": "逐层AG/free、反向AG/RS；预取受依赖约束。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 25,
+    "transcript": "20:00–28:00",
+    "section": "逐页核验补充：FSDP 的时序图",
+    "note": "逐层AG/free、反向AG/RS；预取受依赖约束。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 26,
+    "transcript": "20:00–28:00",
+    "section": "逐页核验补充：FSDP 的时序图",
+    "note": "逐层AG/free、反向AG/RS；预取受依赖约束。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 27,
+    "transcript": "20:00–28:00",
+    "section": "逐页核验补充：FSDP 的时序图",
+    "note": "逐层AG/free、反向AG/RS；预取受依赖约束。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 28,
+    "transcript": "27:00–31:00",
+    "section": "逐页核验补充：12 字节容量表不是训练可用容量",
+    "note": "6.67/16/24.62/53.33B静态上限；stage1/2减少状态但参数仍完整复制。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 29,
+    "transcript": "27:00–31:00",
+    "section": "逐页核验补充：12 字节容量表不是训练可用容量",
+    "note": "6.67/16/24.62/53.33B静态上限；stage1/2减少状态但参数仍完整复制。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 30,
+    "transcript": "27:00–31:00",
+    "section": "逐页核验补充：12 字节容量表不是训练可用容量",
+    "note": "6.67/16/24.62/53.33B静态上限；stage1/2减少状态但参数仍完整复制。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 31,
+    "transcript": "30:00–33:30",
+    "section": "5. 流水线的气泡怎样估计",
+    "note": "跨层传激活/梯度；单微批顺序图利用率低。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 32,
+    "transcript": "30:00–33:30",
+    "section": "5. 流水线的气泡怎样估计",
+    "note": "跨层传激活/梯度；单微批顺序图利用率低。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 33,
+    "transcript": "30:00–33:30",
+    "section": "5. 流水线的气泡怎样估计",
+    "note": "跨层传激活/梯度；单微批顺序图利用率低。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 34,
+    "transcript": "33:00–37:00",
+    "section": "逐页核验补充：流水线中的三个 batch 概念",
+    "note": "p-1/m是bubble/useful非bubble/total；microbatch数与大小分开。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 35,
+    "transcript": "33:00–37:00",
+    "section": "逐页核验补充：流水线中的三个 batch 概念",
+    "note": "p-1/m是bubble/useful非bubble/total；microbatch数与大小分开。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 36,
+    "transcript": "33:00–37:00",
+    "section": "逐页核验补充：流水线中的三个 batch 概念",
+    "note": "p-1/m是bubble/useful非bubble/total；microbatch数与大小分开。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 37,
+    "transcript": "36:00–39:30",
+    "section": "逐页核验补充：反向的两个梯度和 zero bubble",
+    "note": "延后dW必须在更新前，保留依赖激活；虚拟stage增加边界通信。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 38,
+    "transcript": "36:00–39:30",
+    "section": "逐页核验补充：反向的两个梯度和 zero bubble",
+    "note": "延后dW必须在更新前，保留依赖激活；虚拟stage增加边界通信。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 39,
+    "transcript": "39:00–45:00",
+    "section": "6. TP、SP 与 CP 不要混淆",
+    "note": "列切上投影、行切下投影、前反向collective对偶；8卡经验非定律。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 40,
+    "transcript": "39:00–45:00",
+    "section": "6. TP、SP 与 CP 不要混淆",
+    "note": "列切上投影、行切下投影、前反向collective对偶；8卡经验非定律。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 41,
+    "transcript": "39:00–45:00",
+    "section": "6. TP、SP 与 CP 不要混淆",
+    "note": "列切上投影、行切下投影、前反向collective对偶；8卡经验非定律。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 42,
+    "transcript": "39:00–45:00",
+    "section": "6. TP、SP 与 CP 不要混淆",
+    "note": "列切上投影、行切下投影、前反向collective对偶；8卡经验非定律。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 43,
+    "transcript": "39:00–45:00",
+    "section": "6. TP、SP 与 CP 不要混淆",
+    "note": "列切上投影、行切下投影、前反向collective对偶；8卡经验非定律。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 44,
+    "transcript": "45:00–53:00",
+    "section": "逐页核验补充：激活内存公式的适用条件",
+    "note": "动态峰值、34/24/10常数；LayerNorm按token独立非hidden逐元素。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 45,
+    "transcript": "45:00–53:00",
+    "section": "逐页核验补充：激活内存公式的适用条件",
+    "note": "动态峰值、34/24/10常数；LayerNorm按token独立非hidden逐元素。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 46,
+    "transcript": "45:00–53:00",
+    "section": "逐页核验补充：激活内存公式的适用条件",
+    "note": "动态峰值、34/24/10常数；LayerNorm按token独立非hidden逐元素。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 47,
+    "transcript": "45:00–53:00",
+    "section": "逐页核验补充：激活内存公式的适用条件",
+    "note": "动态峰值、34/24/10常数；LayerNorm按token独立非hidden逐元素。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 48,
+    "transcript": "45:00–53:00",
+    "section": "逐页核验补充：激活内存公式的适用条件",
+    "note": "动态峰值、34/24/10常数；LayerNorm按token独立非hidden逐元素。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 49,
+    "transcript": "45:00–53:00",
+    "section": "逐页核验补充：激活内存公式的适用条件",
+    "note": "动态峰值、34/24/10常数；LayerNorm按token独立非hidden逐元素。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 50,
+    "transcript": "52:00–62:00",
+    "section": "逐页核验补充：专家并行与设备组不能机械相乘",
+    "note": "EP/EDP与attention组可重叠；context与sequence不同。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 51,
+    "transcript": "52:00–62:00",
+    "section": "逐页核验补充：专家并行与设备组不能机械相乘",
+    "note": "EP/EDP与attention组可重叠；context与sequence不同。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 52,
+    "transcript": "52:00–62:00",
+    "section": "逐页核验补充：专家并行与设备组不能机械相乘",
+    "note": "EP/EDP与attention组可重叠；context与sequence不同。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 53,
+    "transcript": "52:00–62:00",
+    "section": "逐页核验补充：专家并行与设备组不能机械相乘",
+    "note": "EP/EDP与attention组可重叠；context与sequence不同。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 54,
+    "transcript": "52:00–62:00",
+    "section": "逐页核验补充：专家并行与设备组不能机械相乘",
+    "note": "EP/EDP与attention组可重叠；context与sequence不同。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 55,
+    "transcript": "61:00–69:00",
+    "section": "逐页核验补充：总览表中的简写要还原",
+    "note": "FSDP参数AG/梯度RS；DP不必增加全局batch；compute/comm比不是实测利用率。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 56,
+    "transcript": "61:00–69:00",
+    "section": "逐页核验补充：总览表中的简写要还原",
+    "note": "FSDP参数AG/梯度RS；DP不必增加全局batch；compute/comm比不是实测利用率。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 57,
+    "transcript": "61:00–69:00",
+    "section": "逐页核验补充：总览表中的简写要还原",
+    "note": "FSDP参数AG/梯度RS；DP不必增加全局batch；compute/comm比不是实测利用率。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 58,
+    "transcript": "61:00–69:00",
+    "section": "逐页核验补充：总览表中的简写要还原",
+    "note": "FSDP参数AG/梯度RS；DP不必增加全局batch；compute/comm比不是实测利用率。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 59,
+    "transcript": "69:00–73:00",
+    "section": "逐页核验补充：扩展实验的比较条件",
+    "note": "表中模型/GPU/batch一起变；p61是64GPU非64机器；重计算扩batch。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 60,
+    "transcript": "69:00–73:00",
+    "section": "逐页核验补充：扩展实验的比较条件",
+    "note": "表中模型/GPU/batch一起变；p61是64GPU非64机器；重计算扩batch。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 61,
+    "transcript": "69:00–73:00",
+    "section": "逐页核验补充：扩展实验的比较条件",
+    "note": "表中模型/GPU/batch一起变；p61是64GPU非64机器；重计算扩batch。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 62,
+    "transcript": "69:00–73:00",
+    "section": "逐页核验补充：扩展实验的比较条件",
+    "note": "表中模型/GPU/batch一起变；p61是64GPU非64机器；重计算扩batch。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 63,
+    "transcript": "72:00–75:00",
+    "section": "逐页核验补充：训练实例、框架建议与未知项",
+    "note": "OLMo非Dolma；DeepSeek/Yi配方；EP与TP可并存。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 64,
+    "transcript": "72:00–75:00",
+    "section": "逐页核验补充：训练实例、框架建议与未知项",
+    "note": "OLMo非Dolma；DeepSeek/Yi配方；EP与TP可并存。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 65,
+    "transcript": "72:00–75:00",
+    "section": "逐页核验补充：训练实例、框架建议与未知项",
+    "note": "OLMo非Dolma；DeepSeek/Yi配方；EP与TP可并存。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 66,
+    "transcript": "74:00–77:00",
+    "section": "逐页核验补充：阶段变化和故障表",
+    "note": "Llama阶段CP/DP变化，148是故障类别次数；Gemma按具体规模。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 67,
+    "transcript": "74:00–77:00",
+    "section": "逐页核验补充：阶段变化和故障表",
+    "note": "Llama阶段CP/DP变化，148是故障类别次数；Gemma按具体规模。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 68,
+    "transcript": "74:00–77:00",
+    "section": "逐页核验补充：阶段变化和故障表",
+    "note": "Llama阶段CP/DP变化，148是故障类别次数；Gemma按具体规模。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 69,
+    "transcript": "76:00–80:00",
+    "section": "逐页核验补充：训练实例、框架建议与未知项",
+    "note": "Megatron建议非原始训练事实；DP2是未证实猜测；PP0标无pipeline不是0rank。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 70,
+    "transcript": "76:00–80:00",
+    "section": "逐页核验补充：训练实例、框架建议与未知项",
+    "note": "Megatron建议非原始训练事实；DP2是未证实猜测；PP0标无pipeline不是0rank。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 71,
+    "transcript": "76:00–80:00",
+    "section": "逐页核验补充：训练实例、框架建议与未知项",
+    "note": "Megatron建议非原始训练事实；DP2是未证实猜测；PP0标无pipeline不是0rank。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 72,
+    "transcript": "76:00–80:00",
+    "section": "逐页核验补充：训练实例、框架建议与未知项",
+    "note": "Megatron建议非原始训练事实；DP2是未证实猜测；PP0标无pipeline不是0rank。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  },
+  {
+    "page": 73,
+    "transcript": "79:00–80:02",
+    "section": "7. 如何组合并行",
+    "note": "总结；不是任何拓扑都能完全利用。",
+    "review": "已对照页面图像与完整文字稿（含续行）"
+  }
+]

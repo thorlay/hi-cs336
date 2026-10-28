@@ -4,7 +4,7 @@
 
 **范围：18 讲教材初版，另有 L18 的材料缺口说明。** 现有材料为 L1–L17 和 Dan Fu 嘉宾课；这里沿官方课程表将 Dan Fu 编为 L19。正文不是完整逐字翻译，也不声称覆盖全部课堂问答，未逐句对照视频录音。
 
-[逐章 Transcript 核验记录](../sources/transcript-audit.md)：18 讲已加入本轮补遗；8 讲完成全文阅读，10 讲续行待补查，整体核验尚未完成。
+[每页 Slides ↔ 完整 Transcript ↔ 教材](../sources/three-way-audit.md)：496/496 页 PDF、9 讲代码讲义均有具体去向；18 份文字稿已通读全部正文与续行。L19 仅文字稿对照，L18 材料待补。[核验记录与边界](../sources/transcript-audit.md)。
 
 ## 建议怎样读
 

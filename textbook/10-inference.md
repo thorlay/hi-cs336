@@ -2,6 +2,8 @@
 
 > Spring 2026 · 中文教材（含 Transcript 对照补遗）。主要依据用户提供的 `lecture-10.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_10.py)。 时间定位：约 00:00–45:01 推理模型与指标；50:02–70:00 压缩；约 70:00–85:23 推测采样与缓存管理。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
 
+> 对照入口：[原始讲义 ↔ 完整文字稿 ↔ 本章小节](../sources/three-way/lecture-10-code.md)。
+
 ## 1. 先把“快”说清楚
 
 TTFT 是从请求进入系统到首个 token 出现的时间，包含排队、调度与 prefill 等；每 token 延迟描述单个请求生成速度；总吞吐描述许多请求合计每秒产生多少 token。它们经常相互制约。
@@ -128,3 +130,19 @@ Continuous batching 按 decode 迭代插入/移除请求；selective batching �
 [返回教材目录](README.md) · [材料与编写说明](../sources/textbook-evidence.md)
 
 [上一讲：L09](09-scaling-laws.md) · [下一讲：L11](11-scaling-practice.md)
+
+## 代码讲义核验补充
+
+[代码段三方表](../sources/three-way/lecture-10-code.md)覆盖全部官方讲义函数及课堂主题。S 在这里常指已缓存上下文长度，T 在 decode 时取 1；不要与“整个请求生成 T 步”的总长度混用。
+
+**简化模型的适用条件。** 无 KV cache 的 O(T³) 来自累加全注意力的平方主项，不表示所有长度下都由 attention 主导。讲义 MLP 的 IO 表没有逐一列出所有中间结果的再次读取，也没有计算每个非线性算子的成本；强度 BT 是权重主导、理想重用下的渐近近似。attention 公式 `ST/(S+T)` 按普通 MHA 的 Q/K/V 形状和理想数据读取计算，不能据它声称所有 FlashAttention prefill 都恰好有这个 HBM 流量，或所有 GQA decode 的强度都不可能超过 1。GQA 的 KV 共享、kernel tile 重读、融合与不同缓存层级会改变账本。无共享前缀时 batch 不会复用各请求 KV，是理解瓶颈的主线。
+
+**参数和时间的单位。** `TransformerPerformanceStats.num_params` 实际存元素个数，docstring 中“in bytes”有误；`parameter_size=2*num_params` 才是 bf16 字节。`latency=memory/bandwidth` 是理想带宽**下界**，throughput 是相应理想上界，讲义“theoretical maximum latency”应改成最小延迟。它不包含全部实际写入、工作区、排队、kernel 与多卡通信成本。2VD 的 embedding 计数也按不共享输入输出词表矩阵的配置，不能套给所有 tied embedding 模型。
+
+**重算 GQA 算例。** 严格代入讲义的 Llama2-13B 配置，K=40/B=64 的权重+KV 约 79.718GB，理想一步约 23.80ms；K=8/B=64 约 33.413GB、9.97ms；K=8/B=256 约 65.625GB、19.59ms。同 batch 减 K 后，模型给出的延迟应**下降**，原文 “Worse latency” 标签写反了。原 K=40/B=64 的静态量略低于 80GB，不能说一定装不下，也不能说一定能运行，因为真实峰值另有开销。增到 B=256 时相对哪一个配置比较，也要说清。这里只复算符号模型，不是硬件测速或保证质量相同。
+
+**压缩不会自动保持能力。** GQA 减少 KV 头数，CLA 共享不同层的 KV；纯局部层可截断旧 KV，但混入全局层后整体 cache 仍有随上下文增长的部分。MLA 对内容潜变量与额外位置键的缓存需同时计入，“不兼容 RoPE”是指直接吸收投影的朴素推导遇到困难，不是这种架构完全不能使用 RoPE。
+
+量化章节“higher latency/throughput”中 latency 的方向有误，应追求较低延迟与较高吞吐。整数范围还需加 scale/zero point、裁剪与打包元数据；int8 也不能不分格式、通道尺度和硬件就总说比 fp8 更差或更便宜。课堂的 E4M3 范围与 L02 不一致，须区分具体 FP8 编码，不能混作同一规格。按 [AWQ 论文](https://arxiv.org/abs/2306.00978)，显著通道通过等价缩放保护，以避免低效混合精度；“把重要 1% 永久保留高精度”不是完整算法。
+
+**无损采样的精确说法。** 二元例子里 `[0,1]` 是**归一化以后**的拒绝残差分布；原始 `max(q−p,0)` 应为 `[0,q(B)−p(B)]`，通常不直接等于 `[0,1]`。精确性是相对同一上下文下的目标采样分布而言，还要匹配温度、截断等采样处理；候选全接受时需处理额外 token，拒绝后需正确回退 KV。它不保证同一个随机种子生成完全相同的字符串，也不保证任意 Medusa/EAGLE 接受规则都无损。

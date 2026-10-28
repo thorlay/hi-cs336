@@ -2,6 +2,8 @@
 
 > Spring 2026 · 中文教材（含 Transcript 对照补遗）。主要依据用户提供的 `lecture-07.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_07.py)。 时间定位：00:05–约 30:03 原语与硬件；约 35:00–50:00 通信示例；55:01–80:54 三种并行。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
 
+> 对照入口：[原始讲义 ↔ 完整文字稿 ↔ 本章小节](38-lecture-07-code.md)。
+
 ## 1. 多卡解决两个问题
 
 第一种情况是模型、梯度、优化器状态和激活装不进一张卡；第二种情况是能装下，但训练太慢。增加 GPU 可能解决容量问题，却未必提高速度，因为设备之间需要交换数据。
@@ -115,11 +117,11 @@ flowchart LR
 
 ## Transcript 对照补遗
 
-> 核验进行中：无时间戳续行尚需补做完整对照，本补遗不是无遗漏认证。
+> 已通读包含无时间戳续行的全文，并对照官方课堂代码。[代码段三方表](38-lecture-07-code.md)使用固定版本行号；未回听音频。
 
 ### 网络拓扑不是一根统一的“网线”（00:00–约 36:00）
 
-本讲无时间戳续行尚需补做完整对照，以下保留本轮已检查的通信语义和训练流程。课堂的层级是片上存储→HBM→NVLink/NVSwitch 域→跨节点网络，越远通常越贵；并非所有集群都严格采用同一种层级。较大的 NVLink 域、InfiniBand、Ethernet 和 RoCE 都是具体配置选项。
+课堂的层级是片上存储→HBM→NVLink/NVSwitch 域→跨节点网络，越远通常越贵；并非所有集群都严格采用同一种层级。较大的 NVLink 域、InfiniBand、Ethernet 和 RoCE 都是具体配置选项。
 
 RDMA 描述远端直接内存访问能力，InfiniBand 和 RoCE 是实现相关网络路线，不能把 RDMA 当成另一种与它们平行的线缆。实际 GPU 直连传输还取决于设备、驱动和 GPUDirect 等路径。NCCL 把 collective 映射到拓扑和通信算法；PyTorch distributed 提供接口，初始化时的协调连接不等于训练张量都经由该连接传送。
 
@@ -144,3 +146,15 @@ DDP 在各 rank 的不同样本上前向/反向，再平均梯度；保持同样
 [返回教材目录](README.md) · [材料与编写说明](21-jiao-cai-cai-liao-yu-bian-xie-shuo-ming.md)
 
 [上一讲：L06](07-l06-cong-pytorch-dao-triton-ce-liang-rong-he-yu-fen-kuai.md) · [下一讲：L08](09-l08zero-liu-shui-xian-yu-zu-he-bing-xing-rang-da-mo-xing-zhuang-de-xia-pao-de-kuai.md)
+
+## 代码讲义核验补充
+
+**通信结果与运行展示。** `all_reduce` 修改输入本身，`reduce_scatter_tensor` 写入独立输出；`torch.empty` 中碰巧出现的零或其他值不是有效初始结果。课堂追踪模式关闭了真实通信，仅帮助浏览代码；它不能用来验证多进程结果和性能。这里 rank 按一进程一 GPU 使用，更一般的 rank 是进程组内的进程标识。
+
+**DDP 的等价条件。** 课堂口述一次说“averages parameters”，实际代码平均的是梯度。同样大小的本地 batch、同样归约方式、同样初始参数及 optimizer state 才对应这个简单等价论证。样本数不齐时不能直接平均各 rank 的均值；padding 还需 mask 与正确分母。示例默认只运行一步，没有在循环里清梯度；若改成多步，应在适当位置清除旧梯度，否则会意外累加。初始化辅助函数每次重置同一个随机种子，因此不同层可能得到重复的初始矩阵，它是演示简化，不是推荐初始化方案。
+
+**带宽计算与比较对象。** 令 S 为每个 rank 的 all-reduce 输入字节数，p 为 rank 数，t 为耗时，代码的归一化带宽为 `2(p−1)S/(pt)`；reduce-scatter 对同样的完整输入 S 则为 `(p−1)S/(pt)`。`p−1` 来自常用通信量模型，不能把它当作 NCCL 必然采用的 p−1 个物理时序步骤；实际可用 ring、tree 等安排。代码的 reduce-scatter 分配了 `p × num_elements` 个元素，而 all-reduce 只有 `num_elements`，因此两次调用的参数同名**不表示完整输入一样大**。只有比较相同 S、相应实现与条件，才能讨论大约两倍传输量/耗时。除以 `1024**3` 的打印值严格说是 GiB/s，不能直接与十进制硬件 GB/s 比。
+
+“独立于 world size/topology”描述归一化指标的目的与近似，**不表示实测带宽不受卡数、拓扑和拥塞影响**。同步和 barrier 也有开销；少量单次计时不够估计分布，更不应只选最快 rank。
+
+**硬件口径更正。** 代码与口述把 NVL72 说成 9 个、每个 8 GPU 的 tray。NVIDIA 的 [GB200 系统配置说明](https://docs.nvidia.com/multi-node-nvlink-systems/multi-node-tuning-guide/system.html)列出的是 18 个计算 tray、每个 4 GPU，另有交换 tray；保留 72 GPU 的域概念，同时更正物理托盘数。课堂的 256 节点 pod 明确是示意值，不是硬件标准。NVLink/InfiniBand/RoCE 是不同互联方案，RDMA 是内存访问机制；“无需 CPU”主要指相应数据通路，不表示初始化和控制完全不用 CPU。

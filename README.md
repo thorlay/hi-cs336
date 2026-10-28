@@ -8,6 +8,12 @@
 
 已生成 [Spring 2026 中文教材](textbook/README.md)：覆盖现有文字稿的 18 讲，包含机制解释、公式、手算、补充理解与自测。L18 缺原始材料，单独标记待补；正文不是逐字稿，尚未逐句对照视频。
 
+## 逐页三方对照
+
+[Slides ↔ 完整 Transcript ↔ 教材总入口](sources/three-way-audit.md)：8 份 PDF 的 496 页、9 讲代码讲义的 110 个段落组、L19 的 11 个文字稿主题区间均有教材去向。18 份文字稿包含全部续行；时间为近似定位，未回听音频。
+
+本地另有三栏阅读器：左侧原始页面/代码，中间完整英文文字稿，右侧中文教材，选择页面会联动定位。需准备本地原材料与页面图，再安装 Python `Markdown` 并运行 `python3 tools/build_three_way_reader.py`；生成文件位于被忽略的 `outputs/three-way-reader/index.html`。原文与页面图留在本地，不进入公共仓库。公式保留 LaTeX，正式阅读可使用 GitBook。
+
 ## 从这里开始
 
 1. [8 个阶段的学习路线](study-plan.md)：按产出推进，不强行按周追进度。

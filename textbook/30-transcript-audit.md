@@ -1,14 +1,14 @@
 # Transcript 逐章覆盖核验
 
-核验日期：2026-10-27。当前为补遗版：8 讲完成本轮全文阅读；10 讲需补查无时间戳续行，整体校验尚未完成。L18 没有材料。
+核验日期：2026-10-27 至 2026-10-28。现有 18 份文字稿已完成包含无时间戳续行的全文阅读，并与对应教材复核。8 份 PDF 的 496 页逐页保存三方记录，9 份代码讲义按段落和行号保存三方记录；L19 仅有文字稿，L18 没有材料。[完整对照入口](31-three-way-audit.md)。
 
 ## 进度更正
 
 此前提取只保留带时间戳的行，漏掉了 10 份文件的续行，共 12,134 行。这是提取错误，不是原始字幕必然缺词。已修正提取工具并验证所有正文行都被保留，但重新提取不等于已完成语义复核。
 
-全文阅读的 8 讲为 L01、L02、L03、L04、L06、L09、L10、L19；其余 10 讲在下表明确标待补查。所有现有章节均已加入本轮发现的内容补遗。
+先前报告的 8 讲之后，已补读 L05、L07、L08、L11、L12、L13、L14、L15、L16、L17 的全部正文与续行，并把新增问答、例子、限定条件和错误澄清写入对应教材。现在的“全文阅读”指全部原文正文纳入阅读，不表示逐字翻译或音频回听。
 
-寒暄、重复口述、现场操作和临时排行榜不逐字转载；历史例子概括教学作用。补遗含编者的数学澄清与工程边界，不等于讲者原话。未回听录音，不承诺视频信息零遗漏，也不声称 PDF 全页事实审校或完成独立实验。
+寒暄、重复口述、现场操作和临时排行榜不逐字转载；历史例子概括教学作用。补遗含编者的数学澄清与工程边界，不等于讲者原话。未回听录音，不承诺视频信息零遗漏。PDF 已逐页阅读提取文本并查看页面图像，教材记录发现的冲突；没有独立复算每个图表单元或复现全部论文实验。
 
 ## 逐章结果
 
@@ -18,24 +18,28 @@
 | [L02](03-l02-ba-zhang-liang-xian-cun-he-flops-suan-ming-bai.md) | 低精度位分配、课堂成本算例、算术强度表、AdaGrad 与检查点边界 | 文字稿已对照；音频未复核 |
 | [L03](04-l03-xian-dai-transformer-cong-jie-gou-dao-xun-lian-wen-ding-xing.md) | 并行残差、超参数范围、位置方案、z-loss 与 KV 口误 | 文字稿已对照；音频未复核 |
 | [L04](05-l04-zhang-shang-xia-wen-yu-moe-gai-bian-ji-suan-de-zu-zhi-fang-shi.md) | 递推等价条件、DSA 索引成本、路由设计空间、均衡与系统细节 | 文字稿已对照；音频未复核 |
-| [L05](06-l05gpu-zen-yang-gong-zuo-flashattention-wei-shen-me-geng-kuai.md) | 硬件层级、低精度转换、tile/wave 效应与 FlashAttention 边界 | 续行待补查，完整核验进行中 |
+| [L05](06-l05gpu-zen-yang-gong-zuo-flashattention-wei-shen-me-geng-kuai.md) | 硬件层级、低精度转换、tile/wave 效应与 FlashAttention 边界 | 全文及续行已对照；音频未复核 |
 | [L06](07-l06-cong-pytorch-dao-triton-ce-liang-rong-he-yu-fen-kuai.md) | occupancy 算例、bank conflict、编译与逻辑块/线程区别 | 文字稿已对照；音频未复核 |
-| [L07](08-l07-duo-gpu-de-yu-yan-ji-he-tong-xin-yu-san-zhong-ji-ben-bing-xing.md) | 拓扑/RDMA、通信带宽口径、autograd 与异步依赖 | 续行待补查，完整核验进行中 |
-| [L08](09-l08zero-liu-shui-xian-yu-zu-he-bing-xing-rang-da-mo-xing-zhuang-de-xia-pao-de-kuai.md) | ZeRO 生命周期、激活账本、EP 组合与实际配方 | 续行待补查，完整核验进行中 |
+| [L07](08-l07-duo-gpu-de-yu-yan-ji-he-tong-xin-yu-san-zhong-ji-ben-bing-xing.md) | 拓扑/RDMA、通信带宽口径、autograd 与异步依赖 | 全文及续行已对照；音频未复核 |
+| [L08](09-l08zero-liu-shui-xian-yu-zu-he-bing-xing-rang-da-mo-xing-zhuang-de-xia-pao-de-kuai.md) | ZeRO 生命周期、激活账本、EP 组合与实际配方 | 全文及续行已对照；音频未复核 |
 | [L09](10-l09scaling-laws-ba-xiao-shi-yan-bian-cheng-da-mo-xing-jue-ce.md) | 混合/重复、critical batch、上下游差异与 Chinchilla 拟合分歧 | 文字稿已对照；音频未复核 |
 | [L10](11-l10-tui-li-xi-tong-kv-cache-liang-hua-tui-ce-cai-yang-yu-dong-tai-pi-chu-li.md) | 完整成本模型、跨层 KV、量化/剪枝与分页细节 | 文字稿已对照；音频未复核 |
-| [L11](12-l11-gui-mo-hua-xun-lian-de-xi-jie-wsd-you-hua-qi-yu-p.md) | 公开 scaling 配方、优化器证据边界、μP 假设 | 续行待补查，完整核验进行中 |
-| [L12](13-l12-ping-gu-fen-shu-jiu-jing-shuo-ming-mo-xing-hui-zuo-shen-me.md) | 各类基准的目的、裁判偏差、污染路线与基准本身的错误 | 续行待补查，完整核验进行中 |
-| [L13](14-l13-shu-ju-cong-na-li-lai-cong-wang-ye-dao-ke-xun-lian-yu-liao.md) | 抓取/格式、数据集演化、来源链与法律口述边界 | 续行待补查，完整核验进行中 |
-| [L14](15-l14-shu-ju-guan-xian-guolminhash-qu-zhong-hun-he-yu-he-cheng.md) | 过滤实例、去重条件、混合外推和合成代码任务 | 续行待补查，完整核验进行中 |
-| [L15](16-l15-hou-xun-lian-cong-mo-fang-shi-fan-dao-you-hua-pian-hao.md) | SFT 数据演化、知识/风格纠缠、人工/模型标注与 PPO 桥梁 | 续行待补查，完整核验进行中 |
-| [L16](17-l16rlvr-yu-grpo-zen-yang-cong-ke-yan-zheng-jie-guo-zhong-xue-xi.md) | 组均值/标准差偏差、各家后训练路线与环境漏洞 | 续行待补查，完整核验进行中 |
-| [L17](18-l17-duo-mo-tai-zen-yang-rang-yu-yan-mo-xing-kan-jian-tu-xiang-yu-shi-pin.md) | CLIP/SigLIP、各代 VLM、视频与离散生成路线 | 续行待补查，完整核验进行中 |
+| [L11](12-l11-gui-mo-hua-xun-lian-de-xi-jie-wsd-you-hua-qi-yu-p.md) | 公开 scaling 配方、优化器证据边界、μP 假设 | 全文及续行已对照；音频未复核 |
+| [L12](13-l12-ping-gu-fen-shu-jiu-jing-shuo-ming-mo-xing-hui-zuo-shen-me.md) | 各类基准的目的、裁判偏差、污染路线与基准本身的错误 | 全文及续行已对照；音频未复核 |
+| [L13](14-l13-shu-ju-cong-na-li-lai-cong-wang-ye-dao-ke-xun-lian-yu-liao.md) | 抓取/格式、数据集演化、来源链与法律口述边界 | 全文及续行已对照；音频未复核 |
+| [L14](15-l14-shu-ju-guan-xian-guolminhash-qu-zhong-hun-he-yu-he-cheng.md) | 过滤实例、去重条件、混合外推和合成代码任务 | 全文及续行已对照；音频未复核 |
+| [L15](16-l15-hou-xun-lian-cong-mo-fang-shi-fan-dao-you-hua-pian-hao.md) | SFT 数据演化、知识/风格纠缠、人工/模型标注与 PPO 桥梁 | 全文及续行已对照；音频未复核 |
+| [L16](17-l16rlvr-yu-grpo-zen-yang-cong-ke-yan-zheng-jie-guo-zhong-xue-xi.md) | 组均值/标准差偏差、各家后训练路线与环境漏洞 | 全文及续行已对照；音频未复核 |
+| [L17](18-l17-duo-mo-tai-zen-yang-rang-yu-yan-mo-xing-kan-jian-tu-xiang-yu-shi-pin.md) | CLIP/SigLIP、各代 VLM、视频与离散生成路线 | 全文及续行已对照；音频未复核 |
 | L18 | 无原始材料 | 待补 |
 | [L19](20-l19dan-fu-tui-li-yue-shu-ru-he-fan-guo-lai-su-zao-jia-gou.md) | 请求全生命周期、缓存分层、异常行为、megakernel 成本与 Parcae 问答 | 文字稿已对照；音频未复核 |
 
-## 后续核验
+## 如何追溯与理解状态
 
-逐章读取包含续行的完整文本，复查新增补遗的表述、数字与问答，记录具体时间段；只对真正听不清或有歧义的片段列出回听需求，不能笼统称原材料损坏。
+从[逐页/逐段入口](31-three-way-audit.md)选择讲次，每行对应一个实际 PDF 页或一个课堂代码段，列出完整文字稿的近似时间范围、教材实际小节和核验说明。覆盖统计由显式记录计算；仅提取、渲染或生成表格不会自动增加完成数。
+
+对照中包括封面、重复构建页、总结与课上跳过页；跳过页标成课件补充，不伪造口述。课堂代码的导入、运行工具和行政说明按支撑组解释。原始英文全文保留本地，公共教材给出定位与原创讲解，不转载整套原文。
+
+仍可进一步做的是：对材料冲突处回听视频、精确到换页秒数、补齐 L18 与 L19 独立课件、复跑 GPU 实验。这些不在“已阅读文字材料”的完成定义中。
 
 原始文件与校验值见 [Transcript 索引](23-yong-hu-ti-gong-de-transcript-suo-yin.md)，材料范围见 [编写说明](21-jiao-cai-cai-liao-yu-bian-xie-shuo-ming.md)。

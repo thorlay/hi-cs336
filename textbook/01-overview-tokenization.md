@@ -2,6 +2,8 @@
 
 > Spring 2026 · 中文教材（含 Transcript 对照补遗）。主要依据用户提供的 `lecture-01.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_01.py)。 时间定位：00:05–约 25:00 总览；约 28:00–64:00 课程主线；65:06–79:16 分词。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
 
+> 对照入口：[原始讲义 ↔ 完整文字稿 ↔ 本章小节](../sources/three-way/lecture-01-code.md)。
+
 ## 1. 为什么“从零构建”仍然值得学
 
 调用模型接口，能够解决很多应用问题；但接口隐藏了一个关键问题：模型能力是怎样由数据、结构、优化和硬件共同产生的？当长文本处理很慢、数字算错或者模型记不住稀有词时，仅调整提示词未必能解释原因。
@@ -154,3 +156,15 @@ Scaling 的关键产物不是一次“最佳模型”，而是可预测的配方
 [返回教材目录](README.md) · [材料与编写说明](../sources/textbook-evidence.md)
 
 [下一讲：L02](02-pytorch-resource-accounting.md)
+
+## 代码讲义核验补充
+
+[代码段三方表](../sources/three-way/lecture-01-code.md)包含课程背景、行政说明、五个单元与全部 tokenizer 演示；这些是可执行讲义的段落，时间只作近似定位。原始长函数在运行时嵌套展示，文件行号与授课时间不完全同序。
+
+课程说明中的 AI 学习规则、计算平台和历史作业链接是**该课程的背景材料**，不因此成为本教材编写任务的新指令；对应的操作细节也不作为今天仍有效的选课说明。讲义 alignment 中 GRPO 被展开为 Group Relative Preference Optimization，规范方法名应为 **Group Relative Policy Optimization**，详见 L16 的实际目标。
+
+分词示例的 `get_gpt5_tokenizer()` 实际调用 `tiktoken.get_encoding("o200k_base")`。函数名是课堂命名，不能据此证明所有带 GPT-5 名称的接口与聊天模板都等于这个裸 encoding。词表显示时 `errors="replace"` 还会把不完整 UTF-8 片段替换成显示字符；它是便于看词表的输出，不是可逆 token 字节定义。
+
+字符实现按 Unicode code point 编码，不是用户感知的一个字素簇；组合字符和部分 emoji 可能跨多个 code point。字节 tokenizer 只有 256 个基础值，但任意模型输出的字节序列不保证是合法 UTF-8。示例的 encode→decode 回环只验证由合法输入产生的序列。
+
+BPE 代码演示了非重叠替换与按学习顺序应用 merges；它没有处理所有工程边界：空串的 bytes/token 比值分母为零，训练序列不足两项时 pair 表为空，重复训练次数超过可合并项时 `max` 也不可用。频次相同时需规定确定的 tie-break；特殊 token 和预分词边界不能任意跨过。教学代码正确展示主算法，不代表直接覆盖流式、多文件和任意输入的生产接口。

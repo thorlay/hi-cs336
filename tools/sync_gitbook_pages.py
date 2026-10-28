@@ -38,6 +38,10 @@ def main():
         if len(candidates)!=1:raise ValueError((source,candidates))
         mapping[(ROOT/source).resolve()] = candidates[0]
     mapping[(ROOT/'sources/transcript-audit.md').resolve()] = book/'30-transcript-audit.md'
+    mapping[(ROOT/'sources/three-way-audit.md').resolve()] = book/'31-three-way-audit.md'
+    audit_files=sorted((ROOT/'sources/three-way').glob('*.md'))
+    for i,source in enumerate(audit_files,32):
+        mapping[source.resolve()]=book/f'{i:02}-{source.stem}.md'
     # Read all source files before writing, including the two in-place pages.
     texts={p:p.read_text() for p in mapping}
     texts[(book/'README.md').resolve()] = (book/'index.md').read_text()

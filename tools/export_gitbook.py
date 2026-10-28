@@ -17,7 +17,9 @@ def main():
         'study-plan.md', 'assignments/README.md', 'labs/README.md',
         'templates/experiment-log.md', 'templates/lecture-note.md',
         'sources/transcript-audit.md',
+        'sources/three-way-audit.md',
     ]]
+    files += sorted((ROOT/'sources/three-way').glob('*.md'))
     names = {}
     for i, path in enumerate(files):
         title = path.read_text().splitlines()[0].removeprefix('# ').strip()

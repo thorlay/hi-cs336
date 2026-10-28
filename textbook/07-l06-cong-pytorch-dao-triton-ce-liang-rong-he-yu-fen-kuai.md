@@ -2,6 +2,8 @@
 
 > Spring 2026 · 中文教材（含 Transcript 对照补遗）。主要依据用户提供的 `lecture-06.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_06.py)。 时间定位：00:05–约 20:01 硬件细节；约 25:01–35:00 测量；40:00–86:34 Triton 算例。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
 
+> 对照入口：[原始讲义 ↔ 完整文字稿 ↔ 本章小节](37-lecture-06-code.md)。
+
 ## 1. 正确性模型与性能模型
 
 PyTorch 让我们描述张量运算，Triton 让我们描述一块数据如何被并行处理。写出正确输出只需要遵守编程模型；写出高速 kernel 还要理解寄存器、共享内存、访存与调度。
@@ -133,3 +135,19 @@ Triton 的 program 描述一块逻辑数据的操作，不是 Python 解释器�
 [返回教材目录](README.md) · [材料与编写说明](21-jiao-cai-cai-liao-yu-bian-xie-shuo-ming.md)
 
 [上一讲：L05](06-l05gpu-zen-yang-gong-zuo-flashattention-wei-shen-me-geng-kuai.md) · [下一讲：L07](08-l07-duo-gpu-de-yu-yan-ji-he-tong-xin-yu-san-zhong-ji-ben-bing-xing.md)
+
+## 代码讲义核验补充
+
+[代码段三方表](37-lecture-06-code.md)区分 GPU 复习、测量、四个 kernel 与运行辅助函数。本轮检查是材料和实现阅读，未在本机复跑 CUDA/Triton 性能测试。
+
+**占用率的两个口径。** 文字称 64 threads/block，但实际算例设 128、每线程 160 个寄存器。按代码，65536//20480=3 个块，共 12 warp，在最大 64 warp 假设下占用率为 18.75%；还没考虑分配粒度、shared memory 和硬件块数限制。它只是一项资源上限估计，非实测 occupancy。148 个 SM、160 块导致尾波不足，也是假设每波每 SM 接一块；改善整齐度通常希望块数接近有效 SM 容量的**倍数**，不是简单要求“块数整除 SM 数”。
+
+**时间和内存单位。** `start_event.elapsed_time(end_event)` 返回毫秒，所以讲义 benchmark 函数结果是 **ms**；不能按其他讲次的秒接口解释。CUDA event 主要测设备时间线，端到端 Python、编译、数据准备和请求时延需另外测量。`run_operation1(dim)` 分配的是 dim×dim 矩阵，dim=16384 不等于仅有 16384 个元素。记录形状时必须同时写 rank 与维度。
+
+**program 不等于线程。** `BLOCK_SIZE=1024` 表示这个 Triton program 的逻辑元素数，不保证启动 1024 个 CUDA 线程；编译器可让一个线程处理多项。`tl.load` 的值也不自动全部经过显式 shared memory，标量/向量可能驻留寄存器，归约可用 warp shuffle。PTX 是中间指令表示，还不是最终机器指令的逐项性能证明。
+
+**数值和布局边界。** 示例用 `(exp(2a)−1)/(exp(2a)+1)` 实现 tanh，大正输入时 exp 可溢出，产生 inf/inf 的 NaN；例如 x=12 的中间 `2a` 已远超 float32 的正常 exp 范围。普通正态随机测试不等于验证所有输入。softmax 用 −inf 补齐尾部是为不改变 max/sum，但整行全为 −inf 时还要单独约定，不能由这个普通 softmax 代码自动得到有意义概率。
+
+Softmax kernel 传了 row stride，却默认列 stride=1；行求和更直接使用 row*N，因此默认连续二维布局。仅换成转置/切片而不检查 stride，会改变地址语义。matmul 尽管传了各轴 stride，包装器仍限制连续输入，输出还默认创建 float32；它不是任意 dtype/layout 通用算子。
+
+**流量账本。** 若把读每行分母的 M 次也计入，naive softmax 约为 `5MN+2M` 读、`3MN+2M` 写；讲义总数漏掉一次分母向量读。大 N 时主项仍是 8MN 对融合的 2MN，所以约四倍的是**理想主项流量比**，不保证实际四倍加速。朴素 matmul 为每个 (m,n,k) 读取 A、B 两个元素，主项是 2MNK 次元素读，讲义 MNK 是量级简写。分块提高重用后仍受资源与调度限制，不能只根据 O(tile_size) 推出越大越快。

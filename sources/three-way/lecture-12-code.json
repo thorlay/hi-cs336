@@ -1,0 +1,90 @@
+[
+  {
+    "start": 1,
+    "end": 30,
+    "transcript": "00:00–03:00；75:00–结束",
+    "section": "1. 从抽象能力到可测指标",
+    "note": "主程序与总结，不把调用语句当 slides 页",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 33,
+    "end": 57,
+    "transcript": "00:00–06:00",
+    "section": "1. 从抽象能力到可测指标",
+    "note": "能力、成本、偏好、使用量对应不同目标",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 60,
+    "end": 105,
+    "transcript": "03:00–18:00",
+    "section": "代码讲义核验补充",
+    "note": "PPL/熵与条件 PPL 公式更正；自报概率须有效",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 108,
+    "end": 152,
+    "transcript": "18:00–33:00",
+    "section": "代码讲义核验补充",
+    "note": "MMLU/Pro、GPQA、HLE；Diamond 判据按原论文校正",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 155,
+    "end": 205,
+    "transcript": "30:00–45:00",
+    "section": "4. 开放回答怎么比较",
+    "note": "Arena 比较图、AlpacaEval 长度控制、WildBench rubric",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 208,
+    "end": 254,
+    "transcript": "45:00–54:00",
+    "section": "5. Agent 分数评估的是整个系统",
+    "note": "四类 agent benchmark 与 scaffold；训练材料中的委派不是本任务指令",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 257,
+    "end": 283,
+    "transcript": "54:00–60:00",
+    "section": "6. 推理、安全与现实任务",
+    "note": "ARC-1/2/3 与知识/推理分离的限制",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 286,
+    "end": 311,
+    "transcript": "60:00–66:00",
+    "section": "6. 推理、安全与现实任务",
+    "note": "HarmBench/AIR-Bench、对抗鲁棒性与双重用途背景",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 314,
+    "end": 335,
+    "transcript": "63:00–69:00",
+    "section": "6. 推理、安全与现实任务",
+    "note": "GDPVal/MedHELM/Clio；真实用途与隐私",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 338,
+    "end": 368,
+    "transcript": "66:00–75:00",
+    "section": "7. 数据污染会怎样误导判断",
+    "note": "顺序检测、报告重叠、fresh/private、数据质量与空响应基线",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 371,
+    "end": 394,
+    "transcript": "75:00–结束",
+    "section": "9. 自测与评估卡片",
+    "note": "评方法、模型或系统须先定义规则；入口为运行支撑",
+    "review": "已对照代码讲义、完整字幕与教材"
+  }
+]

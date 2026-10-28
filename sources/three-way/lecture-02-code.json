@@ -1,0 +1,106 @@
+[
+  {
+    "start": 1,
+    "end": 68,
+    "transcript": "00:00–06:00；总结末尾",
+    "section": "1. 先建立“物理账本”",
+    "note": "行政公告、主程序和学习目标；不是额外任务指令",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 71,
+    "end": 86,
+    "transcript": "00:00–06:00",
+    "section": "Transcript 对照补遗：保留课堂的两个端到端估算",
+    "note": "70B/15T/1024 H100 与 12 bytes 静态上限",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 89,
+    "end": 181,
+    "transcript": "约 04:00–18:00",
+    "section": "代码讲义核验补充",
+    "note": "tensor rank、精度、AMP 与 NVFP4；名义内存与实际dtype分开",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 184,
+    "end": 199,
+    "transcript": "约 17:00–21:00",
+    "section": "1. 先建立“物理账本”",
+    "note": "CPU/GPU 驻留和传输",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 202,
+    "end": 276,
+    "transcript": "约 18:00–30:00",
+    "section": "3. 形状是程序的类型说明",
+    "note": "einsum/reduce/rearrange 的维度语义",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 279,
+    "end": 335,
+    "transcript": "约 28:00–39:00",
+    "section": "4. 为什么一次矩阵乘法约为 2mnk FLOPs",
+    "note": "FLOPs vs FLOP/s、稠密/稀疏峰值与 MFU",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 338,
+    "end": 431,
+    "transcript": "约 36:00–49:00",
+    "section": "5. Roofline：算得慢，还是搬得慢",
+    "note": "ReLU/GELU/点积逐项字节和计算，重叠为理想假设",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 434,
+    "end": 481,
+    "transcript": "约 45:00–57:00",
+    "section": "代码讲义核验补充",
+    "note": "GEMV/GEMM、精度与 roofline 上界",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 484,
+    "end": 556,
+    "transcript": "约 57:00–69:00",
+    "section": "深入算例与补充理解",
+    "note": "标量梯度、两矩阵反向与 6ND 近似条件",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 559,
+    "end": 599,
+    "transcript": "约 57:00–69:00，深网络演示回指",
+    "section": "3. 形状是程序的类型说明",
+    "note": "参数注册与 L 个 D×D 矩阵，实际运行在梯度章节前",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 602,
+    "end": 715,
+    "transcript": "约 66:00–72:00；训练循环被口头略过",
+    "section": "代码讲义核验补充",
+    "note": "AdaGrad 状态、参数更新与演示训练循环的标量广播",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 718,
+    "end": 787,
+    "transcript": "约 72:00–结束",
+    "section": "7. 显存不足时，两种不同的交换",
+    "note": "累积与重计算；L/s+s 空间模型与特定逐层示例分开",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 791,
+    "end": 856,
+    "transcript": "贯穿计时与内存示例，未单独讲授",
+    "section": "代码讲义核验补充",
+    "note": "工具函数：逻辑字节数不是allocator峰值；GPU峰值表和同步计时",
+    "review": "已对照代码讲义、完整字幕与教材"
+  }
+]

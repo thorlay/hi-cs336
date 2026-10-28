@@ -53,3 +53,5 @@
 [Spring 2025 历史索引](spring2025-reference.md)保留原有提交，供比较版本差异使用。三篇 `notes/` 为入门速读初稿；[逐讲教材](../textbook/README.md)已覆盖现有材料的 18 讲。[核验说明](textbook-evidence.md)记录材料、校正与适用边界。
 
 原始文字稿仅在本地 `sources/raw/transcripts-spring2026/` 保存；不将原始讲义、字幕或大型数据上传 GitHub。
+
+[逐页三方对照](three-way-audit.md)记录全部 496 页 PDF 与 9 份代码讲义的教材去向；[全文核验](transcript-audit.md)包括全部无时间戳续行。

@@ -1,0 +1,74 @@
+[
+  {
+    "start": 1,
+    "end": 36,
+    "transcript": "00:00–03:00；81:00–结束",
+    "section": "1. 四个步骤分别改变什么",
+    "note": "主程序串联转换/过滤/去重/混合，入口非独立 slides",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 39,
+    "end": 57,
+    "transcript": "00:00–06:00",
+    "section": "2. 转换首先是保真问题",
+    "note": "HTML 结构丢失、截断 PDF 重抓、OCR 成本",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 60,
+    "end": 142,
+    "transcript": "06:00–22:00",
+    "section": "代码讲义核验补充",
+    "note": "目标分布、轻量分类、OpenWebMath 名称、Pareto 保留概率、尺度过滤",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 145,
+    "end": 175,
+    "transcript": "21:00–30:00",
+    "section": "4. 精确去重：先定义什么叫同一条",
+    "note": "重复层级、匹配策略、删除策略和跨数据集去重",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 178,
+    "end": 214,
+    "transcript": "27:00–33:00",
+    "section": "代码讲义核验补充",
+    "note": "哈希冲突不能当精确相等；排序非线性时间；C4 删段破坏连贯性",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 217,
+    "end": 265,
+    "transcript": "30:00–39:00",
+    "section": "代码讲义核验补充",
+    "note": "Jaccard=3/5、MinHash 理想随机排列与有限哈希误差",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 268,
+    "end": 321,
+    "transcript": "36:00–49:00",
+    "section": "代码讲义核验补充",
+    "note": "AND/OR 概率、b/r 成本、0.9934 特征阈值不是硬阈值",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 324,
+    "end": 406,
+    "transcript": "48:00–72:00",
+    "section": "代码讲义核验补充",
+    "note": "50 epoch、UniMax 修正单位、RegMix 外推、simulated epoching 与源内混合",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 409,
+    "end": 464,
+    "transcript": "72:00–结束",
+    "section": "9. 合成数据从任务设计开始",
+    "note": "OpenThoughts/SWE-smith/Zero/rebench/12M；任务、问题、轨迹分开",
+    "review": "已对照代码讲义、完整字幕与教材"
+  }
+]

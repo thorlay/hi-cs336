@@ -1,0 +1,422 @@
+[
+  {
+    "page": 1,
+    "transcript": "00:00–06:00",
+    "section": "1. 两种不同的“大”",
+    "note": "上下文长度与耗时图；FlashAttention改进常数与IO，未消除二次计算。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 2,
+    "transcript": "00:00–06:00",
+    "section": "1. 两种不同的“大”",
+    "note": "上下文长度与耗时图；FlashAttention改进常数与IO，未消除二次计算。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 3,
+    "transcript": "00:00–06:00",
+    "section": "1. 两种不同的“大”",
+    "note": "上下文长度与耗时图；FlashAttention改进常数与IO，未消除二次计算。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 4,
+    "transcript": "06:00–10:00；20:00–22:00",
+    "section": "2. 从矩阵结合律走到线性 Attention",
+    "note": "去softmax改变模型；给定线性算子后递推等价，还需因果mask。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 5,
+    "transcript": "06:00–10:00；20:00–22:00",
+    "section": "2. 从矩阵结合律走到线性 Attention",
+    "note": "去softmax改变模型；给定线性算子后递推等价，还需因果mask。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 6,
+    "transcript": "09:00–15:00",
+    "section": "逐页核验补充：混合模型的图不能证明纯线性复杂度",
+    "note": "MiniMax/Nemotron性能与吞吐图；全注意力层仍贡献二次项。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 7,
+    "transcript": "09:00–15:00",
+    "section": "逐页核验补充：混合模型的图不能证明纯线性复杂度",
+    "note": "MiniMax/Nemotron性能与吞吐图；全注意力层仍贡献二次项。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 8,
+    "transcript": "09:00–15:00",
+    "section": "逐页核验补充：混合模型的图不能证明纯线性复杂度",
+    "note": "MiniMax/Nemotron性能与吞吐图；全注意力层仍贡献二次项。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 9,
+    "transcript": "15:00–18:00",
+    "section": "4. 衰减、门控与 Delta 更新",
+    "note": "beta=0仍可能遗忘；一般不是严格正交投影。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 10,
+    "transcript": "18:00–22:00；30:00–34:00",
+    "section": "逐页核验补充：混合模型的图不能证明纯线性复杂度",
+    "note": "QA/召回随混合比变化；纯递推端点性能下降是特定实验。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 11,
+    "transcript": "18:00–22:00；30:00–34:00",
+    "section": "逐页核验补充：混合模型的图不能证明纯线性复杂度",
+    "note": "QA/召回随混合比变化；纯递推端点性能下降是特定实验。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 12,
+    "transcript": "22:00–30:00",
+    "section": "逐页核验补充：稀疏选择保留了哪些代价",
+    "note": "轻量索引器和top-k主attention；后置适配、冻结与联合训练不同。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 13,
+    "transcript": "22:00–30:00",
+    "section": "逐页核验补充：稀疏选择保留了哪些代价",
+    "note": "轻量索引器和top-k主attention；后置适配、冻结与联合训练不同。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 14,
+    "transcript": "33:00–38:00",
+    "section": "5. MoE：增加总容量，限制单 token 工作量",
+    "note": "固定激活专家计算预算，参数与路由通信并非免费。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 15,
+    "transcript": "33:00–38:00",
+    "section": "5. MoE：增加总容量，限制单 token 工作量",
+    "note": "固定激活专家计算预算，参数与路由通信并非免费。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 16,
+    "transcript": "33:00–38:00",
+    "section": "5. MoE：增加总容量，限制单 token 工作量",
+    "note": "固定激活专家计算预算，参数与路由通信并非免费。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 17,
+    "transcript": "37:00–45:00",
+    "section": "逐页核验补充：MoE 对比图的四个横轴",
+    "note": "训练时间、token、激活参数和总参数不互换；榜单非受控消融。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 18,
+    "transcript": "37:00–45:00",
+    "section": "逐页核验补充：MoE 对比图的四个横轴",
+    "note": "训练时间、token、激活参数和总参数不互换；榜单非受控消融。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 19,
+    "transcript": "37:00–45:00",
+    "section": "逐页核验补充：MoE 对比图的四个横轴",
+    "note": "训练时间、token、激活参数和总参数不互换；榜单非受控消融。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 20,
+    "transcript": "37:00–45:00",
+    "section": "逐页核验补充：MoE 对比图的四个横轴",
+    "note": "训练时间、token、激活参数和总参数不互换；榜单非受控消融。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 21,
+    "transcript": "37:00–45:00",
+    "section": "逐页核验补充：MoE 对比图的四个横轴",
+    "note": "训练时间、token、激活参数和总参数不互换；榜单非受控消融。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 22,
+    "transcript": "37:00–45:00",
+    "section": "逐页核验补充：MoE 对比图的四个横轴",
+    "note": "训练时间、token、激活参数和总参数不互换；榜单非受控消融。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 23,
+    "transcript": "37:00–45:00",
+    "section": "逐页核验补充：MoE 对比图的四个横轴",
+    "note": "训练时间、token、激活参数和总参数不互换；榜单非受控消融。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 24,
+    "transcript": "45:00–48:00",
+    "section": "5. MoE：增加总容量，限制单 token 工作量",
+    "note": "基础设施、稳定性及FFN/attention专家设计空间。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 25,
+    "transcript": "45:00–48:00",
+    "section": "5. MoE：增加总容量，限制单 token 工作量",
+    "note": "基础设施、稳定性及FFN/attention专家设计空间。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 26,
+    "transcript": "45:00–48:00",
+    "section": "5. MoE：增加总容量，限制单 token 工作量",
+    "note": "基础设施、稳定性及FFN/attention专家设计空间。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 27,
+    "transcript": "48:00–53:00",
+    "section": "Transcript 对照补遗：Router 的完整设计空间",
+    "note": "token/expert/global选择、hash、RL、匹配；简单router不是领域专家指派。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 28,
+    "transcript": "48:00–53:00",
+    "section": "Transcript 对照补遗：Router 的完整设计空间",
+    "note": "token/expert/global选择、hash、RL、匹配；简单router不是领域专家指派。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 29,
+    "transcript": "48:00–53:00",
+    "section": "Transcript 对照补遗：Router 的完整设计空间",
+    "note": "token/expert/global选择、hash、RL、匹配；简单router不是领域专家指派。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 30,
+    "transcript": "48:00–53:00",
+    "section": "Transcript 对照补遗：Router 的完整设计空间",
+    "note": "token/expert/global选择、hash、RL、匹配；简单router不是领域专家指派。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 31,
+    "transcript": "52:00–54:30",
+    "section": "逐页核验补充：top-k 的顺序、权重与梯度",
+    "note": "softmax前后top-k的归一化不同；仅一项softmax恒为1。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 32,
+    "transcript": "54:00–58:00",
+    "section": "逐页核验补充：共享专家的消融存在分歧",
+    "note": "DeepSeek与OLMoE对共享专家收益不同；总预算匹配。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 33,
+    "transcript": "54:00–58:00",
+    "section": "逐页核验补充：共享专家的消融存在分歧",
+    "note": "DeepSeek与OLMoE对共享专家收益不同；总预算匹配。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 34,
+    "transcript": "54:00–58:00",
+    "section": "逐页核验补充：共享专家的消融存在分歧",
+    "note": "DeepSeek与OLMoE对共享专家收益不同；总预算匹配。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 35,
+    "transcript": "54:00–58:00",
+    "section": "逐页核验补充：共享专家的消融存在分歧",
+    "note": "DeepSeek与OLMoE对共享专家收益不同；总预算匹配。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 36,
+    "transcript": "58:00–63:00",
+    "section": "逐页核验补充：噪声、离散选择与截图不一致",
+    "note": "REINFORCE方差；噪声不让离散选择自动可微；p39代码与文字扰动方式不同。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 37,
+    "transcript": "58:00–63:00",
+    "section": "逐页核验补充：噪声、离散选择与截图不一致",
+    "note": "REINFORCE方差；噪声不让离散选择自动可微；p39代码与文字扰动方式不同。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 38,
+    "transcript": "58:00–63:00",
+    "section": "逐页核验补充：噪声、离散选择与截图不一致",
+    "note": "REINFORCE方差；噪声不让离散选择自动可微；p39代码与文字扰动方式不同。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 39,
+    "transcript": "58:00–63:00",
+    "section": "逐页核验补充：噪声、离散选择与截图不一致",
+    "note": "REINFORCE方差；噪声不让离散选择自动可微；p39代码与文字扰动方式不同。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 40,
+    "transcript": "63:00–71:00",
+    "section": "逐页核验补充：均衡损失、设备目标与偏置",
+    "note": "f离散计数通常停止梯度；偏置影响选择不一定混合权重；序列辅助仍在。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 41,
+    "transcript": "63:00–71:00",
+    "section": "逐页核验补充：均衡损失、设备目标与偏置",
+    "note": "f离散计数通常停止梯度；偏置影响选择不一定混合权重；序列辅助仍在。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 42,
+    "transcript": "63:00–71:00",
+    "section": "逐页核验补充：均衡损失、设备目标与偏置",
+    "note": "f离散计数通常停止梯度；偏置影响选择不一定混合权重；序列辅助仍在。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 43,
+    "transcript": "63:00–71:00",
+    "section": "逐页核验补充：均衡损失、设备目标与偏置",
+    "note": "f离散计数通常停止梯度；偏置影响选择不一定混合权重；序列辅助仍在。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 44,
+    "transcript": "71:00–75:00",
+    "section": "7. 细粒度专家、共享专家与通信",
+    "note": "dispatch/combine、block sparse、低维通信；不混同2:4稀疏硬件。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 45,
+    "transcript": "71:00–75:00",
+    "section": "7. 细粒度专家、共享专家与通信",
+    "note": "dispatch/combine、block sparse、低维通信；不混同2:4稀疏硬件。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 46,
+    "transcript": "71:00–75:00",
+    "section": "7. 细粒度专家、共享专家与通信",
+    "note": "dispatch/combine、block sparse、低维通信；不混同2:4稀疏硬件。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 47,
+    "transcript": "75:00–76:30",
+    "section": "逐页核验补充：容量限制导致批次依赖",
+    "note": "同批请求竞争容量；dropless与浮点确定性是不同问题。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 48,
+    "transcript": "76:00–78:30",
+    "section": "逐页核验补充：router 数值误差与 z-loss",
+    "note": "128/128.5舍入例；FP32和z-loss分别控制舍入与尺度。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 49,
+    "transcript": "76:00–78:30",
+    "section": "逐页核验补充：router 数值误差与 z-loss",
+    "note": "128/128.5舍入例；FP32和z-loss分别控制舍入与尺度。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 50,
+    "transcript": "78:00–80:00",
+    "section": "逐页核验补充：小数据微调与 upcycling",
+    "note": "训练/验证分离、选层微调或增加数据；不保证大数据全无过拟合。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 51,
+    "transcript": "79:00–82:00",
+    "section": "逐页核验补充：小数据微调与 upcycling",
+    "note": "复制预训练FFN再训练；图表不证明无额外训练成本。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 52,
+    "transcript": "79:00–82:00",
+    "section": "逐页核验补充：小数据微调与 upcycling",
+    "note": "复制预训练FFN再训练；图表不证明无额外训练成本。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 53,
+    "transcript": "79:00–82:00",
+    "section": "逐页核验补充：小数据微调与 upcycling",
+    "note": "复制预训练FFN再训练；图表不证明无额外训练成本。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 54,
+    "transcript": "81:00–84:00",
+    "section": "逐页核验补充：DeepSeek 配置中的课件疑点",
+    "note": "p56版本标签V2和258与标题及p35不一致；sigmoid归一化非直接softmax。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 55,
+    "transcript": "81:00–84:00",
+    "section": "逐页核验补充：DeepSeek 配置中的课件疑点",
+    "note": "p56版本标签V2和258与标题及p35不一致；sigmoid归一化非直接softmax。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 56,
+    "transcript": "81:00–84:00",
+    "section": "逐页核验补充：DeepSeek 配置中的课件疑点",
+    "note": "p56版本标签V2和258与标题及p35不一致；sigmoid归一化非直接softmax。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 57,
+    "transcript": "83:30–85:30",
+    "section": "8. MLA、upcycling 与多 token 预测",
+    "note": "缓存latent+位置键；位置相关旋转阻碍固定矩阵吸收。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 58,
+    "transcript": "83:30–85:30",
+    "section": "8. MLA、upcycling 与多 token 预测",
+    "note": "缓存latent+位置键；位置相关旋转阻碍固定矩阵吸收。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 59,
+    "transcript": "84:00–86:14",
+    "section": "8. MLA、upcycling 与多 token 预测",
+    "note": "MTP辅助训练与推测验证不同；框架能多步不代表实例用同样深度。",
+    "review": "已对照页面图像与完整文字稿"
+  },
+  {
+    "page": 60,
+    "transcript": "84:00–86:14",
+    "section": "8. MLA、upcycling 与多 token 预测",
+    "note": "MTP辅助训练与推测验证不同；框架能多步不代表实例用同样深度。",
+    "review": "已对照页面图像与完整文字稿"
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "start": 1,
+    "end": 36,
+    "transcript": "00:00–03:00；总结末尾",
+    "section": "1. 正确性模型与性能模型",
+    "note": "引言、调用顺序、总结与辅助导入",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 39,
+    "end": 142,
+    "transcript": "00:00–22:00",
+    "section": "代码讲义核验补充",
+    "note": "warp、占用率、bank/coalescing、wave；128线程算例与64线程文字不同",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 145,
+    "end": 205,
+    "transcript": "约 22:00–30:00",
+    "section": "代码讲义核验补充",
+    "note": "warmup、CUDA event、测量单位 ms 与端到端边界",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 207,
+    "end": 260,
+    "transcript": "约 27:00–36:00",
+    "section": "2. Benchmark 和 profiler 各回答什么",
+    "note": "kernel 表、shape/dtype 选择与采样开销",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 263,
+    "end": 303,
+    "transcript": "约 30:00–42:00",
+    "section": "4. 为什么融合 GELU 能省时间",
+    "note": "naive/builtin/compiled 同 tanh 近似；融合减少中间流量",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 306,
+    "end": 390,
+    "transcript": "约 36:00–57:00",
+    "section": "代码讲义核验补充",
+    "note": "Triton program/grid、元素块≠线程数、mask、exp形式tanh边界",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 393,
+    "end": 485,
+    "transcript": "约 57:00–66:00",
+    "section": "代码讲义核验补充",
+    "note": "row softmax、-inf补齐、输入列stride限制与读写计数",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 488,
+    "end": 536,
+    "transcript": "约 66:00–72:00",
+    "section": "6. 行求和是分块的入门练习",
+    "note": "循环tile的向量累加和最后归约；要求行连续布局",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 539,
+    "end": 677,
+    "transcript": "约 72:00–结束",
+    "section": "7. 分块 matmul 与 epilogue 融合",
+    "note": "二维grid、stride、K-loop、FP32累加、ReLU epilogue 与mask",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 680,
+    "end": 745,
+    "transcript": "贯穿上述演示；未独立讲授",
+    "section": "代码讲义核验补充",
+    "note": "输入生成、近似GELU参照、随机allclose与PTX输出工具；不代表已在本机GPU复跑",
+    "review": "已对照代码讲义、完整字幕与教材"
+  }
+]

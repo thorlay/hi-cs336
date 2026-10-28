@@ -1,6 +1,7 @@
 # 阅读目录
 
 * [学习首页](README.md)
+* [每页 Slides ↔ 完整 Transcript ↔ 教材](sources/three-way-audit.md)
 * [逐讲中文教材](textbook/README.md)
   * [开始之前：符号与先修知识](textbook/00-prerequisites-and-notation.md)
   * [L01｜从“会用模型”到“会造模型”：总览与分词](textbook/01-overview-tokenization.md)

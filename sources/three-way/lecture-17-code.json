@@ -1,0 +1,74 @@
+[
+  {
+    "start": 1,
+    "end": 45,
+    "transcript": "00:00–06:00；72:00–结束",
+    "section": "1. 语言模型的接口可以接收连续向量",
+    "note": "输入理解与输出生成两条问题；课程主体是前者",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 48,
+    "end": 95,
+    "transcript": "03:00–24:00",
+    "section": "代码讲义核验补充",
+    "note": "CLIP 对比目标、假负例、裁剪、ResNet/ViT pooling 区别",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 98,
+    "end": 121,
+    "transcript": "21:00–28:00",
+    "section": "代码讲义核验补充",
+    "note": "SigLIP 二元目标与负例比例；硬件比较不能混同芯片/核心",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 124,
+    "end": 145,
+    "transcript": "27:00–36:00",
+    "section": "5. LLaVA：视觉编码器 + projector + LM",
+    "note": "符号标注生成对话；冻结与训练模块明确，非单一图像向量",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 148,
+    "end": 192,
+    "transcript": "33:00–45:00",
+    "section": "6. 高分辨率、视频与动态长度",
+    "note": "AnyRes、跨图/视频压缩、三阶段及迁移案例",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 195,
+    "end": 211,
+    "transcript": "45:00–49:00",
+    "section": "代码讲义核验补充",
+    "note": "Qwen-VL 固定 256 与三阶段模块范围",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 214,
+    "end": 233,
+    "transcript": "48:00–54:00",
+    "section": "代码讲义核验补充",
+    "note": "Qwen2-VL 动态分辨率、64+2 token、MRoPE、DFN 初始化",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 236,
+    "end": 265,
+    "transcript": "51:00–66:00",
+    "section": "代码讲义核验补充",
+    "note": "Qwen3-VL 频率交错、显式时间戳、DeepStack 和长上下文阶段",
+    "review": "已对照代码讲义、完整字幕与教材"
+  },
+  {
+    "start": 268,
+    "end": 302,
+    "transcript": "66:00–结束",
+    "section": "8. 看图回答与生成图片是不同方向",
+    "note": "Chameleon 离散图像码、VQ 重建、稳定性与信息损失；结尾闭源结构为猜测",
+    "review": "已对照代码讲义、完整字幕与教材"
+  }
+]
