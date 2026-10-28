@@ -4,6 +4,8 @@
 
 ## 逐讲详细教材
 
+[GitBook 在线阅读](https://niuniu.gitbook.io/cs336-cong-ling-gou-jian-yu-yan-mo-xing/00-cs336-spring-2026-zhu-jiang-zhong-wen-jiao-cai) · [GitHub 教材目录](textbook/README.md)
+
 已生成 [Spring 2026 中文教材](textbook/README.md)：覆盖现有文字稿的 18 讲，包含机制解释、公式、手算、补充理解与自测。L18 缺原始材料，单独标记待补；正文不是逐字稿，尚未逐句对照视频。
 
 ## 从这里开始
@@ -55,6 +57,6 @@ sources/      官方来源、年份与版本
 templates/   笔记和实验记录模板
 ```
 
-[SUMMARY.md](SUMMARY.md) 是阅读目录，`.gitbook.yaml` 已配置好，可用于后续连接 GitBook；当前未发布 GitBook 站点。
+[SUMMARY.md](SUMMARY.md) 是阅读目录，`.gitbook.yaml` 已配置好。[GitBook 站点](https://niuniu.gitbook.io/cs336-cong-ling-gou-jian-yu-yan-mo-xing/)已发布当前教材初版；目前通过导入更新，尚未连接 GitHub 自动同步。
 
 官方入口：[Spring 2026 课程主页](https://cs336.stanford.edu/)。官方资料归原作者所有；本仓库只链接资料，不批量转载讲义、字幕或数据。课程要求和作业接口以固定版本的官方材料为准。
