@@ -1,8 +1,6 @@
 # L06｜从 PyTorch 到 Triton：测量、融合与分块
 
-> Spring 2026 · 中文教材（含 Transcript 对照补遗）。主要依据用户提供的 `lecture-06.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_06.py)。 时间定位：00:05–约 20:01 硬件细节；约 25:01–35:00 测量；40:00–86:34 Triton 算例。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
-
-> 对照入口：[原始讲义 ↔ 完整文字稿 ↔ 本章小节](37-lecture-06-code.md)。
+> Spring 2026 · 中文教材。主要依据用户提供的 `lecture-06.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_06.py)。 时间定位：00:05–约 20:01 硬件细节；约 25:01–35:00 测量；40:00–86:34 Triton 算例。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
 
 ## 1. 正确性模型与性能模型
 
@@ -45,7 +43,9 @@ masked_store(output + offsets, y, valid)
 
 一行 softmax 需要这行的最大值和指数和，是协作归约，而非每个元素完全独立。若一行能装进一个 program 的处理范围，可以加载一次，计算 max、exp、sum、normalize，再写回一次。
 
-尾部无效位置在求最大值时通常填 −∞，使其指数贡献为 0。若填成 0，遇到全为负的有效 logits 就会改变最大值，进而可能造成错误。全无效行仍需专门定义行为。
+尾部无效位置通常填 −∞，使其指数贡献为 0。若直接填 0，又把这些位置算进指数和，它们各会贡献 exp(0−m)，分母就不再只对应有效输入。例如有效 logits 是 `[-2,-3]`，多出的一个 0 会被当成第三个候选，前两个位置的概率和便小于 1。
+
+真正的错误来自**无效位置参与了归一化**，不是“减去了不同的最大值”本身：只要分子、分母使用同一有限平移，且无效位置的指数严格置零，实数运算下结果仍不变。不过选有效位置的最大值更有利于数值稳定。整行都无效或所有有效 logits 都为 −∞ 时，还需单独规定行为，避免 `−∞−(−∞)` 产生 NaN。
 
 当行很大，硬把整行装进一个 program 可能导致寄存器压力过高或 spill。此时要分块、分阶段归约，或者使用在线算法。数学上的最少读写只是理想目标，还要满足片上容量限制。
 
@@ -130,11 +130,6 @@ Triton 的 program 描述一块逻辑数据的操作，不是 Python 解释器�
 
 课堂结尾提到 CUDA、PTX、ThunderKittens、CuTe 等不同层次的选择，重点是表达能力、控制与开发成本的取舍；对于抽象的高维张量，没有脱离具体算子的唯一最佳分块方案。
 
----
-
-[返回教材目录](README.md) · [材料与编写说明](21-jiao-cai-cai-liao-yu-bian-xie-shuo-ming.md)
-
-[上一讲：L05](06-l05gpu-zen-yang-gong-zuo-flashattention-wei-shen-me-geng-kuai.md) · [下一讲：L07](08-l07-duo-gpu-de-yu-yan-ji-he-tong-xin-yu-san-zhong-ji-ben-bing-xing.md)
 
 ## 代码讲义核验补充
 
@@ -151,3 +146,9 @@ Triton 的 program 描述一块逻辑数据的操作，不是 Python 解释器�
 Softmax kernel 传了 row stride，却默认列 stride=1；行求和更直接使用 row*N，因此默认连续二维布局。仅换成转置/切片而不检查 stride，会改变地址语义。matmul 尽管传了各轴 stride，包装器仍限制连续输入，输出还默认创建 float32；它不是任意 dtype/layout 通用算子。
 
 **流量账本。** 若把读每行分母的 M 次也计入，naive softmax 约为 `5MN+2M` 读、`3MN+2M` 写；讲义总数漏掉一次分母向量读。大 N 时主项仍是 8MN 对融合的 2MN，所以约四倍的是**理想主项流量比**，不保证实际四倍加速。朴素 matmul 为每个 (m,n,k) 读取 A、B 两个元素，主项是 2MNK 次元素读，讲义 MNK 是量级简写。分块提高重用后仍受资源与调度限制，不能只根据 O(tile_size) 推出越大越快。
+
+---
+
+[返回教材目录](README.md) · [材料与编写说明](21-jiao-cai-cai-liao-yu-bian-xie-shuo-ming.md)
+
+[上一讲：L05](06-l05gpu-zen-yang-gong-zuo-flashattention-wei-shen-me-geng-kuai.md) · [下一讲：L07](08-l07-duo-gpu-de-yu-yan-ji-he-tong-xin-yu-san-zhong-ji-ben-bing-xing.md)

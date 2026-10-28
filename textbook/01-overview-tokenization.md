@@ -1,8 +1,6 @@
 # L01｜从“会用模型”到“会造模型”：总览与分词
 
-> Spring 2026 · 中文教材（含 Transcript 对照补遗）。主要依据用户提供的 `lecture-01.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_01.py)。 时间定位：00:05–约 25:00 总览；约 28:00–64:00 课程主线；65:06–79:16 分词。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
-
-> 对照入口：[原始讲义 ↔ 完整文字稿 ↔ 本章小节](../sources/three-way/lecture-01-code.md)。
+> Spring 2026 · 中文教材。主要依据用户提供的 `lecture-01.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_01.py)。 时间定位：00:05–约 25:00 总览；约 28:00–64:00 课程主线；65:06–79:16 分词。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
 
 ## 1. 为什么“从零构建”仍然值得学
 
@@ -151,11 +149,6 @@ Scaling 的关键产物不是一次“最佳模型”，而是可预测的配方
 
 课堂 BPE 使用 `the cat in the hat` 展示 `t+h→th`、再与后续符号合并的过程；随着合并继续，序列缩短而词表扩大。教学代码能运行却很慢，工程优化应避免每次编码都遍历所有合并规则，利用索引只处理当前相关的候选，并在预分词片段内部应用合并。实现语言变化不能替代先理解这个算法瓶颈。
 
----
-
-[返回教材目录](README.md) · [材料与编写说明](../sources/textbook-evidence.md)
-
-[下一讲：L02](02-pytorch-resource-accounting.md)
 
 ## 代码讲义核验补充
 
@@ -168,3 +161,9 @@ Scaling 的关键产物不是一次“最佳模型”，而是可预测的配方
 字符实现按 Unicode code point 编码，不是用户感知的一个字素簇；组合字符和部分 emoji 可能跨多个 code point。字节 tokenizer 只有 256 个基础值，但任意模型输出的字节序列不保证是合法 UTF-8。示例的 encode→decode 回环只验证由合法输入产生的序列。
 
 BPE 代码演示了非重叠替换与按学习顺序应用 merges；它没有处理所有工程边界：空串的 bytes/token 比值分母为零，训练序列不足两项时 pair 表为空，重复训练次数超过可合并项时 `max` 也不可用。频次相同时需规定确定的 tie-break；特殊 token 和预分词边界不能任意跨过。教学代码正确展示主算法，不代表直接覆盖流式、多文件和任意输入的生产接口。
+
+---
+
+[返回教材目录](README.md) · [材料与编写说明](../sources/textbook-evidence.md)
+
+[下一讲：L02](02-pytorch-resource-accounting.md)

@@ -1,8 +1,6 @@
 # L05｜GPU 怎样工作，FlashAttention 为什么更快
 
-> Spring 2026 · 中文教材（含 Transcript 对照补遗）。主要依据用户提供的 `lecture-05.txt`，并结合[官方 PDF](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_05.pdf)。 时间定位：00:05–约 30:00 硬件；约 30:02–68:00 性能；约 70:01–78:31 FlashAttention。 课件重点页：8–18、22–48、50–54（PDF 页码从 1 开始）。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
-
-> 对照入口：[原始讲义 ↔ 完整文字稿 ↔ 本章小节](../sources/three-way/lecture-05.md)。
+> Spring 2026 · 中文教材。主要依据用户提供的 `lecture-05.txt`，并结合[官方 PDF](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_05.pdf)。 时间定位：00:05–约 30:00 硬件；约 30:02–68:00 性能；约 70:01–78:31 FlashAttention。 课件重点页：8–18、22–48、50–54（PDF 页码从 1 开始）。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
 
 ## 1. GPU 快在哪里
 
@@ -146,11 +144,6 @@ FlashAttention 将分块、融合、在线 softmax 和反向重计算组合起�
 
 它对标准 attention 是数学等价的重新组织，浮点归约顺序仍可能改变末位误差；节省 HBM 中间量不代表标准 dense attention 的 FLOPs 已变成线性。性能还受 tile 调度和硬件代际影响，不能把某张图上的加速倍数写成所有形状的承诺。
 
----
-
-[返回教材目录](README.md) · [材料与编写说明](../sources/textbook-evidence.md)
-
-[上一讲：L04](04-linear-attention-moe.md) · [下一讲：L06](06-kernels-triton.md)
 
 ## 逐页核验补充
 
@@ -203,3 +196,9 @@ p50 中一个实验从 66.6 增至 75.2 GFLOPs，却把 HBM 读写从 40.3 降�
 p51 与口述提到“三次矩阵乘法”，但给定 Q、K、V 的 Attention 核心是两次：`QKᵀ` 与 `PV`；生成 Q/K/V 的输入投影需要另行计账。不要把三个输入张量误当成核心里的三次矩阵乘法。
 
 p53–54 的在线 softmax 不仅保留分母；为了最后得到正确的输出，还要保留并重缩放未归一化的 value 加权和。每个 tile 单独做 softmax 后直接相加会错，因为各 tile 的归一化常数不同。课堂没有完整推导反向过程，教材将反向重计算作为机制说明，不把它标成课堂已经逐行证明的代码。
+
+---
+
+[返回教材目录](README.md) · [材料与编写说明](../sources/textbook-evidence.md)
+
+[上一讲：L04](04-linear-attention-moe.md) · [下一讲：L06](06-kernels-triton.md)

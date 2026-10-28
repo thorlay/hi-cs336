@@ -1,8 +1,6 @@
 # L17｜多模态：怎样让语言模型看见图像与视频
 
-> Spring 2026 · 中文教材（含 Transcript 对照补遗）。主要依据用户提供的 `lecture-17.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_17.py)。 时间定位：00:05–约 25:02 CLIP/SigLIP；30:02–60:00 VLM；65:00–77:29 统一生成。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
-
-> 对照入口：[原始讲义 ↔ 完整文字稿 ↔ 本章小节](48-lecture-17-code.md)。
+> Spring 2026 · 中文教材。主要依据用户提供的 `lecture-17.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_17.py)。 时间定位：00:05–约 25:02 CLIP/SigLIP；30:02–60:00 VLM；65:00–77:29 统一生成。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
 
 ## 1. 语言模型的接口可以接收连续向量
 
@@ -47,6 +45,14 @@ CLIP 可以把“某类别的照片”编码为文本向量，与图像比较做
 ## 4. SigLIP 为什么改变损失
 
 CLIP 用整批 softmax 比较配对与其他候选，需要跨样本归一化。SigLIP 把图文配对判断改为二元 logistic 损失，减轻对全局 softmax 的依赖，提供不同的批量与分布式计算权衡。
+
+把一对图文的标签写为 z_{ij}∈{−1,+1}，匹配对取 +1，其余取 −1；设相似度经过可学习的尺度和偏置后为 a_{ij}，单对损失为：
+
+$$
+\ell_{ij}=\log\left(1+\exp(-z_{ij}a_{ij})\right).
+$$
+
+正例希望 a 变大，负例希望 a 变小；每一对都不需要其他候选的 softmax 分母。不过，若一批 B 对数据的全部 B² 个组合都参与，每个正例会对应 B−1 个负例。改变 B、负例采样或最终归约方式，仍会改变训练目标中的样本构成和权重。因此“逐对计算”并不等于“batch 大小完全无关”。
 
 这不表示整个训练完全不需要通信，也不表示负样本数量无关。应该分清目标函数的归一化依赖和实际多卡系统的数据交换。
 
@@ -145,11 +151,6 @@ VQ 编码器先输出连续表示，再用 codebook 最近项量化成离散 ID�
 
 模型名、token 数和问答中的限定已补入下节；不把未公开的内部结构猜测当事实。
 
----
-
-[返回教材目录](README.md) · [材料与编写说明](21-jiao-cai-cai-liao-yu-bian-xie-shuo-ming.md)
-
-[上一讲：L16](17-l16rlvr-yu-grpo-zen-yang-cong-ke-yan-zheng-jie-guo-zhong-xue-xi.md) · [下一讲：L18](19-l18daniel-selsam-jia-bin-ke-cai-liao-dai-bu.md)
 
 ## 代码讲义核验补充
 
@@ -180,3 +181,9 @@ MRoPE 的时间、高度、宽度对应不同坐标；文本可用相同坐标�
 Chameleon 的 1024 指 512×512 图像的表示长度，8192 指码本可选项数，二者不可混为词表大小。最近邻量化不直接可微，训练除重建外还涉及量化相关项/梯度处理；仅写重建 loss 不足以复现。重新训练文本 BPE 与使用图像离散码是两套 token 来源，并非对图像像素执行文本 BPE。
 
 这条路线能交错生成文本与图像，前面理解型 VLM 通常只输出文本；扩散头是另一种生成方案，不是所有连续编码器数学上只能接扩散。课堂末尾对未公开 omni 模型“可能连续编码+扩散”的说法明确是教师猜测；视频信息密度、训练平衡和 OCR 信息损失也应按任务与表示条件讨论，不据此断言所有视频都比所有文本信息少。
+
+---
+
+[返回教材目录](README.md) · [材料与编写说明](21-jiao-cai-cai-liao-yu-bian-xie-shuo-ming.md)
+
+[上一讲：L16](17-l16rlvr-yu-grpo-zen-yang-cong-ke-yan-zheng-jie-guo-zhong-xue-xi.md) · [下一讲：L18](19-l18daniel-selsam-jia-bin-ke-cai-liao-dai-bu.md)

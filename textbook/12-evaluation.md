@@ -1,8 +1,6 @@
 # L12｜评估：分数究竟说明模型会做什么
 
-> Spring 2026 · 中文教材（含 Transcript 对照补遗）。主要依据用户提供的 `lecture-12.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_12.py)。 时间定位：00:06–约 15:00 PPL；20:00–40:01 考试与偏好；45:05–60:02 agents；65:01–78:28 有效性。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
-
-> 对照入口：[原始讲义 ↔ 完整文字稿 ↔ 本章小节](../sources/three-way/lecture-12-code.md)。
+> Spring 2026 · 中文教材。主要依据用户提供的 `lecture-12.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_12.py)。 时间定位：00:06–约 15:00 PPL；20:00–40:01 考试与偏好；45:05–60:02 agents；65:01–78:28 有效性。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
 
 ## 1. 从抽象能力到可测指标
 
@@ -137,11 +135,6 @@ GPT-2 在其他数据集上 zero-shot 评 perplexity，是从同分布 train/tes
 
 最后要明确目的是选购模型、改进训练、研究能力还是制定政策，也要分清评模型成品与评训练算法。前者可能允许不同数据与系统，后者则必须控制预算和条件。课程展示的外部排行榜和网页不作为实时排名认证。
 
----
-
-[返回教材目录](README.md) · [材料与编写说明](../sources/textbook-evidence.md)
-
-[上一讲：L11](11-scaling-practice.md) · [下一讲：L13](13-data-sources.md)
 
 ## 代码讲义核验补充
 
@@ -154,3 +147,9 @@ GPT-2 在其他数据集上 zero-shot 评 perplexity，是从同分布 train/tes
 **基准版本与有效性。** 原 SWE-bench 与 Verified、Terminal-Bench 收集总量与 2.0 子集、GPQA 各子集，应分别标记；课堂导航打开的排行榜可能属于不同版本。ARC 的“人类可解”是设计意图，不表示所有人能在所有题上达到 100%。私有题、动态题与顺序检验只提供不同证据；日期之后的新仓库仍可能复制旧内容，未检出污染也不是无污染证明。医疗考试或工作任务的得分是评估材料，不能单靠它推出实际部署可靠性。
 
 最后的空响应基线、缺失题图和不完整测试例子说明：评估器自身也需要负对照与人工看轨迹。课堂涉及的历史网页分数保留为语境，本教材不据其宣称现在的模型排名。
+
+---
+
+[返回教材目录](README.md) · [材料与编写说明](../sources/textbook-evidence.md)
+
+[上一讲：L11](11-scaling-practice.md) · [下一讲：L13](13-data-sources.md)

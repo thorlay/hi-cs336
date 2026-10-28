@@ -1,8 +1,6 @@
 # L10｜推理系统：KV cache、量化、推测采样与动态批处理
 
-> Spring 2026 · 中文教材（含 Transcript 对照补遗）。主要依据用户提供的 `lecture-10.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_10.py)。 时间定位：约 00:00–45:01 推理模型与指标；50:02–70:00 压缩；约 70:00–85:23 推测采样与缓存管理。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
-
-> 对照入口：[原始讲义 ↔ 完整文字稿 ↔ 本章小节](41-lecture-10-code.md)。
+> Spring 2026 · 中文教材。主要依据用户提供的 `lecture-10.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_10.py)。 时间定位：约 00:00–45:01 推理模型与指标；50:02–70:00 压缩；约 70:00–85:23 推测采样与缓存管理。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
 
 ## 1. 先把“快”说清楚
 
@@ -125,11 +123,6 @@ MLA 需要处理 RoPE 的位置分量，RoPE 通常作用于 Q/K，不能照抄�
 
 Continuous batching 按 decode 迭代插入/移除请求；selective batching 可把逐位置 MLP 打包，attention 仍需保留每请求边界。分页解决预留空间的内部浪费和外部碎片：逻辑连续 KV 可映射到不连续物理块，共同前缀还可引用同一块，在分叉写入时复制。共享要求模型、输入前缀、位置等上下文一致；分页不是更改 attention 数学，也不自动等于 CPU/GPU 换页。
 
----
-
-[返回教材目录](README.md) · [材料与编写说明](21-jiao-cai-cai-liao-yu-bian-xie-shuo-ming.md)
-
-[上一讲：L09](10-l09scaling-laws-ba-xiao-shi-yan-bian-cheng-da-mo-xing-jue-ce.md) · [下一讲：L11](12-l11-gui-mo-hua-xun-lian-de-xi-jie-wsd-you-hua-qi-yu-p.md)
 
 ## 代码讲义核验补充
 
@@ -146,3 +139,9 @@ Continuous batching 按 decode 迭代插入/移除请求；selective batching �
 量化章节“higher latency/throughput”中 latency 的方向有误，应追求较低延迟与较高吞吐。整数范围还需加 scale/zero point、裁剪与打包元数据；int8 也不能不分格式、通道尺度和硬件就总说比 fp8 更差或更便宜。课堂的 E4M3 范围与 L02 不一致，须区分具体 FP8 编码，不能混作同一规格。按 [AWQ 论文](https://arxiv.org/abs/2306.00978)，显著通道通过等价缩放保护，以避免低效混合精度；“把重要 1% 永久保留高精度”不是完整算法。
 
 **无损采样的精确说法。** 二元例子里 `[0,1]` 是**归一化以后**的拒绝残差分布；原始 `max(q−p,0)` 应为 `[0,q(B)−p(B)]`，通常不直接等于 `[0,1]`。精确性是相对同一上下文下的目标采样分布而言，还要匹配温度、截断等采样处理；候选全接受时需处理额外 token，拒绝后需正确回退 KV。它不保证同一个随机种子生成完全相同的字符串，也不保证任意 Medusa/EAGLE 接受规则都无损。
+
+---
+
+[返回教材目录](README.md) · [材料与编写说明](21-jiao-cai-cai-liao-yu-bian-xie-shuo-ming.md)
+
+[上一讲：L09](10-l09scaling-laws-ba-xiao-shi-yan-bian-cheng-da-mo-xing-jue-ce.md) · [下一讲：L11](12-l11-gui-mo-hua-xun-lian-de-xi-jie-wsd-you-hua-qi-yu-p.md)

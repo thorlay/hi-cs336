@@ -1,8 +1,6 @@
 # L13｜数据从哪里来：从网页到可训练语料
 
-> Spring 2026 · 中文教材（含 Transcript 对照补遗）。主要依据用户提供的 `lecture-13.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_13.py)。 时间定位：00:05–约 30:00 来源与使用条件；35:00–45:01 原始来源；50:03–81:52 数据集与清洗决策。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
-
-> 对照入口：[原始讲义 ↔ 完整文字稿 ↔ 本章小节](../sources/three-way/lecture-13-code.md)。
+> Spring 2026 · 中文教材。主要依据用户提供的 `lecture-13.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_13.py)。 时间定位：00:05–约 30:00 来源与使用条件；35:00–45:01 原始来源；50:03–81:52 数据集与清洗决策。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
 
 ## 1. “训练于互联网”省略了哪些步骤
 
@@ -140,11 +138,6 @@ Common Crawl 的 WARC 保存抓取记录，WET 是提取后的文本，二者不
 
 许可随时间变化的追问已补入下节；原文件中的续行已全部纳入阅读。
 
----
-
-[返回教材目录](README.md) · [材料与编写说明](../sources/textbook-evidence.md)
-
-[上一讲：L12](12-evaluation.md) · [下一讲：L14](14-data-processing.md)
 
 ## 代码讲义核验补充
 
@@ -169,3 +162,9 @@ LLaMA 的质量分类代理是 Wikipedia **引用的页面**，与 CCNet 的 Wik
 Nemotron 的改写可能改善表达，也可能改变或编造事实；生成问答使文本变成不同监督形态，不是无损扩充。比较数据量时同时列来源文本、独立 token 量、抽样/重复训练 token、保留率与训练预算，不能把 3.8T 的语料与 15T 的训练消耗简单排大小。
 
 The Stack v2 的代码数据与使用它的 StarCoder2 **整体训练配方**需要区分；讲义合并讨论的额外网页、问答、LLVM 成对语料，不表示每项都作为同一种 The Stack v2 原始仓库对象。PR 线性化要显式决定 diff、文件上下文、评论与时间边界，未来补丁不能悄悄变成评估时已知上下文。CommonPile 的许可来源检查同样不等于只看集合页许可证；底层作品和许可授权链仍是其要解决的问题。
+
+---
+
+[返回教材目录](README.md) · [材料与编写说明](../sources/textbook-evidence.md)
+
+[上一讲：L12](12-evaluation.md) · [下一讲：L14](14-data-processing.md)

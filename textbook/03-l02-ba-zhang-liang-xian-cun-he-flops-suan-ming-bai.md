@@ -1,8 +1,6 @@
 # L02｜把张量、显存和 FLOPs 算明白
 
-> Spring 2026 · 中文教材（含 Transcript 对照补遗）。主要依据用户提供的 `lecture-02.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_02.py)。 时间定位：00:05–约 28:00 张量与 einops；约 30:00–55:00 FLOPs 与算术强度；60:01–77:19 梯度、状态与检查点。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
-
-> 对照入口：[原始讲义 ↔ 完整文字稿 ↔ 本章小节](33-lecture-02-code.md)。
+> Spring 2026 · 中文教材。主要依据用户提供的 `lecture-02.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_02.py)。 时间定位：00:05–约 28:00 张量与 einops；约 30:00–55:00 FLOPs 与算术强度；60:01–77:19 梯度、状态与检查点。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
 
 ## 1. 先建立“物理账本”
 
@@ -88,6 +86,8 @@ MFU 通常用模型的有效 FLOPs 除以总耗时和设备峰值 FLOP/s。它�
 
 当一个参数在多处被共享，梯度也要把各条路径的贡献相加。这解释了为什么自动微分默认会累积 `.grad`，以及每步更新后为什么需要清理梯度。忘记清零不是“相当于更大的 batch”，因为中间参数已经更新，累积的是不同参数点的梯度。
 
+有意做梯度累积时，应在同一参数点处理多个 microbatch，最后才更新。若 G 个 microbatch 等大、每个 loss 都取平均，累积前需将各 loss 除以 G，才能得到合并 batch 的平均梯度；有效 token 数不同时则按真实计数加权。广播也必须检查：先把 `model(x)` 全部取均值得到一个标量，再与 `[B]` 标签计算 MSE，会让同一个预测对应所有标签。课堂用它展示训练步骤，但逐样本预测应保留 batch 维。
+
 ### 16GB 静态状态并不意味着 16GB 卡可以训练
 
 设 1B 参数用 16 字节账本，静态数组约为 16GB，转换为 GiB 约 14.9。若设备标称显存也是 16GB，仍可能很快 OOM，因为前向需要保存激活，反向和优化器也会创建临时数组。
@@ -155,11 +155,6 @@ GPU 调用通常异步返回。用主机时钟计时，应在计时区间前后�
 
 对 L 层等宽链式网络，完全不保留中间检查点、每求一层梯度都从输入重算，极端策略可能需要 O(L²) 工作。合理分段则可保存 O(L/k) 个段边界，并在反向时临时保留 O(k) 层激活，取 k≈√L 使峰值存储为 O(√L)。**这一常见分段方案的总重计算量通常仍为 O(L)，不能从文字稿一句“overhead 也是 √L”推出总 FLOPs 增加 √L 倍。** 具体开销取决于保存和重算策略。
 
----
-
-[返回教材目录](README.md) · [材料与编写说明](21-jiao-cai-cai-liao-yu-bian-xie-shuo-ming.md)
-
-[上一讲：L01](02-l01-cong-hui-yong-mo-xing-dao-hui-zao-mo-xing-zong-lan-yu-fen-ci.md) · [下一讲：L03](04-l03-xian-dai-transformer-cong-jie-gou-dao-xun-lian-wen-ding-xing.md)
 
 ## 代码讲义核验补充
 
@@ -172,3 +167,9 @@ GPU 调用通常异步返回。用主机时钟计时，应在计时区间前后�
 **训练循环的目标形状。** 示例先 `model(x).mean()` 得到单个标量，再与长度为 B 的 y 比 MSE，实际会广播成同一个预测对所有标签。它能展示 backward/step/zero_grad 的顺序，却不是逐样本线性回归器。若要做那个任务，应定义每个样本的输出，例如沿特征维归约保留 batch 维，再检查标签形状。基础矩阵的输入不求导时，可省去相应输入梯度乘法；6ND 是多数内部层的粗略主项，非这个小网络每个浮点操作的精确总计。
 
 **累积与检查点。** 小 batch 的平均 loss 若直接累加 G 次，会比同等大 batch 的平均梯度放大 G 倍；需要正确除以 G，或按实际有效 token/样本数加权。检查点将存储换成重算，常用分段模型的峰值激活随 `L/s+s` 变化，s≈sqrt(L) 是均匀层成本下的估计。这里逐层调用 checkpoint 的代码只示意“重算层内部”，并没有自动实现每 sqrt(L) 层分段的最优方案；随机状态、算子副作用与所选 checkpoint 接口也会影响一致性。
+
+---
+
+[返回教材目录](README.md) · [材料与编写说明](21-jiao-cai-cai-liao-yu-bian-xie-shuo-ming.md)
+
+[上一讲：L01](02-l01-cong-hui-yong-mo-xing-dao-hui-zao-mo-xing-zong-lan-yu-fen-ci.md) · [下一讲：L03](04-l03-xian-dai-transformer-cong-jie-gou-dao-xun-lian-wen-ding-xing.md)

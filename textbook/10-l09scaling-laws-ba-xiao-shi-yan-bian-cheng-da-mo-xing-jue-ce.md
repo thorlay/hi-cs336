@@ -1,8 +1,6 @@
 # L09｜Scaling laws：把小实验变成大模型决策
 
-> Spring 2026 · 中文教材（含 Transcript 对照补遗）。主要依据用户提供的 `lecture-09.txt`，并结合[官方 PDF](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_09.pdf)。 时间定位：00:05–约 30:00 数据幂律；35:01–50:00 模型与超参数；55:01–77:47 预算分配。 课件重点页：15–26、35–45、47–54（PDF 页码从 1 开始）。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
-
-> 对照入口：[原始讲义 ↔ 完整文字稿 ↔ 本章小节](40-lecture-09.md)。
+> Spring 2026 · 中文教材。主要依据用户提供的 `lecture-09.txt`，并结合[官方 PDF](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_09.pdf)。 时间定位：00:05–约 30:00 数据幂律；35:01–50:00 模型与超参数；55:01–77:47 预算分配。 课件重点页：15–26、35–45、47–54（PDF 页码从 1 开始）。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
 
 ## 1. 为什么不能凭感觉选择模型大小
 
@@ -82,6 +80,8 @@ M 是预计使用量。所谓 overtraining 往往只是“超过训练预算最�
 
 batch 变大可以提升并行效率，但超过某个范围后，每增加样本带来的优化收益递减。critical batch 不是所有任务共享的数字，甚至可能随目标损失与训练阶段变化。学习率也不能不加分析地从小模型照搬到大模型；μP 等参数化方法试图改善这类迁移。
 
+如何测这个转折？先固定目标损失，对不同 batch B 记录达到目标所需的更新步数 S，以及消耗的样本量 E=BS。课堂采用经验模型 `(S/S_min−1)(E/E_min−1)=1`：S_min 是大 batch 极限下的步数尺度，E_min 是小 batch 极限下的样本量尺度。两者的比值 `B_crit=E_min/S_min` 给出平衡点；代入可得此时 `S=2S_min`、`E=2E_min`。因此临界点是在时间效率与样本效率之间折中，不能同时取得两个极限最小值，也不能脱离目标损失比较不同实验的临界 batch。
+
 ## 8. 一份可信的拟合实验应该留下什么
 
 保留原始运行点、参数计数规则、实际 token 数、精度和模型结构；留出较大规模点检验外推，检查残差，而不是只报告高 R²。对数据量或模型大小特别小的区间，确认是否仍处在想要的同一训练 regime。
@@ -147,11 +147,6 @@ Kaplan–Chinchilla 的差异不是一句“早期论文错了”即可解释：
 
 Scaling 是对特定训练配方的预测，不是数学保证的性能下界；差配方也能产生整齐但无用的曲线。IsoFLOPs 的价值是把预算控制清楚，再扫描自由度。服务规模大时应把训练、研发、推理总成本一起考虑，不能只优化“20 token/参数”。
 
----
-
-[返回教材目录](README.md) · [材料与编写说明](21-jiao-cai-cai-liao-yu-bian-xie-shuo-ming.md)
-
-[上一讲：L08](09-l08zero-liu-shui-xian-yu-zu-he-bing-xing-rang-da-mo-xing-zhuang-de-xia-pao-de-kuai.md) · [下一讲：L10](11-l10-tui-li-xi-tong-kv-cache-liang-hua-tui-ce-cai-yang-yu-dong-tai-pi-chu-li.md)
 
 ## 逐页核验补充
 
@@ -196,3 +191,9 @@ p41 左图是 negative log-perplexity 与参数，右图是 SuperGLUE 与参数�
 p47 从不同训练轨迹中取每个预算下的最低 loss，得到包络；p48 固定预算，调整 N 时同步调整 D，每个点是按该预算训练结束的模型；p49 则拟合整个 `L(N,D)` 曲面，再在预算约束下找最小值。不能把一条长训练轨迹的中途点自动视为所有短预算配方的公平终点，因为学习率计划可能不同。
 
 p45、50 的 N 是参数量、D 是训练token数。口述约60分钟一度把0.73/0.27说反，随后当场更正；教材采用课件和更正后的方向。p51–53 给出对分歧的后续解释及复拟合论文，不代表本仓库已拿到完整训练数据或独立证明论文错误。p46 的第三种方法指数也不完全等于1/2，外推时小指数差异会累积，不能在计算中无条件全部取成0.5。
+
+---
+
+[返回教材目录](README.md) · [材料与编写说明](21-jiao-cai-cai-liao-yu-bian-xie-shuo-ming.md)
+
+[上一讲：L08](09-l08zero-liu-shui-xian-yu-zu-he-bing-xing-rang-da-mo-xing-zhuang-de-xia-pao-de-kuai.md) · [下一讲：L10](11-l10-tui-li-xi-tong-kv-cache-liang-hua-tui-ce-cai-yang-yu-dong-tai-pi-chu-li.md)

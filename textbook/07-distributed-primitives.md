@@ -1,8 +1,6 @@
 # L07｜多 GPU 的语言：集合通信与三种基本并行
 
-> Spring 2026 · 中文教材（含 Transcript 对照补遗）。主要依据用户提供的 `lecture-07.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_07.py)。 时间定位：00:05–约 30:03 原语与硬件；约 35:00–50:00 通信示例；55:01–80:54 三种并行。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
-
-> 对照入口：[原始讲义 ↔ 完整文字稿 ↔ 本章小节](../sources/three-way/lecture-07-code.md)。
+> Spring 2026 · 中文教材。主要依据用户提供的 `lecture-07.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_07.py)。 时间定位：00:05–约 30:03 原语与硬件；约 35:00–50:00 通信示例；55:01–80:54 三种并行。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
 
 ## 1. 多卡解决两个问题
 
@@ -141,11 +139,6 @@ DDP 在各 rank 的不同样本上前向/反向，再平均梯度；保持同样
 
 课堂最后对比“手工安排 collective”与“声明张量分片、由编译器插入通信”：后者降低开发负担，前者帮助理解机制。两者都在重复存储/计算与数据移动之间做交换。
 
----
-
-[返回教材目录](README.md) · [材料与编写说明](../sources/textbook-evidence.md)
-
-[上一讲：L06](06-kernels-triton.md) · [下一讲：L08](08-zero-hybrid-parallelism.md)
 
 ## 代码讲义核验补充
 
@@ -158,3 +151,9 @@ DDP 在各 rank 的不同样本上前向/反向，再平均梯度；保持同样
 “独立于 world size/topology”描述归一化指标的目的与近似，**不表示实测带宽不受卡数、拓扑和拥塞影响**。同步和 barrier 也有开销；少量单次计时不够估计分布，更不应只选最快 rank。
 
 **硬件口径更正。** 代码与口述把 NVL72 说成 9 个、每个 8 GPU 的 tray。NVIDIA 的 [GB200 系统配置说明](https://docs.nvidia.com/multi-node-nvlink-systems/multi-node-tuning-guide/system.html)列出的是 18 个计算 tray、每个 4 GPU，另有交换 tray；保留 72 GPU 的域概念，同时更正物理托盘数。课堂的 256 节点 pod 明确是示意值，不是硬件标准。NVLink/InfiniBand/RoCE 是不同互联方案，RDMA 是内存访问机制；“无需 CPU”主要指相应数据通路，不表示初始化和控制完全不用 CPU。
+
+---
+
+[返回教材目录](README.md) · [材料与编写说明](../sources/textbook-evidence.md)
+
+[上一讲：L06](06-kernels-triton.md) · [下一讲：L08](08-zero-hybrid-parallelism.md)

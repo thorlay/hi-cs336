@@ -1,8 +1,6 @@
 # L16｜RLVR 与 GRPO：怎样从可验证结果中学习
 
-> Spring 2026 · 中文教材（含 Transcript 对照补遗）。主要依据用户提供的 `lecture-16.txt`，并结合[官方 PDF](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_16.pdf)。 时间定位：00:05–约 25:01 PPO/GRPO；30:01–40:00 R1；45:01–60:01 Kimi 与 Qwen；65:02–75:42 agent RL。 课件重点页：5–24、28–45、48–60（PDF 页码从 1 开始）。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
-
-> 对照入口：[原始讲义 ↔ 完整文字稿 ↔ 本章小节](47-lecture-16.md)。
+> Spring 2026 · 中文教材。主要依据用户提供的 `lecture-16.txt`，并结合[官方 PDF](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_16.pdf)。 时间定位：00:05–约 25:01 PPO/GRPO；30:01–40:00 R1；45:01–60:01 Kimi 与 Qwen；65:02–75:42 agent RL。 课件重点页：5–24、28–45、48–60（PDF 页码从 1 开始）。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
 
 ## 1. 为什么可验证反馈很有吸引力
 
@@ -34,6 +32,8 @@ $$
 
 在语言模型场景，终点奖励、每 token KL 惩罚和 critic 估计需要一致地组合。实现的细节不应隐藏在“就是 PPO”这句话里。
 
+例如 TD 残差是 `δ_t=r_t+γV(s_{t+1})−V(s_t)`。在有限、真正终止的轨迹上，若 γ=λ=1 且终点价值为零，GAE 的残差和会抵消中间的 V，得到 `A_t=Σ_{u=t}^{T−1}r_u−V(s_t)`。这解释了简化条件下 advantage 为什么是“后续回报减当前估值”，而不是“每个 token 都等于最后一个奖励”。逐 token KL 会进入相应 r_u；因长度限制而截断的轨迹也不能未经判断就把末端价值设为零。
+
 ## 4. GRPO 怎样省掉 value model
 
 对同一道 prompt 采样 G 条回答，计算奖励 R_i，常见组内 advantage 为：
@@ -49,6 +49,8 @@ $$
 ## 5. “简单”不代表目标没有偏差
 
 组内标准差是数据相关缩放，会改变不同 prompt 的相对权重，不能把它当成一个保证无偏的传统 baseline。组内均值包含自身样本时，也需要仔细分析估计性质；leave-one-out 是一种相关替代思路。
+
+先去掉标准差、长度缩放和 clipping，便能看清一个具体影响：同题独立采样 G 次，令 `g_i=∇logπ(y_i)`，则 `E[(R_i−R̄)g_i]=(1−1/G)E[R_i g_i]`，因为均值中包含当前奖励自身的 1/G。用其余 G−1 条的均值作 baseline，在独立采样等条件下可以消去这个自身项；这不自动证明加入其他归约和 PPO 更新后的完整算法仍无偏。另需注意 G=1 时某些样本标准差实现返回 NaN，加 ε 无法修复 NaN。
 
 长度归一化同样重要。按每条序列先除长度，和把整个 batch 的有效 token 一起平均，会给不同长度的正负轨迹不同权重，可能影响回答长度和训练方向。
 
@@ -143,11 +145,6 @@ Qwen 的案例还包括思考/非思考模式融合、以控制 token 提前终�
 
 可验证不代表不可钻空子：Git 历史泄漏未来补丁、访问远端或修改环境、形式验证系统的绕过入口，都可能让“通过”偏离真正解题。课堂主旨是审计奖励与环境边界，不能因测试/编译器存在就保证正确；在训练过的环境上进步，也不自动证明跨环境泛化。下节补充了续行中的问答与课件限定条件。
 
----
-
-[返回教材目录](README.md) · [材料与编写说明](21-jiao-cai-cai-liao-yu-bian-xie-shuo-ming.md)
-
-[上一讲：L15](16-l15-hou-xun-lian-cong-mo-fang-shi-fan-dao-you-hua-pian-hao.md) · [下一讲：L17](18-l17-duo-mo-tai-zen-yang-rang-yu-yan-mo-xing-kan-jian-tu-xiang-yu-shi-pin.md)
 
 ## 逐页核验补充
 
@@ -186,3 +183,9 @@ Kimi 第 41 页摘要写 best-of-8，嵌入原文又说采样 ten times；把它
 第 56 页仓库拼接、PR 检索上下文、文本代码网页、合成轨迹、指令与 fill-in-the-middle 各解决不同的数据覆盖问题。第 59 页约 800k 是构造的任务环境量级，不是全部独立人工标注 issue；第 60 页 70.6% 需要连同 SWE-bench Verified 的框架列阅读，不是普适代码正确率。图中异常跃升展示获取隐藏答案造成的奖励漏洞。形式证明工具也应限制被允许的证明入口和评估环境，“有编译器”不能替代完整的验证协议。
 
 最后 69–76 分钟问答还补充：mid-training 是否关键取决于预训练覆盖和后续 SFT；long-CoT SFT 与长上下文扩展并非同一个阶段；推理任务与通用偏好任务常分阶段处理，后训仍可能遗忘，应看独立评估。不要把这些回答整理成唯一固定、所有模型都必须遵循的时间表。
+
+---
+
+[返回教材目录](README.md) · [材料与编写说明](21-jiao-cai-cai-liao-yu-bian-xie-shuo-ming.md)
+
+[上一讲：L15](16-l15-hou-xun-lian-cong-mo-fang-shi-fan-dao-you-hua-pian-hao.md) · [下一讲：L17](18-l17-duo-mo-tai-zen-yang-rang-yu-yan-mo-xing-kan-jian-tu-xiang-yu-shi-pin.md)

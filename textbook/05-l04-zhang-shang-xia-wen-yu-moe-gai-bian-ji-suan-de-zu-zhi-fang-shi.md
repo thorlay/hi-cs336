@@ -1,8 +1,6 @@
 # L04｜长上下文与 MoE：改变计算的组织方式
 
-> Spring 2026 · 中文教材（含 Transcript 对照补遗）。主要依据用户提供的 `lecture-04.txt`，并结合[官方 PDF](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_04.pdf)。 时间定位：00:05–约 30:00 Attention 替代；约 35:00–86:14 MoE 与相关组件。 课件重点页：4–13、15–19、27–48、51–59（PDF 页码从 1 开始）。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
-
-> 对照入口：[原始讲义 ↔ 完整文字稿 ↔ 本章小节](35-lecture-04.md)。
+> Spring 2026 · 中文教材。主要依据用户提供的 `lecture-04.txt`，并结合[官方 PDF](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_04.pdf)。 时间定位：00:05–约 30:00 Attention 替代；约 35:00–86:14 MoE 与相关组件。 课件重点页：4–13、15–19、27–48、51–59（PDF 页码从 1 开始）。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
 
 ## 1. 两种不同的“大”
 
@@ -26,6 +24,8 @@ $$
 
 S 的形状是 d_k×d_v。每来一个 token，把 key-value 外积写入状态，再用 Query 从状态读取。于是推理时不用保存全部历史 K/V，状态大小不随 T 增长。
 
+这里的因果性来自“只累加到当前位置”：展开可得 `y_t=Σ_{i≤t}(q_tᵀk_i)v_i`。上一节的完整矩阵表达式若直接包含所有位置，也会读到未来；训练因果模型时必须加入相同的下三角约定。它省掉的是随历史长度增长的显式缓存，状态本身仍需每层、每个请求保存；特征维度增大时，状态容量也会增加。
+
 **补充理解：** 标准 Attention 像保留每份原始档案，检索时逐条比对；状态模型像持续更新一张统计表。统计表紧凑，但不同历史可能压缩成相同状态，因此精确找回某条很早的信息可能更难。固定状态不是免费获得无限记忆。
 
 ## 4. 衰减、门控与 Delta 更新
@@ -39,6 +39,8 @@ S_t=\gamma_t(I-\beta_tk_tk_t^\top)S_{t-1}+\beta_tk_tv_t^\top.
 $$
 
 其中 key 的尺度约束会影响更新性质。β 近零时，输入几乎不写入；γ 决定旧状态的整体保留程度。它比无条件累加有更强的记忆管理能力。
+
+可以用边界值检查理解：β=0 时得到 `S_t=γ_t S_{t-1}`，没有新写入，也没有沿当前 key 的选择性擦除，但仍可能整体遗忘。只有进一步令 γ=1，旧状态才原样保留。`I−βkkᵀ` 也只有在 key 和 β 满足相应条件时才是严格投影，不能把一般门控更新直接当成正交投影。
 
 训练可以利用分块和并行扫描等算法，推理则用递推；“状态递推”不意味着训练只能串行。混合架构再穿插全局 Attention，补充压缩状态不擅长的精确检索。另一条路线是稀疏索引：先找少量相关位置，再在这些位置上计算 Attention。
 
@@ -139,11 +141,6 @@ Capacity 超额时丢弃的是该 token 的专家计算/贡献，不一定删除
 
 Upcycling 是复制 dense MLP 并初始化 router 后继续训练，不是直接获得免费性能。课堂的 DeepSeek 演化主线为：V1 细粒度+共享专家，V2 加强设备/通信均衡，V3 调整路由均衡并加入 MLA、MTP 等设计。MTP 多预测几个未来目标不消除自回归依赖，其推理收益还依赖候选验证机制。
 
----
-
-[返回教材目录](README.md) · [材料与编写说明](21-jiao-cai-cai-liao-yu-bian-xie-shuo-ming.md)
-
-[上一讲：L03](04-l03-xian-dai-transformer-cong-jie-gou-dao-xun-lian-wen-ding-xing.md) · [下一讲：L05](06-l05gpu-zen-yang-gong-zuo-flashattention-wei-shen-me-geng-kuai.md)
 
 ## 逐页核验补充
 
@@ -206,3 +203,9 @@ p51–53 的 upcycling 复制预训练 dense 权重，包括多份 FFN，再训�
 p56 标题是 V3，正文版本标签仍写 V2；专家数写 258，而 p35 同讲表格写 256。教材保留这两处课件内部不一致，不将 258 作为可靠配置。该页公式先 sigmoid 得到非负 affinity，再对选中权重除以其和；这一般**不等于对原 logits 直接 softmax**。“Sigmoid+Softmax”的标题简写不能代替公式。
 
 p57–58 的 MLA 图还缓存旋转用的位置 key，因此“只存 latent c”是忽略位置分支的简化说法。RoPE 的旋转依赖相对位置，使上投影不能像无位置情形那样全部吸收进一个固定矩阵。p59 的 MTP 辅助目标与推测解码的验证机制也应分开：预测远一点有助于训练或提供草稿，但不自动保证草稿正确；图能画多个辅助深度，不代表课件中的实例实际训练了相同数量。
+
+---
+
+[返回教材目录](README.md) · [材料与编写说明](21-jiao-cai-cai-liao-yu-bian-xie-shuo-ming.md)
+
+[上一讲：L03](04-l03-xian-dai-transformer-cong-jie-gou-dao-xun-lian-wen-ding-xing.md) · [下一讲：L05](06-l05gpu-zen-yang-gong-zuo-flashattention-wei-shen-me-geng-kuai.md)

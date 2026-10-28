@@ -1,8 +1,6 @@
 # L08｜ZeRO、流水线与组合并行：让大模型装得下、跑得快
 
-> Spring 2026 · 中文教材（含 Transcript 对照补遗）。主要依据用户提供的 `lecture-08.txt`，并结合[官方 PDF](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_08.pdf)。 时间定位：00:05–约 10:02 网络；15:05–30:02 ZeRO；35:02–60:00 PP/TP/SP/EP；65:00–80:02 组合。 课件重点页：15–30、32–43、45–55、57–72（PDF 页码从 1 开始）。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
-
-> 对照入口：[原始讲义 ↔ 完整文字稿 ↔ 本章小节](39-lecture-08.md)。
+> Spring 2026 · 中文教材。主要依据用户提供的 `lecture-08.txt`，并结合[官方 PDF](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_08.pdf)。 时间定位：00:05–约 10:02 网络；15:05–30:02 ZeRO；35:02–60:00 PP/TP/SP/EP；65:00–80:02 组合。 课件重点页：15–30、32–43、45–55、57–72（PDF 页码从 1 开始）。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
 
 ## 1. DDP 复制了什么
 
@@ -126,11 +124,6 @@ EP 保持专家矩阵较完整，往往比继续把小专家做 TP 更有利；�
 
 还要计入故障、检查点和恢复：模型能在理论上分片并不意味着长时间大集群训练可靠。应按阶段重新核算 FLOPs、激活、通信和可重叠部分，并保留对最大 rank 耗时的测量。本轮已覆盖全部续行；实际听不清的问句不臆补原话，仍不承诺音频信息零遗漏。
 
----
-
-[返回教材目录](README.md) · [材料与编写说明](21-jiao-cai-cai-liao-yu-bian-xie-shuo-ming.md)
-
-[上一讲：L07](08-l07-duo-gpu-de-yu-yan-ji-he-tong-xin-yu-san-zhong-ji-ben-bing-xing.md) · [下一讲：L09](10-l09scaling-laws-ba-xiao-shi-yan-bian-cheng-da-mo-xing-jue-ce.md)
 
 ## 逐页核验补充
 
@@ -198,3 +191,9 @@ p66 的 Llama3 主阶段 `8×1×16×128=16384`，长上下文阶段 `8×16×16×
 p63 中 Dolma 是数据集，模型叫 OLMo，讲者约72分钟已当场纠正。p64–65 用 DeepSeek/Yi 说明配方演变；MoE可以同时用 EP 和 TP，不能把“以EP替代部分TP”的简写读成绝不同时使用。
 
 p69、71 是框架推荐/复现配置，不足以确认原模型团队实际训练时的设置。p69 根据 `256/(4*4*1*8)` 猜 DP=2，忽略了 EP 与其他组可能复用，不能作为已核验配置。p70 的 PP=0 常表示“未用pipeline”的标记，不意味着流水线维度真能为0；实例未给出的维度继续标未知。p71 文字的225B与截图235B不一致，按截图识别该实例并保留课件笔误。p72 的0、1、??混用应先统一“未启用/大小1/未知”的含义，再计算总设备数。
+
+---
+
+[返回教材目录](README.md) · [材料与编写说明](21-jiao-cai-cai-liao-yu-bian-xie-shuo-ming.md)
+
+[上一讲：L07](08-l07-duo-gpu-de-yu-yan-ji-he-tong-xin-yu-san-zhong-ji-ben-bing-xing.md) · [下一讲：L09](10-l09scaling-laws-ba-xiao-shi-yan-bian-cheng-da-mo-xing-jue-ce.md)

@@ -1,8 +1,6 @@
 # L03｜现代 Transformer：从结构到训练稳定性
 
-> Spring 2026 · 中文教材（含 Transcript 对照补遗）。主要依据用户提供的 `lecture-03.txt`，并结合[官方 PDF](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_03.pdf)。 时间定位：00:06–约 40:00 结构；约 45:00–64:00 超参数；65:02–89:07 稳定性与高效 Attention。 课件重点页：10–18、22–35、37–56、58–66（PDF 页码从 1 开始）。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
-
-> 对照入口：[原始讲义 ↔ 完整文字稿 ↔ 本章小节](34-lecture-03.md)。
+> Spring 2026 · 中文教材。主要依据用户提供的 `lecture-03.txt`，并结合[官方 PDF](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_03.pdf)。 时间定位：00:06–约 40:00 结构；约 45:00–64:00 超参数；65:02–89:07 稳定性与高效 Attention。 课件重点页：10–18、22–35、37–56、58–66（PDF 页码从 1 开始）。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
 
 ## 1. 先看一个完整的 decoder block
 
@@ -156,11 +154,6 @@ RoPE 之外，课堂还对比绝对位置向量、加到 attention 分数上的�
 
 KV cache 保存的是过去各层的 **Key 与 Value**，不是 Query，也不是整张 QK 分数矩阵；初版未展开的这处口述错误现明确纠正。MQA/GQA 也是训练时确定的架构，不能无代价地把已训练的 MHA 在推理时改成共享 KV。滑窗/全局混合与廉价递推层/全局 attention 混合，都是在长程信息访问与成本之间取舍；局部层的高层表示可间接带入更远的信息，但不等于每层都有全局直接读取能力。
 
----
-
-[返回教材目录](README.md) · [材料与编写说明](21-jiao-cai-cai-liao-yu-bian-xie-shuo-ming.md)
-
-[上一讲：L02](03-l02-ba-zhang-liang-xian-cun-he-flops-suan-ming-bai.md) · [下一讲：L04](05-l04-zhang-shang-xia-wen-yu-moe-gai-bian-ji-suan-de-zu-zhi-fang-shi.md)
 
 ## 逐页核验补充
 
@@ -229,3 +222,9 @@ p61 的“一组 KV”是每层共享一组 K/V **向量头**，并不是 K/V �
 p64 的蓝色格子表示允许访问的位置，空白处被 mask；固定窗口与跨步稀疏模式不同。p65–66 又展示按层交替的全局与低成本模块。局部层可以读取前面全局层已经汇总的信息，因此“这一层只看局部”不等于“最终表示完全没有远处信息”。但这也不保证能保留任意长程细节。
 
 NoPE、RoPE、滑窗和 gated delta 属于不同选择：位置编码、访问模式、序列混合算子应分开识别。课件中的 Qwen 混合图用了 gated delta 与全注意力，不能统一描述成所有模型都在交替滑窗与全注意力。
+
+---
+
+[返回教材目录](README.md) · [材料与编写说明](21-jiao-cai-cai-liao-yu-bian-xie-shuo-ming.md)
+
+[上一讲：L02](03-l02-ba-zhang-liang-xian-cun-he-flops-suan-ming-bai.md) · [下一讲：L04](05-l04-zhang-shang-xia-wen-yu-moe-gai-bian-ji-suan-de-zu-zhi-fang-shi.md)
