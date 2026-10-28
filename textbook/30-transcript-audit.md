@@ -1,6 +1,6 @@
 # Transcript 逐章覆盖核验
 
-核验日期：2026-10-27。当前是中间同步版，L01–L17 已逐段阅读可用文字稿并补遗；L19 最后一段仍在核验，L18 没有材料。
+核验日期：2026-10-27。L01–L17 与 L19 的 18 份可用文字稿已按时间轴逐段阅读并补遗；L18 没有材料。
 
 ## 怎样理解“校验”
 
@@ -14,25 +14,25 @@
 
 | 讲次 | 本次补充/修正 | 状态 |
 | --- | --- | --- |
-| [L01](02-l01-cong-hui-yong-mo-xing-dao-hui-zao-mo-xing-zong-lan-yu-fen-ci.md#transcript-对照补遗) | 课程背景、规模迁移限制、五单元/作业目标与自适应计算 | 文字稿已对照；音频未复核 |
-| [L02](03-l02-ba-zhang-liang-xian-cun-he-flops-suan-ming-bai.md#transcript-对照补遗) | 低精度位分配、课堂成本算例、算术强度表、AdaGrad 与检查点边界 | 文字稿已对照；音频未复核 |
-| [L03](04-l03-xian-dai-transformer-cong-jie-gou-dao-xun-lian-wen-ding-xing.md#transcript-对照补遗) | 并行残差、超参数范围、位置方案、z-loss 与 KV 口误 | 文字稿已对照；音频未复核 |
-| [L04](05-l04-zhang-shang-xia-wen-yu-moe-gai-bian-ji-suan-de-zu-zhi-fang-shi.md#transcript-对照补遗) | 递推等价条件、DSA 索引成本、路由设计空间、均衡与系统细节 | 文字稿已对照；音频未复核 |
-| [L05](06-l05gpu-zen-yang-gong-zuo-flashattention-wei-shen-me-geng-kuai.md#transcript-对照补遗) | 硬件层级、低精度转换、tile/wave 效应与 FlashAttention 边界 | 文字稿已对照；音频未复核 |
-| [L06](07-l06-cong-pytorch-dao-triton-ce-liang-rong-he-yu-fen-kuai.md#transcript-对照补遗) | occupancy 算例、bank conflict、编译与逻辑块/线程区别 | 文字稿已对照；音频未复核 |
-| [L07](08-l07-duo-gpu-de-yu-yan-ji-he-tong-xin-yu-san-zhong-ji-ben-bing-xing.md#transcript-对照补遗) | 拓扑/RDMA、通信带宽口径、autograd 与异步依赖 | 文字稿已对照；音频未复核 |
-| [L08](09-l08zero-liu-shui-xian-yu-zu-he-bing-xing-rang-da-mo-xing-zhuang-de-xia-pao-de-kuai.md#transcript-对照补遗) | ZeRO 生命周期、激活账本、EP 组合与实际配方 | 文字稿已对照；音频未复核 |
-| [L09](10-l09scaling-laws-ba-xiao-shi-yan-bian-cheng-da-mo-xing-jue-ce.md#transcript-对照补遗) | 混合/重复、critical batch、上下游差异与 Chinchilla 拟合分歧 | 文字稿已对照；音频未复核 |
-| [L10](11-l10-tui-li-xi-tong-kv-cache-liang-hua-tui-ce-cai-yang-yu-dong-tai-pi-chu-li.md#transcript-对照补遗) | 完整成本模型、跨层 KV、量化/剪枝与分页细节 | 文字稿已对照；音频未复核 |
-| [L11](12-l11-gui-mo-hua-xun-lian-de-xi-jie-wsd-you-hua-qi-yu-p.md#transcript-对照补遗) | 公开 scaling 配方、优化器证据边界、μP 假设 | 文字稿已对照；音频未复核 |
-| [L12](13-l12-ping-gu-fen-shu-jiu-jing-shuo-ming-mo-xing-hui-zuo-shen-me.md#transcript-对照补遗) | 各类基准的目的、裁判偏差、污染路线与基准本身的错误 | 文字稿已对照；音频未复核 |
-| [L13](14-l13-shu-ju-cong-na-li-lai-cong-wang-ye-dao-ke-xun-lian-yu-liao.md#transcript-对照补遗) | 抓取/格式、数据集演化、来源链与法律口述边界 | 文字稿已对照；音频未复核 |
-| [L14](15-l14-shu-ju-guan-xian-guolminhash-qu-zhong-hun-he-yu-he-cheng.md#transcript-对照补遗) | 过滤实例、去重条件、混合外推和合成代码任务 | 文字稿已对照；音频未复核 |
-| [L15](16-l15-hou-xun-lian-cong-mo-fang-shi-fan-dao-you-hua-pian-hao.md#transcript-对照补遗) | SFT 数据演化、知识/风格纠缠、人工/模型标注与 PPO 桥梁 | 文字稿已对照；音频未复核 |
-| [L16](17-l16rlvr-yu-grpo-zen-yang-cong-ke-yan-zheng-jie-guo-zhong-xue-xi.md#transcript-对照补遗) | 组均值/标准差偏差、各家后训练路线与环境漏洞 | 文字稿已对照；音频未复核 |
-| [L17](18-l17-duo-mo-tai-zen-yang-rang-yu-yan-mo-xing-kan-jian-tu-xiang-yu-shi-pin.md#transcript-对照补遗) | CLIP/SigLIP、各代 VLM、视频与离散生成路线 | 文字稿已对照；音频未复核 |
+| [L01](02-l01-cong-hui-yong-mo-xing-dao-hui-zao-mo-xing-zong-lan-yu-fen-ci.md) | 课程背景、规模迁移限制、五单元/作业目标与自适应计算 | 文字稿已对照；音频未复核 |
+| [L02](03-l02-ba-zhang-liang-xian-cun-he-flops-suan-ming-bai.md) | 低精度位分配、课堂成本算例、算术强度表、AdaGrad 与检查点边界 | 文字稿已对照；音频未复核 |
+| [L03](04-l03-xian-dai-transformer-cong-jie-gou-dao-xun-lian-wen-ding-xing.md) | 并行残差、超参数范围、位置方案、z-loss 与 KV 口误 | 文字稿已对照；音频未复核 |
+| [L04](05-l04-zhang-shang-xia-wen-yu-moe-gai-bian-ji-suan-de-zu-zhi-fang-shi.md) | 递推等价条件、DSA 索引成本、路由设计空间、均衡与系统细节 | 文字稿已对照；音频未复核 |
+| [L05](06-l05gpu-zen-yang-gong-zuo-flashattention-wei-shen-me-geng-kuai.md) | 硬件层级、低精度转换、tile/wave 效应与 FlashAttention 边界 | 文字稿已对照；音频未复核 |
+| [L06](07-l06-cong-pytorch-dao-triton-ce-liang-rong-he-yu-fen-kuai.md) | occupancy 算例、bank conflict、编译与逻辑块/线程区别 | 文字稿已对照；音频未复核 |
+| [L07](08-l07-duo-gpu-de-yu-yan-ji-he-tong-xin-yu-san-zhong-ji-ben-bing-xing.md) | 拓扑/RDMA、通信带宽口径、autograd 与异步依赖 | 文字稿已对照；音频未复核 |
+| [L08](09-l08zero-liu-shui-xian-yu-zu-he-bing-xing-rang-da-mo-xing-zhuang-de-xia-pao-de-kuai.md) | ZeRO 生命周期、激活账本、EP 组合与实际配方 | 文字稿已对照；音频未复核 |
+| [L09](10-l09scaling-laws-ba-xiao-shi-yan-bian-cheng-da-mo-xing-jue-ce.md) | 混合/重复、critical batch、上下游差异与 Chinchilla 拟合分歧 | 文字稿已对照；音频未复核 |
+| [L10](11-l10-tui-li-xi-tong-kv-cache-liang-hua-tui-ce-cai-yang-yu-dong-tai-pi-chu-li.md) | 完整成本模型、跨层 KV、量化/剪枝与分页细节 | 文字稿已对照；音频未复核 |
+| [L11](12-l11-gui-mo-hua-xun-lian-de-xi-jie-wsd-you-hua-qi-yu-p.md) | 公开 scaling 配方、优化器证据边界、μP 假设 | 文字稿已对照；音频未复核 |
+| [L12](13-l12-ping-gu-fen-shu-jiu-jing-shuo-ming-mo-xing-hui-zuo-shen-me.md) | 各类基准的目的、裁判偏差、污染路线与基准本身的错误 | 文字稿已对照；音频未复核 |
+| [L13](14-l13-shu-ju-cong-na-li-lai-cong-wang-ye-dao-ke-xun-lian-yu-liao.md) | 抓取/格式、数据集演化、来源链与法律口述边界 | 文字稿已对照；音频未复核 |
+| [L14](15-l14-shu-ju-guan-xian-guolminhash-qu-zhong-hun-he-yu-he-cheng.md) | 过滤实例、去重条件、混合外推和合成代码任务 | 文字稿已对照；音频未复核 |
+| [L15](16-l15-hou-xun-lian-cong-mo-fang-shi-fan-dao-you-hua-pian-hao.md) | SFT 数据演化、知识/风格纠缠、人工/模型标注与 PPO 桥梁 | 文字稿已对照；音频未复核 |
+| [L16](17-l16rlvr-yu-grpo-zen-yang-cong-ke-yan-zheng-jie-guo-zhong-xue-xi.md) | 组均值/标准差偏差、各家后训练路线与环境漏洞 | 文字稿已对照；音频未复核 |
+| [L17](18-l17-duo-mo-tai-zen-yang-rang-yu-yan-mo-xing-kan-jian-tu-xiang-yu-shi-pin.md) | CLIP/SigLIP、各代 VLM、视频与离散生成路线 | 文字稿已对照；音频未复核 |
 | L18 | 无原始材料 | 待补 |
-| L19 | 已读至约 69 分钟；末段待查，尚未加入本轮补遗 | 进行中 |
+| [L19](20-l19dan-fu-tui-li-yue-shu-ru-he-fan-guo-lai-su-zao-jia-gou.md) | 请求全生命周期、缓存分层、异常行为、megakernel 成本与 Parcae 问答 | 文字稿已对照；音频未复核 |
 
 ## 仍需回听的具体风险
 

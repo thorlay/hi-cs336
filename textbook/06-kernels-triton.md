@@ -1,6 +1,6 @@
 # L06｜从 PyTorch 到 Triton：测量、融合与分块
 
-> Spring 2026 · 中文教材初版。主要依据用户提供的 `lecture-06.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_06.py)。 时间定位：00:05–约 20:01 硬件细节；约 25:01–35:00 测量；40:00–86:34 Triton 算例。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
+> Spring 2026 · 中文教材（含 Transcript 对照补遗）。主要依据用户提供的 `lecture-06.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_06.py)。 时间定位：00:05–约 20:01 硬件细节；约 25:01–35:00 测量；40:00–86:34 Triton 算例。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
 
 ## 1. 正确性模型与性能模型
 

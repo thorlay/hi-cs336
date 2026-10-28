@@ -1,6 +1,6 @@
 # L07｜多 GPU 的语言：集合通信与三种基本并行
 
-> Spring 2026 · 中文教材初版。主要依据用户提供的 `lecture-07.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_07.py)。 时间定位：00:05–约 30:03 原语与硬件；约 35:00–50:00 通信示例；55:01–80:54 三种并行。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
+> Spring 2026 · 中文教材（含 Transcript 对照补遗）。主要依据用户提供的 `lecture-07.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_07.py)。 时间定位：00:05–约 30:03 原语与硬件；约 35:00–50:00 通信示例；55:01–80:54 三种并行。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
 
 ## 1. 多卡解决两个问题
 

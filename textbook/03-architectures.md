@@ -1,6 +1,6 @@
 # L03｜现代 Transformer：从结构到训练稳定性
 
-> Spring 2026 · 中文教材初版。主要依据用户提供的 `lecture-03.txt`，并结合[官方 PDF](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_03.pdf)。 时间定位：00:06–约 40:00 结构；约 45:00–64:00 超参数；65:02–89:07 稳定性与高效 Attention。 课件重点页：10–18、22–35、37–56、58–66（PDF 页码从 1 开始）。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
+> Spring 2026 · 中文教材（含 Transcript 对照补遗）。主要依据用户提供的 `lecture-03.txt`，并结合[官方 PDF](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_03.pdf)。 时间定位：00:06–约 40:00 结构；约 45:00–64:00 超参数；65:02–89:07 稳定性与高效 Attention。 课件重点页：10–18、22–35、37–56、58–66（PDF 页码从 1 开始）。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
 
 ## 1. 先看一个完整的 decoder block
 

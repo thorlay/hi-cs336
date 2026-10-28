@@ -1,6 +1,6 @@
 # L16｜RLVR 与 GRPO：怎样从可验证结果中学习
 
-> Spring 2026 · 中文教材初版。主要依据用户提供的 `lecture-16.txt`，并结合[官方 PDF](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_16.pdf)。 时间定位：00:05–约 25:01 PPO/GRPO；30:01–40:00 R1；45:01–60:01 Kimi 与 Qwen；65:02–75:42 agent RL。 课件重点页：5–24、28–45、48–60（PDF 页码从 1 开始）。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
+> Spring 2026 · 中文教材（含 Transcript 对照补遗）。主要依据用户提供的 `lecture-16.txt`，并结合[官方 PDF](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_16.pdf)。 时间定位：00:05–约 25:01 PPO/GRPO；30:01–40:00 R1；45:01–60:01 Kimi 与 Qwen；65:02–75:42 agent RL。 课件重点页：5–24、28–45、48–60（PDF 页码从 1 开始）。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
 
 ## 1. 为什么可验证反馈很有吸引力
 

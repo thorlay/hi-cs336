@@ -1,6 +1,6 @@
 # L12｜评估：分数究竟说明模型会做什么
 
-> Spring 2026 · 中文教材初版。主要依据用户提供的 `lecture-12.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_12.py)。 时间定位：00:06–约 15:00 PPL；20:00–40:01 考试与偏好；45:05–60:02 agents；65:01–78:28 有效性。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
+> Spring 2026 · 中文教材（含 Transcript 对照补遗）。主要依据用户提供的 `lecture-12.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_12.py)。 时间定位：00:06–约 15:00 PPL；20:00–40:01 考试与偏好；45:05–60:02 agents；65:01–78:28 有效性。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
 
 ## 1. 从抽象能力到可测指标
 

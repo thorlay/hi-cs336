@@ -1,6 +1,6 @@
 # L02｜把张量、显存和 FLOPs 算明白
 
-> Spring 2026 · 中文教材初版。主要依据用户提供的 `lecture-02.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_02.py)。 时间定位：00:05–约 28:00 张量与 einops；约 30:00–55:00 FLOPs 与算术强度；60:01–77:19 梯度、状态与检查点。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
+> Spring 2026 · 中文教材（含 Transcript 对照补遗）。主要依据用户提供的 `lecture-02.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_02.py)。 时间定位：00:05–约 28:00 张量与 einops；约 30:00–55:00 FLOPs 与算术强度；60:01–77:19 梯度、状态与检查点。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
 
 ## 1. 先建立“物理账本”
 

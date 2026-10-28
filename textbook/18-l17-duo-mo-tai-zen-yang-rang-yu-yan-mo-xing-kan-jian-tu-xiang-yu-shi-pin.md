@@ -1,6 +1,6 @@
 # L17｜多模态：怎样让语言模型看见图像与视频
 
-> Spring 2026 · 中文教材初版。主要依据用户提供的 `lecture-17.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_17.py)。 时间定位：00:05–约 25:02 CLIP/SigLIP；30:02–60:00 VLM；65:00–77:29 统一生成。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
+> Spring 2026 · 中文教材（含 Transcript 对照补遗）。主要依据用户提供的 `lecture-17.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_17.py)。 时间定位：00:05–约 25:02 CLIP/SigLIP；30:02–60:00 VLM；65:00–77:29 统一生成。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
 
 ## 1. 语言模型的接口可以接收连续向量
 

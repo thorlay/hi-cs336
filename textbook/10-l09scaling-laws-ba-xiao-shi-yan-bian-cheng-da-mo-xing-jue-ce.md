@@ -1,6 +1,6 @@
 # L09｜Scaling laws：把小实验变成大模型决策
 
-> Spring 2026 · 中文教材初版。主要依据用户提供的 `lecture-09.txt`，并结合[官方 PDF](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_09.pdf)。 时间定位：00:05–约 30:00 数据幂律；35:01–50:00 模型与超参数；55:01–77:47 预算分配。 课件重点页：15–26、35–45、47–54（PDF 页码从 1 开始）。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
+> Spring 2026 · 中文教材（含 Transcript 对照补遗）。主要依据用户提供的 `lecture-09.txt`，并结合[官方 PDF](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_09.pdf)。 时间定位：00:05–约 30:00 数据幂律；35:01–50:00 模型与超参数；55:01–77:47 预算分配。 课件重点页：15–26、35–45、47–54（PDF 页码从 1 开始）。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
 
 ## 1. 为什么不能凭感觉选择模型大小
 

@@ -4,7 +4,7 @@
 
 **范围：18 讲教材初版，另有 L18 的材料缺口说明。** 现有材料为 L1–L17 和 Dan Fu 嘉宾课；这里沿官方课程表将 Dan Fu 编为 L19。正文不是完整逐字翻译，也不声称覆盖全部课堂问答，未逐句对照视频录音。
 
-[逐章 Transcript 核验记录](../sources/transcript-audit.md)：L01–L17 已加入对照补遗，L19 仍在核验；字幕缺损处待回听。
+[逐章 Transcript 核验记录](../sources/transcript-audit.md)：L01–L17 与 L19 共 18 讲已加入对照补遗；字幕缺损处待回听。
 
 ## 建议怎样读
 

@@ -1,6 +1,6 @@
 # L08｜ZeRO、流水线与组合并行：让大模型装得下、跑得快
 
-> Spring 2026 · 中文教材初版。主要依据用户提供的 `lecture-08.txt`，并结合[官方 PDF](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_08.pdf)。 时间定位：00:05–约 10:02 网络；15:05–30:02 ZeRO；35:02–60:00 PP/TP/SP/EP；65:00–80:02 组合。 课件重点页：15–30、32–43、45–55、57–72（PDF 页码从 1 开始）。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
+> Spring 2026 · 中文教材（含 Transcript 对照补遗）。主要依据用户提供的 `lecture-08.txt`，并结合[官方 PDF](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_08.pdf)。 时间定位：00:05–约 10:02 网络；15:05–30:02 ZeRO；35:02–60:00 PP/TP/SP/EP；65:00–80:02 组合。 课件重点页：15–30、32–43、45–55、57–72（PDF 页码从 1 开始）。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
 
 ## 1. DDP 复制了什么
 

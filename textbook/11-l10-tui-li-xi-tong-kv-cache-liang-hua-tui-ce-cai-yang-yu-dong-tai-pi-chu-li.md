@@ -1,6 +1,6 @@
 # L10｜推理系统：KV cache、量化、推测采样与动态批处理
 
-> Spring 2026 · 中文教材初版。主要依据用户提供的 `lecture-10.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_10.py)。 时间定位：约 00:00–45:01 推理模型与指标；50:02–70:00 压缩；约 70:00–85:23 推测采样与缓存管理。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
+> Spring 2026 · 中文教材（含 Transcript 对照补遗）。主要依据用户提供的 `lecture-10.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_10.py)。 时间定位：约 00:00–45:01 推理模型与指标；50:02–70:00 压缩；约 70:00–85:23 推测采样与缓存管理。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
 
 ## 1. 先把“快”说清楚
 

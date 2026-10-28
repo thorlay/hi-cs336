@@ -1,6 +1,6 @@
 # L01｜从“会用模型”到“会造模型”：总览与分词
 
-> Spring 2026 · 中文教材初版。主要依据用户提供的 `lecture-01.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_01.py)。 时间定位：00:05–约 25:00 总览；约 28:00–64:00 课程主线；65:06–79:16 分词。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
+> Spring 2026 · 中文教材（含 Transcript 对照补遗）。主要依据用户提供的 `lecture-01.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_01.py)。 时间定位：00:05–约 25:00 总览；约 28:00–64:00 课程主线；65:06–79:16 分词。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
 
 ## 1. 为什么“从零构建”仍然值得学
 
