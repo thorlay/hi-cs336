@@ -39,7 +39,7 @@ def main():
                 if resolved in names:
                     dest = quote(names[resolved])
                 else:
-                    dest = 'https://github.com/thorlay/cs336/blob/main/' + quote(resolved.relative_to(ROOT).as_posix())
+                    dest = 'https://github.com/thorlay/hi-cs336/blob/main/' + quote(resolved.relative_to(ROOT).as_posix())
                 return '](' + dest + (sep + anchor if sep else '') + ')'
             text = re.sub(r'\]\(([^)]+)\)', rewrite, text)
             archive.writestr(names[path.resolve()], text)

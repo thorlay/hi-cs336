@@ -52,7 +52,7 @@ def main():
             if path in mapping:
                 dest=quote(mapping[path].name)
             else:
-                dest='https://github.com/thorlay/cs336/blob/main/'+quote(path.relative_to(ROOT).as_posix())
+                dest='https://github.com/thorlay/hi-cs336/blob/main/'+quote(path.relative_to(ROOT).as_posix())
             return ']('+dest+(sep+anchor if sep else '')+')'
         rendered=re.sub(r'\]\(([^)]+)\)',rewrite,texts[source])
         if target!=source or target.name=='README.md':target.write_text(rendered.rstrip()+'\n')
