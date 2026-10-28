@@ -1,0 +1,18 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+site:
+  title: CS336 从零构建语言模型
+  structure:
+    - type: space
+      key: space-1
+      title: Documentation
+      path: documentation
+      draft: true
+      content:
+        directory: ./documentation
+    - type: space
+      key: space-2
+      title: 逐讲中文教材
+      path: textbook
+      default: true
+      content:
+        directory: ./textbook
