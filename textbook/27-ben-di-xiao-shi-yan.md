@@ -1,4 +1,4 @@
-# 27 本地小实验
+# 本地小实验
 
 ## 实验 0：Transformer 参数与权重核算
 
@@ -15,9 +15,9 @@ python3 labs/resource_accounting.py --vocab-size 32000 --layers 12 --d-model 768
 
 ## 下一步实验（待实现）
 
-* BPE 小语料统计与编码往返。
-* 因果 attention 的形状与掩码检查。
-* 小数据集过拟合和学习率曲线。
-* CUDA 环境下的 attention 基线、profiling 与优化。
+- BPE 小语料统计与编码往返。
+- 因果 attention 的形状与掩码检查。
+- 小数据集过拟合和学习率曲线。
+- CUDA 环境下的 attention 基线、profiling 与优化。
 
 所有测量使用[实验模板](28-shi-yan-ji-lu.md)，不要把估算值填成实际测量值。

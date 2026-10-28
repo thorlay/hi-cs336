@@ -1,4 +1,4 @@
-# 19 L18｜Daniel Selsam 嘉宾课：材料待补
+# L18｜Daniel Selsam 嘉宾课：材料待补
 
 > 状态：尚未编写教材。本页是材料缺口说明，不计入已完成章节。
 
@@ -8,6 +8,6 @@ Spring 2026 官方课表把本讲列为 Daniel Selsam 嘉宾课；用户提供�
 
 取得本讲的视频／Transcript／课件后，再按“问题 → 机制 → 算例 → 工程联系 → 自测”的格式补写。
 
-[返回教材目录](00-cs336-spring-2026-zhu-jiang-zhong-wen-jiao-cai.md) · [官方课表](https://cs336.stanford.edu/#schedule)
+[返回教材目录](README.md) · [官方课表](https://cs336.stanford.edu/#schedule)
 
 [上一讲：L17](18-l17-duo-mo-tai-zen-yang-rang-yu-yan-mo-xing-kan-jian-tu-xiang-yu-shi-pin.md) · [下一讲：L19](20-l19dan-fu-tui-li-yue-shu-ru-he-fan-guo-lai-su-zao-jia-gou.md)

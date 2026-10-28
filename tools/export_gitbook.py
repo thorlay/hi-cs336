@@ -3,13 +3,14 @@ from pathlib import Path
 import re
 import zipfile
 from urllib.parse import quote, unquote
+from sync_gitbook_pages import CHAPTER_NAMES
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'outputs' / 'cs336-gitbook-textbook.zip'
 
 def main():
-    files = [ROOT / 'textbook' / 'README.md']
-    files += sorted((ROOT / 'textbook').glob('[0-9][0-9]-*.md'))
+    files = [ROOT / 'textbook' / 'index.md']
+    files += [ROOT / 'textbook' / name for name in CHAPTER_NAMES]
     files += [ROOT / p for p in [
         'sources/textbook-evidence.md', 'sources/README.md',
         'sources/transcripts.md', 'sources/spring2025-reference.md',
@@ -22,6 +23,7 @@ def main():
         title = path.read_text().splitlines()[0].removeprefix('# ').strip()
         title = re.sub(r'[\\/:*?"<>|]', ' ', title)
         names[path.resolve()] = f'{i:02d} {title}.md'
+    names[(ROOT / 'textbook' / 'README.md').resolve()] = names[(ROOT / 'textbook' / 'index.md').resolve()]
     OUT.parent.mkdir(exist_ok=True)
     with zipfile.ZipFile(OUT, 'w', zipfile.ZIP_DEFLATED) as archive:
         for path in files:

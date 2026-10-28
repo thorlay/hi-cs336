@@ -1,4 +1,4 @@
-# 23 用户提供的 Transcript 索引
+# 用户提供的 Transcript 索引
 
 导入日期：2026-10-27。来源：用户提供的 `transcripts.zip`，共 18 份 UTF-8 文本。
 
@@ -8,32 +8,32 @@
 
 [2026 主线来源与作业快照](22-guan-fang-lai-yuan-yu-ban-ben.md)是当前入口；[2025 历史参考](24-spring-2025-li-shi-can-kao.md)保留用于对比。后续教材按 2026 视频顺序组织。
 
-现已据这 18 份文字稿与官方材料生成[逐讲中文教材初版](00-cs336-spring-2026-zhu-jiang-zhong-wen-jiao-cai.md)，采用主题扫描、重点段落抽核与材料交叉检查；**尚未逐句对照录音，也不声称覆盖全部课堂问答**。L18 仍缺材料。
+现已据这 18 份文字稿与官方材料生成[逐讲中文教材初版](README.md)，采用主题扫描、重点段落抽核与材料交叉检查；**尚未逐句对照录音，也不声称覆盖全部课堂问答**。L18 仍缺材料。
 
 ## 文件清单
 
 原文位于本地 `sources/raw/transcripts-spring2026/`，已由 `.gitignore` 排除，不上传 GitHub。末尾时间戳仅用于初步检查，不代表已核验的视频时长。
 
-| 讲次 | 文件名中的主题                   | 本地文件               | 末尾时间戳 |
-| -- | ------------------------- | ------------------ | ----- |
-| 1  | Overview, Tokenization    | `lecture-01.txt`   | 79:16 |
-| 2  | PyTorch (einops)          | `lecture-02.txt`   | 77:19 |
-| 3  | Architectures             | `lecture-03.txt`   | 89:07 |
-| 4  | Attention Alternatives    | `lecture-04.txt`   | 86:14 |
-| 5  | GPUs, TPUs                | `lecture-05.txt`   | 78:31 |
-| 6  | Kernels, Triton, XLA      | `lecture-06.txt`   | 86:34 |
-| 7  | Parallelism               | `lecture-07.txt`   | 80:54 |
-| 8  | Parallelism               | `lecture-08.txt`   | 80:02 |
-| 9  | Scaling Laws              | `lecture-09.txt`   | 77:47 |
-| 10 | Inference                 | `lecture-10.txt`   | 85:23 |
-| 11 | Scaling Laws              | `lecture-11.txt`   | 76:55 |
-| 12 | Evaluation                | `lecture-12.txt`   | 78:28 |
-| 13 | Data (Sources, Datasets)  | `lecture-13.txt`   | 81:52 |
-| 14 | Data                      | `lecture-14.txt`   | 84:37 |
-| 15 | MidPost-Training          | `lecture-15.txt`   | 79:46 |
-| 16 | Post-Training - RLVR      | `lecture-16.txt`   | 75:42 |
-| 17 | Alignment - Multimodality | `lecture-17.txt`   | 77:29 |
-| 19 | Guest Lecture — Dan Fu    | `guest-dan-fu.txt` | 71:33 |
+| 讲次 | 文件名中的主题 | 本地文件 | 末尾时间戳 |
+| --- | --- | --- | --- |
+| 1 | Overview, Tokenization | `lecture-01.txt` | 79:16 |
+| 2 | PyTorch (einops) | `lecture-02.txt` | 77:19 |
+| 3 | Architectures | `lecture-03.txt` | 89:07 |
+| 4 | Attention Alternatives | `lecture-04.txt` | 86:14 |
+| 5 | GPUs, TPUs | `lecture-05.txt` | 78:31 |
+| 6 | Kernels, Triton, XLA | `lecture-06.txt` | 86:34 |
+| 7 | Parallelism | `lecture-07.txt` | 80:54 |
+| 8 | Parallelism | `lecture-08.txt` | 80:02 |
+| 9 | Scaling Laws | `lecture-09.txt` | 77:47 |
+| 10 | Inference | `lecture-10.txt` | 85:23 |
+| 11 | Scaling Laws | `lecture-11.txt` | 76:55 |
+| 12 | Evaluation | `lecture-12.txt` | 78:28 |
+| 13 | Data (Sources, Datasets) | `lecture-13.txt` | 81:52 |
+| 14 | Data | `lecture-14.txt` | 84:37 |
+| 15 | MidPost-Training | `lecture-15.txt` | 79:46 |
+| 16 | Post-Training - RLVR | `lecture-16.txt` | 75:42 |
+| 17 | Alignment - Multimodality | `lecture-17.txt` | 77:29 |
+| 19 | Guest Lecture — Dan Fu | `guest-dan-fu.txt` | 71:33 |
 
 缺少 L18（Daniel Selsam）；不得标为已获取或已学习。
 
@@ -41,7 +41,7 @@
 
 保存原始文件字节，只将本地文件名规范化。以下 SHA-256 可用于确认后续使用的是同一份文字稿。
 
-```
+```text
 e1b6160e52e7165ce46a17b1ae474fb472ceda433d192ca40b8d0ce41c1f80d2  lecture-01.txt
 6359d1b3e7ae7c71a1b8e5c3c94ac0e24840d41c03291a893a00de7ef2a3b331  lecture-02.txt
 59a0952dfcd001d3ca4a1ebec327d341ea879ff0421e9857a415a46eaac52b43  lecture-03.txt

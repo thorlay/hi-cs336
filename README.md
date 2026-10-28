@@ -57,6 +57,6 @@ sources/      官方来源、年份与版本
 templates/   笔记和实验记录模板
 ```
 
-[SUMMARY.md](SUMMARY.md) 是阅读目录，`.gitbook.yaml` 已配置好。[GitBook 站点](https://niuniu.gitbook.io/cs336-cong-ling-gou-jian-yu-yan-mo-xing/)已发布当前教材初版；目前通过导入更新，尚未连接 GitHub 自动同步。
+[SUMMARY.md](SUMMARY.md) 是阅读目录，`.gitbook.yaml` 已配置好。[GitBook 站点](https://niuniu.gitbook.io/cs336-cong-ling-gou-jian-yu-yan-mo-xing/)已发布当前教材初版；已连接 GitHub 同步。原创教材维护在下列逐讲文件；发布前运行 `python3 tools/sync_gitbook_pages.py` 更新 GitBook 已有页面，保留公开网址。
 
 官方入口：[Spring 2026 课程主页](https://cs336.stanford.edu/)。官方资料归原作者所有；本仓库只链接资料，不批量转载讲义、字幕或数据。课程要求和作业接口以固定版本的官方材料为准。

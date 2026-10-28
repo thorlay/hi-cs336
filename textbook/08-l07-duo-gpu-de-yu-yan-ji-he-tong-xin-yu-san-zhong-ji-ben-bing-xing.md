@@ -1,4 +1,4 @@
-# 08 L07｜多 GPU 的语言：集合通信与三种基本并行
+# L07｜多 GPU 的语言：集合通信与三种基本并行
 
 > Spring 2026 · 中文教材初版。主要依据用户提供的 `lecture-07.txt`，并结合[官方 课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_07.py)。 时间定位：00:05–约 30:03 原语与硬件；约 35:00–50:00 通信示例；55:01–80:54 三种并行。正文按知识逻辑重组，不是逐字翻译；“补充理解”与教学算例为作者解释。未逐句对照录音。
 
@@ -18,15 +18,15 @@ rank 是进程组中的编号，world size 是组大小。常见训练方式是�
 
 假设 rank0 有 `[1,2]`，rank1 有 `[10,20]`：
 
-| 操作                  | 结果直觉                                 |
-| ------------------- | ------------------------------------ |
-| Broadcast           | 指定来源的一份数据复制给所有 rank                  |
-| Gather              | 各 rank 的数据拼到一个目标 rank                |
-| All-gather          | 每个 rank 都得到 `[1,2,10,20]`            |
-| Reduce(sum)         | 一个目标 rank 得到 `[11,22]`               |
-| All-reduce(sum)     | 每个 rank 都得到 `[11,22]`                |
+| 操作 | 结果直觉 |
+| --- | --- |
+| Broadcast | 指定来源的一份数据复制给所有 rank |
+| Gather | 各 rank 的数据拼到一个目标 rank |
+| All-gather | 每个 rank 都得到 `[1,2,10,20]` |
+| Reduce(sum) | 一个目标 rank 得到 `[11,22]` |
+| All-reduce(sum) | 每个 rank 都得到 `[11,22]` |
 | Reduce-scatter(sum) | 先求和，再让 rank0 得 `[11]`、rank1 得 `[22]` |
-| All-to-all          | 每个 rank 向每个其他 rank 发送各自的一部分          |
+| All-to-all | 每个 rank 向每个其他 rank 发送各自的一部分 |
 
 reduce-scatter 后再 all-gather，可以实现相同语义的 all-reduce。它们的区别不只是命名，而是最终数据的所有权：完整复制，还是每人持有一片。这会直接决定显存使用。
 
@@ -94,7 +94,7 @@ flowchart LR
 
 ### 张量切分的一个数值小例子
 
-设 X=\[1,2]，W 的两行分别为 `[3,4]`、`[5,6]`，则 Y=\[13,16]。按输出列切，两个 rank 分别得到 13 和 16，拼接即可；按输入维切，则分别得到 `[3,4]` 与 `[10,12]`，需要相加。
+设 X=[1,2]，W 的两行分别为 `[3,4]`、`[5,6]`，则 Y=[13,16]。按输出列切，两个 rank 分别得到 13 和 16，拼接即可；按输入维切，则分别得到 `[3,4]` 与 `[10,12]`，需要相加。
 
 这两个切法的“输出是分片还是部分和”不同。把需要求和的结果直接拼接，是非常典型的 TP 错误。做两层 MLP 时，应顺着中间激活的所有权安排下一层矩阵切法。
 
@@ -106,15 +106,39 @@ flowchart LR
 
 ## 9. 自测
 
-* 为什么 all-reduce 的结果需要说明 sum 还是 mean？
-* reduce-scatter 的结果为什么适合分片优化器？
-* 单卡 batch 为 8，两卡各 8，等价的是原来的 batch 8 还是 16？
-* 什么条件下增加第九张卡，收益可能比增加第八张卡小得多？
+- 为什么 all-reduce 的结果需要说明 sum 还是 mean？
+- reduce-scatter 的结果为什么适合分片优化器？
+- 单卡 batch 为 8，两卡各 8，等价的是原来的 batch 8 还是 16？
+- 什么条件下增加第九张卡，收益可能比增加第八张卡小得多？
 
 **参考思路：** 看全局有效 batch 和拓扑边界；跨节点通信可能让新增计算收益被同步开销抵消。
 
-***
+## Transcript 对照补遗
 
-[返回教材目录](00-cs336-spring-2026-zhu-jiang-zhong-wen-jiao-cai.md) · [材料与编写说明](21-jiao-cai-cai-liao-yu-bian-xie-shuo-ming.md)
+### 网络拓扑不是一根统一的“网线”（00:00–约 36:00）
+
+本讲 transcript 也有明显缺词与听不清标记；可读部分能核对通信语义和训练流程，残缺的规格、问答细节仍需回听。课堂的层级是片上存储→HBM→NVLink/NVSwitch 域→跨节点网络，越远通常越贵；并非所有集群都严格采用同一种层级。较大的 NVLink 域、InfiniBand、Ethernet 和 RoCE 都是具体配置选项。
+
+RDMA 描述远端直接内存访问能力，InfiniBand 和 RoCE 是实现相关网络路线，不能把 RDMA 当成另一种与它们平行的线缆。实际 GPU 直连传输还取决于设备、驱动和 GPUDirect 等路径。NCCL 把 collective 映射到拓扑和通信算法；PyTorch distributed 提供接口，初始化时的协调连接不等于训练张量都经由该连接传送。
+
+Broadcast 是把某 rank 的张量复制出去，不是 NumPy 广播维度；gather 拼接，reduce 逐元素聚合，all 表示结果分发到所有相关 rank。All-to-all 的均衡等大小示例像转置，MoE 动态路由则可能需要不同的发送/接收分片大小。All-reduce 可分解为 reduce-scatter + all-gather，这是语义分解，不保证底层总采用相同的环算法。
+
+### 通信性能的数字要说清口径（约 36:00–55:00）
+
+设每 rank 参与 all-reduce 的完整张量为 S bytes、world size 为 p，在理想 ring 模型中每 rank 传送约 `2(p−1)S/p` bytes；reduce-scatter 约为 `(p−1)S/p`。除以通信耗时得到常见校正带宽口径，不能把跨 rank 求和后的总字节数与单链路规格直接比较。实际选用算法、双向规格、层级与小消息延迟都会改变解释。
+
+测量应处理两种异步：不同进程的进度，以及各设备提交/完成的进度。Barrier 与设备同步用途不同；`async_op` 返回工作句柄，调用方须在依赖结果前正确等待，并遵守 stream 依赖。不能为了“加速”在尚未完成的通信张量上直接计算。汇总时关注最慢 rank，而不是只挑最快记录。
+
+### 教学代码能说明什么，不能自动完成什么（约 55:00–结尾）
+
+DDP 在各 rank 的不同样本上前向/反向，再平均梯度；保持同样初始化和更新，模型副本才一致。普通 tensor-parallel 示例把列切分结果 all-gather，涉及通信的反向还需要匹配的梯度传播；不能仅调用任意原始 collective 后就假定 autograd 自动齐全。
+
+流水并行示例用点对点 send/recv 传递 microbatch 激活，真实训练还需反向梯度、正确顺序与缓冲生命周期。非阻塞传输与反向就绪即发送的梯度 bucket，可以把通信藏在计算后，但要付出更细的依赖管理。TP 一般需要更紧密的低延迟网络，PP 较能容忍较慢链接，DP 的扩展则还受全局 batch 和临界 batch 限制。具体方案应根据拓扑选择，不能无限添加卡而假定等比例加速。
+
+课堂最后对比“手工安排 collective”与“声明张量分片、由编译器插入通信”：后者降低开发负担，前者帮助理解机制。两者都在重复存储/计算与数据移动之间做交换。
+
+---
+
+[返回教材目录](README.md) · [材料与编写说明](21-jiao-cai-cai-liao-yu-bian-xie-shuo-ming.md)
 
 [上一讲：L06](07-l06-cong-pytorch-dao-triton-ce-liang-rong-he-yu-fen-kuai.md) · [下一讲：L08](09-l08zero-liu-shui-xian-yu-zu-he-bing-xing-rang-da-mo-xing-zhuang-de-xia-pao-de-kuai.md)
