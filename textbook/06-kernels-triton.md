@@ -102,6 +102,32 @@ occupancy 高不一定性能最好：低 occupancy 可能换来更多数据复�
 
 **参考思路：** block 是逻辑处理范围；softmax 的无效值不能参与最大值或分母；计时边界必须隔离待测工作。不要把 CPU 提交时间当作设备完成时间。
 
+## Transcript 对照补遗
+
+### 硬件约束的课堂算例（00:00–约 22:00）
+
+课堂区分 warp occupancy 与尾波利用率。以每 block 128 线程、每线程 160 个寄存器、每 SM 65,536 个寄存器、最大 64 个 warp 为简化假设：每 block 需 20,480 个寄存器，寄存器容量至多容纳 3 个 block，即 12 个 warp，occupancy 约 18.75%。实际还有寄存器分配粒度、共享内存与 block 上限等约束。Occupancy 低不自动意味着慢：thread coarsening 让每线程处理多个元素，也可能减少调度开销。
+
+Shared-memory bank conflict 与 HBM 不合并访存是两个层次的问题。前者涉及同一 bank 不同地址的竞争，可借 padding、swizzling 等缓解；同地址广播又有例外。后者涉及 warp 地址能否合并成较少内存事务。尾波例子中的“148 个 SM、160 个 block”只是单 block/SM 的简化模型，不能推断硬件永远不允许多个 block 共享 SM。
+
+### 从测量到生成代码（约 22:00–57:00）
+
+Benchmark 关注端到端时间及分布，profiler 关注时间花在哪里。应把输入生成、编译与预热的范围写清，再用 CUDA events 或正确同步的计时测重复调用。Profiler 中同样的 `@` 在不同形状下可能选择不同 tile 的 kernel；kernel 名称中的架构、dtype 和 tile 信息有助于理解分派，不是一个名称对应永恒实现。
+
+课堂比较手写 PyTorch GELU、库内置 GELU 和 `torch.compile`：前者多个 kernel，后两者能融合，但编译版不保证快过内置版。它还强调核对采用精确 GELU 还是 tanh 近似，避免拿不同函数做“加速”比较。
+
+Triton 的 program 描述一块逻辑数据的操作，不是 Python 解释器在 GPU 上逐行运行。编译器决定元素如何分配给线程、寄存器和共享内存。PTX 是中间指令表示，还需生成设备执行的机器指令，不能把 PTX 本身说成硬件最终 ISA。示例中可观察到单线程处理多个元素；具体调度到哪个 SM 并未由 Python 源码指定。
+
+### 必须补上的边界与实现区别（约 39:00–结尾）
+
+8000 个元素按 1024 个逻辑元素划分，需要 8 个 program，最后一块只有 832 个有效元素；字幕说“整除”是口误。`offset < n` 必须同时保护 load/store。Triton 的逻辑 `BLOCK_SIZE` 也**不等于 CUDA block 的物理线程数**，两者由编译布局及 `num_warps` 等联系起来。
+
+行 softmax 可用一 program 一行，在尾部加载处填 −∞，使其指数贡献为零；如果整行都是 −∞，减最大值将出现未定义差值，需单独定义空有效行行为。处理列时改变 stride 在数学上可行，但可能破坏访存效率。
+
+对超长行求和，一 program 可以循环处理多个 tile，累积一个局部向量后再归约；这些 tile 不是多个可以任意独立归一化的 block。Matmul 则是一 program 负责一个输出 tile，沿 K 遍历对应 A/B tile，在片上累积，最后融合 ReLU 等 epilogue 再写回。累加器经常由寄存器等承载，不应把口述“在 shared memory”当成编译器所有布局的保证。
+
+课堂结尾提到 CUDA、PTX、ThunderKittens、CuTe 等不同层次的选择，重点是表达能力、控制与开发成本的取舍；对于抽象的高维张量，没有脱离具体算子的唯一最佳分块方案。
+
 ---
 
 [返回教材目录](README.md) · [材料与编写说明](../sources/textbook-evidence.md)

@@ -15,6 +15,7 @@ def main():
         'sources/transcripts.md', 'sources/spring2025-reference.md',
         'study-plan.md', 'assignments/README.md', 'labs/README.md',
         'templates/experiment-log.md', 'templates/lecture-note.md',
+        'sources/transcript-audit.md',
     ]]
     names = {}
     for i, path in enumerate(files):

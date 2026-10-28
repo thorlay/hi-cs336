@@ -34,3 +34,5 @@
   * [Transformer 与资源核算](notes/03-transformer-accounting.md)
 * [实验记录模板](templates/experiment-log.md)
 * [笔记模板](templates/lecture-note.md)
+
+* [Transcript 逐章核验记录](sources/transcript-audit.md)
