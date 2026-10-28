@@ -2,6 +2,7 @@
 from pathlib import Path
 import re
 from urllib.parse import quote, unquote
+from gitbook_anchors import published_anchor
 
 ROOT = Path(__file__).resolve().parents[1]
 CHAPTER_NAMES = [
@@ -49,12 +50,15 @@ def main():
     for source,target in mapping.items():
         def rewrite(m):
             link=m[1]
-            if '://' in link or link.startswith('#'):return m[0]
+            if '://' in link:return m[0]
+            if link.startswith('#'):
+                return '](#'+published_anchor(source,link[1:])+')'
             raw,sep,anchor=link.partition('#')
             path=(source.parent/unquote(raw)).resolve()
             if not path.exists():raise ValueError((source,link))
             if path in mapping:
                 dest=quote(mapping[path].name)
+                anchor=published_anchor(path,anchor)
             else:
                 dest='https://github.com/thorlay/hi-cs336/blob/main/'+quote(path.relative_to(ROOT).as_posix())
             return ']('+dest+(sep+anchor if sep else '')+')'

@@ -4,6 +4,7 @@ import re
 import zipfile
 from urllib.parse import quote, unquote
 from sync_gitbook_pages import CHAPTER_NAMES
+from gitbook_anchors import published_anchor
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'outputs' / 'cs336-gitbook-textbook.zip'
@@ -32,14 +33,17 @@ def main():
             text = path.read_text()
             def rewrite(match):
                 target = match[1]
-                if '://' in target or target.startswith('#'):
+                if '://' in target:
                     return match[0]
+                if target.startswith('#'):
+                    return '](#'+published_anchor(path,target[1:])+')'
                 raw, sep, anchor = target.partition('#')
                 resolved = (path.parent / unquote(raw)).resolve()
                 if not resolved.exists():
                     raise ValueError(f'Broken link in {path}: {target}')
                 if resolved in names:
                     dest = quote(names[resolved])
+                    anchor = published_anchor(resolved,anchor)
                 else:
                     dest = 'https://github.com/thorlay/hi-cs336/blob/main/' + quote(resolved.relative_to(ROOT).as_posix())
                 return '](' + dest + (sep + anchor if sep else '') + ')'
