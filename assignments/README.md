@@ -1,6 +1,6 @@
-# 五次作业的实践入口
+# Spring 2026 主线：五次作业的实践入口
 
-作业来源和固定提交见[版本索引](../sources/README.md)。这里是自学时的推进清单；准确要求、测试命令和环境以对应提交的 README 与 handout 为准。尚未提供或完成官方作业实现。
+使用 2026 官方课程页所链接仓库的固定快照。A1 的 README 仍标 2025，属于官方入口的年份差异，详见来源索引。作业来源和固定提交见[版本索引](../sources/README.md)。这里是自学时的推进清单；准确要求、测试命令和环境以对应提交的 README 与 handout 为准。尚未提供或完成官方作业实现。
 
 | 作业 | 先回答的问题 | 本仓库建议留下的证据 | 状态 |
 | --- | --- | --- | --- |
@@ -17,7 +17,7 @@
 ```bash
 mkdir -p workspaces
 git clone https://github.com/stanford-cs336/assignment1-basics.git workspaces/assignment1-basics
-git -C workspaces/assignment1-basics checkout 1076cb9741ca280afd71e6d768ddd09ab42e9c4d
+git -C workspaces/assignment1-basics checkout a158843b20107949f1a8d7df1b05cd33b9166712
 ```
 
 随后阅读该目录的 README、handout 和测试适配层。其他作业使用相应仓库与固定提交。这里没有自动安装 GPU 依赖；不同作业的依赖必须分别处理。

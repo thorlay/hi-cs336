@@ -1,5 +1,7 @@
 # 03｜Transformer 与资源核算
 
+> 状态：通用概念初稿；仓库主线为 Spring 2026 视频，本文尚未按对应 Transcript 逐讲扩写。
+
 ## 先写形状，再写代码
 
 设 batch 为 B、序列长 T、隐藏宽度 d、头数 h，每头维度为 d/h。输入 ID 为 `[B,T]`，embedding 输出 `[B,T,d]`。Q、K、V 拆成多头后常表示为 `[B,h,T,d/h]`。
