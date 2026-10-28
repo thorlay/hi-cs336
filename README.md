@@ -2,6 +2,10 @@
 
 以用户提供的 **Spring 2026 视频及 Transcript** 为主线，面向有后端、系统或 CS149 基础，希望理解大模型训练与 AI Infrastructure 的自学者。这里记录原创概念解释、作业路线与可复现实验。
 
+## 逐讲详细教材
+
+已生成 [Spring 2026 中文教材](textbook/README.md)：覆盖现有文字稿的 18 讲，包含机制解释、公式、手算、补充理解与自测。L18 缺原始材料，单独标记待补；正文不是逐字稿，尚未逐句对照视频。
+
 ## 从这里开始
 
 1. [8 个阶段的学习路线](study-plan.md)：按产出推进，不强行按周追进度。
@@ -22,7 +26,7 @@
 
 ## 主线文字稿与课件
 
-已收到用户提供的 [Spring 2026 Transcript（18 份）](sources/transcripts.md)：L1–L17 与 Dan Fu 嘉宾讲座。已与 [2026 官方课表](https://cs336.stanford.edu/#schedule)核对讲次：Dan Fu 为 L19，L18 Daniel Selsam 的文字稿尚缺。原文保存在本地，尚未逐讲校对或改写为教材。作业已切换为 2026 官网所链接仓库的固定快照；A1 README 仍标 2025 的例外见来源索引。
+已收到用户提供的 [Spring 2026 Transcript（18 份）](sources/transcripts.md)：L1–L17 与 Dan Fu 嘉宾讲座。已与 [2026 官方课表](https://cs336.stanford.edu/#schedule)核对讲次：Dan Fu 为 L19，L18 Daniel Selsam 的文字稿尚缺。原文保存在本地，已按主题整理为中文教材初版，尚未逐句校对录音。作业已切换为 2026 官网所链接仓库的固定快照；A1 README 仍标 2025 的例外见来源索引。
 
 ## 内容状态
 
@@ -32,9 +36,9 @@
 | 全景、分词、Transformer 资源核算 | 通用入门初稿，待按 2026 Transcript 扩写 |
 | A1–A5 | 已建立实践入口，尚未完成作业 |
 | 本地资源核算实验 | 已提供，可用 Python 标准库运行 |
-| 系统、数据、对齐的详细教材 | 待补充 |
+| 逐讲详细教材 | 18 讲中文初版 + L18 材料缺口说明 |
 
-这是一份学习仓库的起点，尚未完成全课程笔记，也未完成 GPU 训练或性能验证。
+教材覆盖已有 18 讲材料，详细状态与核验边界见[教材说明](sources/textbook-evidence.md)。尚未完成课程作业或 GPU 训练实验。
 
 ## 和 CS149 怎样衔接
 
@@ -43,7 +47,8 @@
 ## 仓库结构
 
 ```text
-notes/        原创概念笔记
+textbook/     逐讲中文详细教材
+notes/        入门速读笔记
 assignments/  作业路线与完成记录
 labs/         独立的小实验
 sources/      官方来源、年份与版本

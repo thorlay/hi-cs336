@@ -1,6 +1,6 @@
 # 02｜Tokenization 与 BPE
 
-> 状态：通用概念初稿；仓库主线为 Spring 2026 视频，本文尚未按对应 Transcript 逐讲扩写。
+> 状态：入门速读笔记；详细解释见[对应逐讲教材](../textbook/01-overview-tokenization.md)。
 
 ## 为什么不直接用字符
 

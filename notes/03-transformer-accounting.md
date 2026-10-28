@@ -1,6 +1,6 @@
 # 03｜Transformer 与资源核算
 
-> 状态：通用概念初稿；仓库主线为 Spring 2026 视频，本文尚未按对应 Transcript 逐讲扩写。
+> 状态：入门速读笔记；详细解释见[对应逐讲教材](../textbook/03-architectures.md)。
 
 ## 先写形状，再写代码
 

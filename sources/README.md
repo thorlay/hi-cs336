@@ -50,6 +50,6 @@
 
 ## 历史参考与内容状态
 
-[Spring 2025 历史索引](spring2025-reference.md)保留原有提交，供比较版本差异使用。已有三篇笔记是通用概念初稿，尚未按 2026 各讲 Transcript 完整改写，不能视为已经完成的逐讲教材。
+[Spring 2025 历史索引](spring2025-reference.md)保留原有提交，供比较版本差异使用。三篇 `notes/` 为入门速读初稿；[逐讲教材](../textbook/README.md)已覆盖现有材料的 18 讲。[核验说明](textbook-evidence.md)记录材料、校正与适用边界。
 
 原始文字稿仅在本地 `sources/raw/transcripts-spring2026/` 保存；不将原始讲义、字幕或大型数据上传 GitHub。
