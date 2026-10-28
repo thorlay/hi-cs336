@@ -115,9 +115,11 @@ flowchart LR
 
 ## Transcript 对照补遗
 
+> 核验进行中：无时间戳续行尚需补做完整对照，本补遗不是无遗漏认证。
+
 ### 网络拓扑不是一根统一的“网线”（00:00–约 36:00）
 
-本讲 transcript 也有明显缺词与听不清标记；可读部分能核对通信语义和训练流程，残缺的规格、问答细节仍需回听。课堂的层级是片上存储→HBM→NVLink/NVSwitch 域→跨节点网络，越远通常越贵；并非所有集群都严格采用同一种层级。较大的 NVLink 域、InfiniBand、Ethernet 和 RoCE 都是具体配置选项。
+本讲无时间戳续行尚需补做完整对照，以下保留本轮已检查的通信语义和训练流程。课堂的层级是片上存储→HBM→NVLink/NVSwitch 域→跨节点网络，越远通常越贵；并非所有集群都严格采用同一种层级。较大的 NVLink 域、InfiniBand、Ethernet 和 RoCE 都是具体配置选项。
 
 RDMA 描述远端直接内存访问能力，InfiniBand 和 RoCE 是实现相关网络路线，不能把 RDMA 当成另一种与它们平行的线缆。实际 GPU 直连传输还取决于设备、驱动和 GPUDirect 等路径。NCCL 把 collective 映射到拓扑和通信算法；PyTorch distributed 提供接口，初始化时的协调连接不等于训练张量都经由该连接传送。
 
