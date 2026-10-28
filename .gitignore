@@ -1,0 +1,16 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+workspaces/
+data/
+checkpoints/
+outputs/
+wandb/
+sources/raw/
+*.pt
+*.pth
+*.safetensors
