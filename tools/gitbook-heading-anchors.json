@@ -1,6 +1,6 @@
 {
-  "revision": "IINIjKIbA1bO0JDXCjd6",
-  "note": "Observed rendered heading IDs. Canonical Markdown retains GitHub anchors; publishing rewrites links using this mapping. Re-capture after adding or renaming a linked heading.",
+  "revision": "6vxD5aJ9FvXkxrW8C5Ok",
+  "note": "Rendered GitBook IDs verified after the classroom-flow rewrite. Canonical Markdown retains GitHub anchors. Re-capture after renaming a linked heading. A footer separation correction removes one unintended setext heading without changing these target IDs.",
   "pages": {
     "textbook/00-prerequisites-and-notation.md": {
       "本书怎样区分三种内容": {
@@ -33,6 +33,18 @@
         "heading": "1. 为什么“从零构建”仍然值得学",
         "id": "id-1.-wei-shen-me-cong-ling-gou-jian-reng-ran-zhi-de-xue"
       },
+      "课程背景与小模型能教会我们什么": {
+        "heading": "课程背景与“小模型能教会我们什么”",
+        "id": "ke-cheng-bei-jing-yu-xiao-mo-xing-neng-jiao-hui-wo-men-shen-me"
+      },
+      "2-这门课接下来怎样展开": {
+        "heading": "2. 这门课接下来怎样展开",
+        "id": "id-2.-zhe-men-ke-jie-xia-lai-zen-yang-zhan-kai"
+      },
+      "五个单元各自解决什么问题": {
+        "heading": "五个单元各自解决什么问题",
+        "id": "wu-ge-dan-yuan-ge-zi-jie-jue-shen-me-wen-ti"
+      },
       "3-语言模型究竟预测什么": {
         "heading": "3. 语言模型究竟预测什么",
         "id": "id-3.-yu-yan-mo-xing-jiu-jing-yu-ce-shen-me"
@@ -53,9 +65,9 @@
         "heading": "7. 从教学 BPE 到工程 BPE",
         "id": "id-7.-cong-jiao-xue-bpe-dao-gong-cheng-bpe"
       },
-      "2-这门课接下来怎样展开": {
-        "heading": "2. 这门课接下来怎样展开",
-        "id": "id-2.-zhe-men-ke-jie-xia-lai-zen-yang-zhan-kai"
+      "分词还承担自适应计算的职责": {
+        "heading": "分词还承担“自适应计算”的职责",
+        "id": "fen-ci-hai-cheng-dan-zi-shi-ying-ji-suan-de-zhi-ze"
       },
       "深入算例与补充理解": {
         "heading": "深入算例与补充理解",
@@ -77,51 +89,147 @@
         "heading": "学习检查：你应能独立画出什么",
         "id": "xue-xi-jian-cha-ni-ying-neng-du-li-hua-chu-shen-me"
       },
+      "独立完成一个小算例": {
+        "heading": "独立完成一个小算例",
+        "id": "du-li-wan-cheng-yi-ge-xiao-suan-li"
+      },
       "8-自测与最小实验": {
         "heading": "8. 自测与最小实验",
         "id": "id-8.-zi-ce-yu-zui-xiao-shi-yan"
       },
-      "课程背景与小模型能教会我们什么": {
-        "heading": "课程背景与“小模型能教会我们什么”",
-        "id": ""
-      },
-      "五个单元各自解决什么问题": {
-        "heading": "五个单元各自解决什么问题",
-        "id": ""
-      },
-      "分词还承担自适应计算的职责": {
-        "heading": "分词还承担“自适应计算”的职责",
-        "id": ""
+      "逐题推理": {
+        "heading": "逐题推理",
+        "id": "zhu-ti-tui-li"
       }
     },
     "textbook/02-pytorch-resource-accounting.md": {
+      "阅读起点与符号": {
+        "heading": "阅读起点与符号",
+        "id": "yue-du-qi-dian-yu-fu-hao"
+      },
       "1-先建立物理账本": {
         "heading": "1. 先建立“物理账本”",
         "id": "id-1.-xian-jian-li-wu-li-zhang-ben"
+      },
+      "张量就是带形状和类型的数组": {
+        "heading": "张量就是带形状和类型的数组",
+        "id": "zhang-liang-jiu-shi-dai-xing-zhuang-he-lei-xing-de-shu-zu"
+      },
+      "一次训练里哪些数组同时存在": {
+        "heading": "一次训练里，哪些数组同时存在",
+        "id": "yi-ci-xun-lian-li-na-xie-shu-zu-tong-shi-cun-zai"
+      },
+      "逻辑数组不等于独立物理存储": {
+        "heading": "逻辑数组不等于独立物理存储",
+        "id": "luo-ji-shu-zu-bu-deng-yu-du-li-wu-li-cun-chu"
       },
       "2-精度少一半字节不是免费午餐": {
         "heading": "2. 精度：少一半字节不是免费午餐",
         "id": "id-2.-jing-du-shao-yi-ban-zi-jie-bu-shi-mian-fei-wu-can"
       },
+      "动态范围和分辨率是两件事": {
+        "heading": "动态范围和分辨率是两件事",
+        "id": "dong-tai-fan-wei-he-fen-bianlshi-liang-jian-shi"
+      },
+      "混合精度按用途分工": {
+        "heading": "混合精度按用途分工",
+        "id": "hun-he-jing-du-an-yong-tu-fen-gong"
+      },
+      "为什么-fp4-不能只理解成十六个全局数值": {
+        "heading": "为什么 FP4 不能只理解成十六个全局数值",
+        "id": "wei-shen-me-fp4-bu-neng-zhi-li-jie-cheng-shi-liu-ge-quan-ju-shu-zhi"
+      },
       "3-形状是程序的类型说明": {
         "heading": "3. 形状是程序的类型说明",
         "id": "id-3.-xing-zhuang-shi-cheng-xu-de-lei-xing-shuo-ming"
+      },
+      "矩阵乘法匹配的是哪一个轴": {
+        "heading": "矩阵乘法：匹配的是哪一个轴",
+        "id": "ju-zhen-cheng-fa-pi-pei-de-shi-na-yi-ge-zhou"
+      },
+      "reduce有些轴要变成一个数": {
+        "heading": "reduce：有些轴要变成一个数",
+        "id": "reduce-you-xie-zhou-yao-bian-cheng-yi-ge-shu"
+      },
+      "rearrange拆轴合轴与顺序": {
+        "heading": "rearrange：拆轴、合轴与顺序",
+        "id": "rearrange-chai-zhou-he-zhou-yu-shun-xu"
+      },
+      "stride形状相同物理布局也可能不同": {
+        "heading": "stride：形状相同，物理布局也可能不同",
+        "id": "stride-xing-zhuang-xiang-tong-wu-li-bu-ju-ye-ke-neng-bu-tong"
       },
       "4-为什么一次矩阵乘法约为-2mnk-flops": {
         "heading": "4. 为什么一次矩阵乘法约为 2mnk FLOPs",
         "id": "id-4.-wei-shen-me-yi-ci-ju-zhen-cheng-fa-yue-wei-2mnk-flops"
       },
-      "6-roofline算得慢还是搬得慢": {
-        "heading": "6. Roofline：算得慢，还是搬得慢",
-        "id": "id-6.-roofline-suan-de-man-hai-shi-ban-de-man"
+      "先区分工作量与速度": {
+        "heading": "先区分工作量与速度",
+        "id": "xian-qu-fen-gong-zuo-liang-yu-su-du"
       },
       "5-mfu-应该怎样读": {
         "heading": "5. MFU 应该怎样读",
         "id": "id-5.-mfu-ying-gai-zen-yang-du"
       },
+      "先正确测时间再谈利用率": {
+        "heading": "先正确测时间，再谈利用率",
+        "id": "xian-zheng-que-ce-shi-jian-zai-tan-li-yong-l"
+      },
+      "模型-flops-利用率的分母是什么": {
+        "heading": "模型 FLOPs 利用率的分母是什么",
+        "id": "mo-xing-flops-li-yonglde-fen-mu-shi-shen-me"
+      },
+      "6-roofline算得慢还是搬得慢": {
+        "heading": "6. Roofline：算得慢，还是搬得慢",
+        "id": "id-6.-roofline-suan-de-man-hai-shi-ban-de-man"
+      },
+      "显存容量不等于显存带宽": {
+        "heading": "显存容量不等于显存带宽",
+        "id": "xian-cun-rong-liang-bu-deng-yu-xian-cun-dai-kuan"
+      },
+      "五种算子逐项做账": {
+        "heading": "五种算子逐项做账",
+        "id": "wu-zhong-suan-zi-zhu-xiang-zuo-zhang"
+      },
+      "复用为何比少做一次乘法更重要": {
+        "heading": "复用为何比“少做一次乘法”更重要",
+        "id": "fu-yong-wei-he-bi-shao-zuo-yi-ci-cheng-fa-geng-zhong-yao"
+      },
+      "7-从前向到反向传播": {
+        "heading": "7. 从前向到反向传播",
+        "id": "id-7.-cong-qian-xiang-dao-fan-xiang-chuan-bo"
+      },
+      "从一个标量损失理解梯度": {
+        "heading": "从一个标量损失理解梯度",
+        "id": "cong-yi-ge-biao-liang-sun-shi-li-jie-ti-du"
+      },
+      "矩阵反向为什么出现两次乘法": {
+        "heading": "矩阵反向为什么出现两次乘法",
+        "id": "ju-zhen-fan-xiang-wei-shen-me-chu-xian-liang-ci-cheng-fa"
+      },
+      "6nd-究竟在数什么": {
+        "heading": "6ND 究竟在数什么",
+        "id": "id-6nd-jiu-jing-zai-shu-shen-me"
+      },
       "8-显存不足时两种不同的交换": {
         "heading": "8. 显存不足时，两种不同的交换",
         "id": "id-8.-xian-cun-bu-zu-shi-liang-zhong-bu-tong-de-jiao-huan"
+      },
+      "先把优化器状态补进账本": {
+        "heading": "先把优化器状态补进账本",
+        "id": "xian-ba-you-hua-qi-zhuang-tai-bu-jin-zhang-ben"
+      },
+      "梯度累积一次更新分几次看完数据": {
+        "heading": "梯度累积：一次更新，分几次看完数据",
+        "id": "ti-du-lei-ji-yi-ci-geng-xin-fen-ji-ci-kan-wan-shu-ju"
+      },
+      "激活检查点不保存的中间量以后重算": {
+        "heading": "激活检查点：不保存的中间量以后重算",
+        "id": "ji-huo-jian-cha-dian-bu-bao-cun-de-zhong-jian-liang-yi-hou-zhong-suan"
+      },
+      "两种方法怎样组合": {
+        "heading": "两种方法怎样组合",
+        "id": "liang-zhong-fang-fa-zen-yang-zu-he"
       },
       "深入算例与补充理解": {
         "heading": "深入算例与补充理解",
@@ -157,29 +265,97 @@
         "heading": "2. 为什么 pre-norm 改变了梯度路径",
         "id": "id-2.-wei-shen-me-prenorm-gai-bian-le-ti-du-lu-jing"
       },
+      "归一化位置的其他选择": {
+        "heading": "归一化位置的其他选择",
+        "id": "gui-yi-hua-wei-zhi-de-qi-ta-xuan-ze"
+      },
+      "如何读稳定性图": {
+        "heading": "如何读稳定性图",
+        "id": "ru-he-du-wen-ding-xing-tu"
+      },
+      "归一化分支不等于归一化残差流": {
+        "heading": "归一化分支不等于归一化残差流",
+        "id": "gui-yi-hua-fen-zhi-bu-deng-yu-gui-yi-hua-can-cha-liu"
+      },
       "3-rmsnormlayernorm-与显存读写": {
         "heading": "3. RMSNorm、LayerNorm 与显存读写",
         "id": "id-3.-rmsnormlayernorm-yu-xian-cun-du-xie"
+      },
+      "为什么少量-flops-可以占很多时间": {
+        "heading": "为什么少量 FLOPs 可以占很多时间",
+        "id": "wei-shen-me-shao-liang-flops-ke-yi-zhan-hen-duo-shi-jian"
       },
       "4-swiglu-为什么有三个矩阵": {
         "heading": "4. SwiGLU 为什么有三个矩阵",
         "id": "id-4.-swiglu-wei-shen-me-you-san-ge-ju-zhen"
       },
+      "门控表格的证据边界": {
+        "heading": "门控表格的证据边界",
+        "id": "men-kong-biao-ge-de-zheng-ju-bian-jie"
+      },
+      "串行与并行的证据边界": {
+        "heading": "串行与并行的证据边界",
+        "id": "chuan-xing-yu-bing-xing-de-zheng-ju-bian-jie"
+      },
       "5-rope-如何让位置差进入点积": {
         "heading": "5. RoPE 如何让位置差进入点积",
         "id": "id-5.-rope-ru-he-rang-wei-zhi-cha-jin-ru-dian-ji"
+      },
+      "位置编码的比较条件": {
+        "heading": "位置编码的比较条件",
+        "id": "wei-zhi-bian-ma-de-bi-jiao-tiao-jian"
       },
       "6-超参数规则是起点不是定律": {
         "heading": "6. 超参数规则是起点，不是定律",
         "id": "id-6.-chao-can-shu-gui-ze-shi-qi-dian-bu-shi-ding-l"
       },
+      "超参数的具体范围与课堂问答": {
+        "heading": "超参数的具体范围与课堂问答",
+        "id": "chao-can-shu-de-ju-ti-fan-wei-yu-ke-tang-wen-da"
+      },
+      "超参数图表怎么读": {
+        "heading": "超参数图表怎么读",
+        "id": "chao-can-shu-tu-biao-zen-me-du"
+      },
+      "核算表格不照抄数字": {
+        "heading": "核算表格，不照抄数字",
+        "id": "he-suan-biao-ge-bu-zhao-chao-shu-zi"
+      },
+      "词表与-bits-per-byte-问答": {
+        "heading": "词表与 bits per byte 问答",
+        "id": "ci-biao-yu-bits-per-byte-wen-da"
+      },
+      "如何读-weight-decay-图": {
+        "heading": "如何读 weight decay 图",
+        "id": "ru-he-du-weight-decay-tu"
+      },
       "7-从-softmax-看稳定性": {
         "heading": "7. 从 softmax 看稳定性",
         "id": "id-7.-cong-softmax-kan-wen-ding-xing"
       },
+      "稳定性与推理的补充边界": {
+        "heading": "稳定性与推理的补充边界",
+        "id": "wen-ding-xing-yu-tui-li-de-bu-chong-bian-jie"
+      },
+      "soft-capping-的质量代价": {
+        "heading": "soft-capping 的质量代价",
+        "id": "softcapping-de-zhi-liang-dai-jia"
+      },
       "8-架构为什么开始为推理省内存": {
         "heading": "8. 架构为什么开始为推理省内存",
         "id": "id-8.-jia-gou-wei-shen-me-kai-shi-wei-tui-li-sheng-nei-cun"
+      },
+      "prefill-与-decode-的计账单位": {
+        "heading": "prefill 与 decode 的计账单位",
+        "id": "prefill-yu-decode-de-ji-zhang-dan-wei"
+      },
+      "gqa-的质量与延迟图": {
+        "heading": "GQA 的质量与延迟图",
+        "id": "gqa-de-zhi-liang-yu-yan-chi-tu"
+      },
+      "混合层中的信息传播": {
+        "heading": "混合层中的信息传播",
+        "id": "hun-he-ceng-zhong-de-xin-xi-chuan-bo"
       },
       "深入算例与补充理解": {
         "heading": "深入算例与补充理解",
@@ -201,77 +377,17 @@
         "heading": "把错误分成结构错误和优化问题",
         "id": "ba-cuo-wu-fen-cheng-jie-gou-cuo-wu-he-you-hua-wen-ti"
       },
+      "独立完成一个小算例": {
+        "heading": "独立完成一个小算例",
+        "id": "du-li-wan-cheng-yi-ge-xiao-suan-li"
+      },
       "9-自测与设计练习": {
         "heading": "9. 自测与设计练习",
         "id": "id-9.-zi-ce-yu-she-ji-lian-xi"
       },
-      "归一化位置的其他选择": {
-        "heading": "归一化位置的其他选择",
-        "id": ""
-      },
-      "超参数的具体范围与课堂问答": {
-        "heading": "超参数的具体范围与课堂问答",
-        "id": ""
-      },
-      "稳定性与推理的补充边界": {
-        "heading": "稳定性与推理的补充边界",
-        "id": ""
-      },
-      "如何读稳定性图": {
-        "heading": "如何读稳定性图",
-        "id": "ru-he-du-wen-ding-xing-tu"
-      },
-      "归一化分支不等于归一化残差流": {
-        "heading": "归一化分支不等于归一化残差流",
-        "id": "gui-yi-hua-fen-zhi-bu-deng-yu-gui-yi-hua-can-cha-liu"
-      },
-      "为什么少量-flops-可以占很多时间": {
-        "heading": "为什么少量 FLOPs 可以占很多时间",
-        "id": "wei-shen-me-shao-liang-flops-ke-yi-zhan-hen-duo-shi-jian"
-      },
-      "门控表格的证据边界": {
-        "heading": "门控表格的证据边界",
-        "id": "men-kong-biao-ge-de-zheng-ju-bian-jie"
-      },
-      "串行与并行的证据边界": {
-        "heading": "串行与并行的证据边界",
-        "id": "chuan-xing-yu-bing-xing-de-zheng-ju-bian-jie"
-      },
-      "位置编码的比较条件": {
-        "heading": "位置编码的比较条件",
-        "id": "wei-zhi-bian-ma-de-bi-jiao-tiao-jian"
-      },
-      "超参数图表怎么读": {
-        "heading": "超参数图表怎么读",
-        "id": "chao-can-shu-tu-biao-zen-me-du"
-      },
-      "核算表格不照抄数字": {
-        "heading": "核算表格，不照抄数字",
-        "id": "he-suan-biao-ge-bu-zhao-chao-shu-zi"
-      },
-      "词表与-bits-per-byte-问答": {
-        "heading": "词表与 bits per byte 问答",
-        "id": "ci-biao-yu-bits-per-byte-wen-da"
-      },
-      "如何读-weight-decay-图": {
-        "heading": "如何读 weight decay 图",
-        "id": "ru-he-du-weight-decay-tu"
-      },
-      "soft-capping-的质量代价": {
-        "heading": "soft-capping 的质量代价",
-        "id": "softcapping-de-zhi-liang-dai-jia"
-      },
-      "prefill-与-decode-的计账单位": {
-        "heading": "prefill 与 decode 的计账单位",
-        "id": "prefill-yu-decode-de-ji-zhang-dan-wei"
-      },
-      "gqa-的质量与延迟图": {
-        "heading": "GQA 的质量与延迟图",
-        "id": "gqa-de-zhi-liang-yu-yan-chi-tu"
-      },
-      "混合层中的信息传播": {
-        "heading": "混合层中的信息传播",
-        "id": "hun-he-ceng-zhong-de-xin-xi-chuan-bo"
+      "逐题推理": {
+        "heading": "逐题推理",
+        "id": "zhu-ti-tui-li"
       }
     },
     "textbook/04-linear-attention-moe.md": {
@@ -291,21 +407,77 @@
         "heading": "4. 衰减、门控与 Delta 更新",
         "id": "id-4.-shuai-jian-men-kong-yu-delta-geng-xin"
       },
+      "线性化递推与稀疏选择不是同一件事": {
+        "heading": "线性化、递推与稀疏选择不是同一件事",
+        "id": "xian-xing-hua-di-tui-yu-xi-shu-xuan-ze-bu-shi-tong-yi-jian-shi"
+      },
+      "混合模型的图不能证明纯线性复杂度": {
+        "heading": "混合模型的图不能证明纯线性复杂度",
+        "id": "hun-he-mo-xing-de-tu-bu-neng-zheng-ming-chun-xian-xing-fu-za-du"
+      },
+      "稀疏选择保留了哪些代价": {
+        "heading": "稀疏选择保留了哪些代价",
+        "id": "xi-shu-xuan-ze-bao-liu-le-na-xie-dai-jia"
+      },
       "5-moe增加总容量限制单-token-工作量": {
         "heading": "5. MoE：增加总容量，限制单 token 工作量",
         "id": "id-5.-moe-zeng-jia-zong-rong-liang-xian-zhi-dan-token-gong-zuo-liang"
+      },
+      "moe-对比图的四个横轴": {
+        "heading": "MoE 对比图的四个横轴",
+        "id": "moe-dui-bi-tu-de-si-ge-heng-zhou"
       },
       "6-router-为什么会偏心": {
         "heading": "6. Router 为什么会“偏心”",
         "id": "id-6.-router-wei-shen-me-hui-pian-xin"
       },
+      "router-的完整设计空间": {
+        "heading": "Router 的完整设计空间",
+        "id": "router-de-wan-zheng-she-ji-kong-jian"
+      },
+      "top-k-的顺序权重与梯度": {
+        "heading": "top-k 的顺序、权重与梯度",
+        "id": "topk-de-shun-xu-quan-zhong-yu-ti-du"
+      },
+      "噪声离散选择与截图不一致": {
+        "heading": "噪声、离散选择与截图不一致",
+        "id": "zao-sheng-li-san-xuan-ze-yu-jie-tu-bu-yi-zhi"
+      },
+      "均衡损失设备目标与偏置": {
+        "heading": "均衡损失、设备目标与偏置",
+        "id": "jun-heng-sun-shi-she-bei-mu-biao-yu-pian-zhi"
+      },
+      "router-数值误差与-z-loss": {
+        "heading": "router 数值误差与 z-loss",
+        "id": "router-shu-zhi-wu-cha-yu-zloss"
+      },
       "7-细粒度专家共享专家与通信": {
         "heading": "7. 细粒度专家、共享专家与通信",
         "id": "id-7.-xi-li-du-zhuan-jia-gong-xiang-zhuan-jia-yu-tong-xin"
       },
+      "均衡目标的作用和系统细节": {
+        "heading": "均衡目标的作用和系统细节",
+        "id": "jun-heng-mu-biao-di-zuo-yong-he-xi-tong-xi-jie"
+      },
+      "共享专家的消融存在分歧": {
+        "heading": "共享专家的消融存在分歧",
+        "id": "gong-xiang-zhuan-jia-de-xiao-rong-cun-zai-fen-qi"
+      },
+      "容量限制导致批次依赖": {
+        "heading": "容量限制导致批次依赖",
+        "id": "rong-liang-xian-zhi-dao-zhi-pi-ci-yi-lai"
+      },
       "8-mlaupcycling-与多-token-预测": {
         "heading": "8. MLA、upcycling 与多 token 预测",
         "id": "id-8.-mlaupcycling-yu-duo-token-yu-ce"
+      },
+      "小数据微调与-upcycling": {
+        "heading": "小数据微调与 upcycling",
+        "id": "xiao-shu-ju-wei-tiao-yu-upcycling"
+      },
+      "deepseek-配置中的课件疑点": {
+        "heading": "DeepSeek 配置中的课件疑点",
+        "id": "deepseek-pei-zhi-zhong-de-ke-jian-yi-dian"
       },
       "深入算例与补充理解": {
         "heading": "深入算例与补充理解",
@@ -327,65 +499,17 @@
         "heading": "三种公平消融怎样安排",
         "id": "san-zhong-gong-ping-xiao-rong-zen-yang-an-pai"
       },
+      "独立完成一个小算例": {
+        "heading": "独立完成一个小算例",
+        "id": "du-li-wan-cheng-yi-ge-xiao-suan-li"
+      },
       "9-自测": {
         "heading": "9. 自测",
         "id": "id-9.-zi-ce"
       },
-      "线性化递推与稀疏选择不是同一件事": {
-        "heading": "线性化、递推与稀疏选择不是同一件事",
-        "id": ""
-      },
-      "router-的完整设计空间": {
-        "heading": "Router 的完整设计空间",
-        "id": ""
-      },
-      "均衡目标的作用和系统细节": {
-        "heading": "均衡目标的作用和系统细节",
-        "id": ""
-      },
-      "混合模型的图不能证明纯线性复杂度": {
-        "heading": "混合模型的图不能证明纯线性复杂度",
-        "id": "hun-he-mo-xing-de-tu-bu-neng-zheng-ming-chun-xian-xing-fu-za-du"
-      },
-      "稀疏选择保留了哪些代价": {
-        "heading": "稀疏选择保留了哪些代价",
-        "id": "xi-shu-xuan-ze-bao-liu-le-na-xie-dai-jia"
-      },
-      "moe-对比图的四个横轴": {
-        "heading": "MoE 对比图的四个横轴",
-        "id": "moe-dui-bi-tu-de-si-ge-heng-zhou"
-      },
-      "top-k-的顺序权重与梯度": {
-        "heading": "top-k 的顺序、权重与梯度",
-        "id": "topk-de-shun-xu-quan-zhong-yu-ti-du"
-      },
-      "共享专家的消融存在分歧": {
-        "heading": "共享专家的消融存在分歧",
-        "id": "gong-xiang-zhuan-jia-de-xiao-rong-cun-zai-fen-qi"
-      },
-      "噪声离散选择与截图不一致": {
-        "heading": "噪声、离散选择与截图不一致",
-        "id": "zao-sheng-li-san-xuan-ze-yu-jie-tu-bu-yi-zhi"
-      },
-      "均衡损失设备目标与偏置": {
-        "heading": "均衡损失、设备目标与偏置",
-        "id": "jun-heng-sun-shi-she-bei-mu-biao-yu-pian-zhi"
-      },
-      "容量限制导致批次依赖": {
-        "heading": "容量限制导致批次依赖",
-        "id": "rong-liang-xian-zhi-dao-zhi-pi-ci-yi-lai"
-      },
-      "router-数值误差与-z-loss": {
-        "heading": "router 数值误差与 z-loss",
-        "id": "router-shu-zhi-wu-cha-yu-zloss"
-      },
-      "小数据微调与-upcycling": {
-        "heading": "小数据微调与 upcycling",
-        "id": "xiao-shu-ju-wei-tiao-yu-upcycling"
-      },
-      "deepseek-配置中的课件疑点": {
-        "heading": "DeepSeek 配置中的课件疑点",
-        "id": "deepseek-pei-zhi-zhong-de-ke-jian-yi-dian"
+      "逐题推理": {
+        "heading": "逐题推理",
+        "id": "zhu-ti-tui-li"
       }
     },
     "textbook/05-gpu-flashattention.md": {
@@ -397,13 +521,57 @@
         "heading": "2. 线程层级与内存层级",
         "id": "id-2.-xian-cheng-ceng-ji-yu-nei-cun-ceng-ji"
       },
+      "硬件执行与存储的具体限制": {
+        "heading": "硬件执行与存储的具体限制",
+        "id": "ying-jian-zhi-xing-yu-cun-chu-de-ju-ti-xian-zhi"
+      },
+      "硬件计数和内存术语": {
+        "heading": "硬件计数和内存术语",
+        "id": "ying-jian-ji-shu-he-nei-cun-shu-yu"
+      },
+      "tpu-对照表的适用范围": {
+        "heading": "TPU 对照表的适用范围",
+        "id": "tpu-dui-zhao-biao-de-shi-yong-fan-wei"
+      },
       "3-六种优化其实在解决不同问题": {
         "heading": "3. 六种优化，其实在解决不同问题",
         "id": "id-3.-liu-zhong-you-hua-qi-shi-zai-jie-jue-bu-tong-wen-ti"
       },
+      "低精度重计算与访存的具体限制": {
+        "heading": "低精度、重计算与访存的具体限制",
+        "id": "di-jing-du-zhong-ji-suan-yu-fang-cun-de-ju-ti-xian-zhi"
+      },
+      "relu-算术强度的单位": {
+        "heading": "ReLU 算术强度的单位",
+        "id": "relu-suan-shu-qiang-du-de-dan-wei"
+      },
+      "四位格式名称与块缩放": {
+        "heading": "四位格式名称与块缩放",
+        "id": "si-wei-ge-shi-ming-cheng-yu-kuai-suo-fang"
+      },
+      "8-次访存如何变为-5-次": {
+        "heading": "8 次访存如何变为 5 次",
+        "id": "id-8-ci-fang-cun-ru-he-bian-wei-5-ci"
+      },
+      "画出-lane-的地址再谈合并": {
+        "heading": "画出 lane 的地址再谈合并",
+        "id": "hua-chu-lane-de-di-zhi-zai-tan-he-bing"
+      },
       "4-用分块矩阵乘法理解复用": {
         "heading": "4. 用分块矩阵乘法理解复用",
         "id": "id-4.-yong-fen-kuai-ju-zhen-cheng-fa-li-jie-fu-yong"
+      },
+      "为什么矩阵稍大反而吞吐骤降": {
+        "heading": "为什么矩阵稍大反而吞吐骤降",
+        "id": "wei-shen-me-ju-zhen-shao-da-fan-er-tun-tu-zhou-jiang"
+      },
+      "边缘-tile-与对齐": {
+        "heading": "边缘 tile 与对齐",
+        "id": "bian-yuan-tile-yu-dui-qi"
+      },
+      "吞吐锯齿图和-wave-quantization": {
+        "heading": "吞吐锯齿图和 wave quantization",
+        "id": "tun-tu-ju-chi-tu-he-wave-quantization"
       },
       "5-attention-的大中间矩阵": {
         "heading": "5. Attention 的大中间矩阵",
@@ -416,6 +584,14 @@
       "7-flashattention-把这些机制组合起来": {
         "heading": "7. FlashAttention 把这些机制组合起来",
         "id": "id-7.-flashattention-ba-zhe-xie-ji-zhi-zu-he-qi-lai"
+      },
+      "flashattention-的精确性说到哪一层": {
+        "heading": "FlashAttention 的精确性说到哪一层",
+        "id": "flashattention-de-jing-que-xing-shuo-dao-na-yi-ceng"
+      },
+      "flashattention-图表中的增算减-io": {
+        "heading": "FlashAttention 图表中的增算减 IO",
+        "id": "flashattention-tu-biao-zhong-de-zeng-suan-jian-io"
       },
       "深入算例与补充理解": {
         "heading": "深入算例与补充理解",
@@ -437,61 +613,17 @@
         "heading": "一个好的 GPU 直觉应带边界",
         "id": "yi-ge-hao-de-gpu-zhi-jue-ying-dai-bian-jie"
       },
+      "独立完成一个小算例": {
+        "heading": "独立完成一个小算例",
+        "id": "du-li-wan-cheng-yi-ge-xiao-suan-li"
+      },
       "8-自测与实验": {
         "heading": "8. 自测与实验",
         "id": "id-8.-zi-ce-yu-shi-yan"
       },
-      "硬件执行与存储的具体限制": {
-        "heading": "硬件执行与存储的具体限制",
-        "id": ""
-      },
-      "低精度重计算与访存的具体限制": {
-        "heading": "低精度、重计算与访存的具体限制",
-        "id": ""
-      },
-      "为什么矩阵稍大反而吞吐骤降": {
-        "heading": "为什么矩阵稍大反而吞吐骤降",
-        "id": ""
-      },
-      "flashattention-的精确性说到哪一层": {
-        "heading": "FlashAttention 的精确性说到哪一层",
-        "id": ""
-      },
-      "硬件计数和内存术语": {
-        "heading": "硬件计数和内存术语",
-        "id": "ying-jian-ji-shu-he-nei-cun-shu-yu"
-      },
-      "tpu-对照表的适用范围": {
-        "heading": "TPU 对照表的适用范围",
-        "id": "tpu-dui-zhao-biao-de-shi-yong-fan-wei"
-      },
-      "relu-算术强度的单位": {
-        "heading": "ReLU 算术强度的单位",
-        "id": "relu-suan-shu-qiang-du-de-dan-wei"
-      },
-      "四位格式名称与块缩放": {
-        "heading": "四位格式名称与块缩放",
-        "id": "si-wei-ge-shi-ming-cheng-yu-kuai-suo-fang"
-      },
-      "8-次访存如何变为-5-次": {
-        "heading": "8 次访存如何变为 5 次",
-        "id": "id-8-ci-fang-cun-ru-he-bian-wei-5-ci"
-      },
-      "画出-lane-的地址再谈合并": {
-        "heading": "画出 lane 的地址再谈合并",
-        "id": "hua-chu-lane-de-di-zhi-zai-tan-he-bing"
-      },
-      "边缘-tile-与对齐": {
-        "heading": "边缘 tile 与对齐",
-        "id": "bian-yuan-tile-yu-dui-qi"
-      },
-      "吞吐锯齿图和-wave-quantization": {
-        "heading": "吞吐锯齿图和 wave quantization",
-        "id": "tun-tu-ju-chi-tu-he-wave-quantization"
-      },
-      "flashattention-图表中的增算减-io": {
-        "heading": "FlashAttention 图表中的增算减 IO",
-        "id": "flashattention-tu-biao-zhong-de-zeng-suan-jian-io"
+      "逐题推理": {
+        "heading": "逐题推理",
+        "id": "zhu-ti-tui-li"
       }
     },
     "textbook/06-kernels-triton.md": {
@@ -499,13 +631,25 @@
         "heading": "1. 正确性模型与性能模型",
         "id": "id-1.-zheng-que-xing-mo-xing-yu-xing-neng-mo-xing"
       },
+      "硬件约束的课堂算例": {
+        "heading": "硬件约束的课堂算例",
+        "id": "ying-jian-yue-shu-de-ke-tang-suan-li"
+      },
       "2-benchmark-和-profiler-各回答什么": {
         "heading": "2. Benchmark 和 profiler 各回答什么",
         "id": "id-2.-benchmark-he-profiler-ge-hui-da-shen-me"
       },
+      "从测量到生成代码": {
+        "heading": "从测量到生成代码",
+        "id": "cong-ce-liang-dao-sheng-cheng-dai-ma"
+      },
       "3-一个-triton-program-的生命周期": {
         "heading": "3. 一个 Triton program 的生命周期",
         "id": "id-3.-yi-ge-triton-program-de-sheng-ming-zhou-qi"
+      },
+      "从逻辑块检查地址边界": {
+        "heading": "从逻辑块检查地址边界",
+        "id": "cong-luo-ji-kuai-jian-cha-di-zhi-bian-jie"
       },
       "4-为什么融合-gelu-能省时间": {
         "heading": "4. 为什么融合 GELU 能省时间",
@@ -547,27 +691,27 @@
         "heading": "怎样读一个“更慢”的结果",
         "id": "zen-yang-du-yi-ge-geng-man-de-jie-guo"
       },
+      "独立完成一个小算例": {
+        "heading": "独立完成一个小算例",
+        "id": "du-li-wan-cheng-yi-ge-xiao-suan-li"
+      },
       "9-自测": {
         "heading": "9. 自测",
         "id": "id-9.-zi-ce"
       },
-      "硬件约束的课堂算例": {
-        "heading": "硬件约束的课堂算例",
-        "id": ""
-      },
-      "从测量到生成代码": {
-        "heading": "从测量到生成代码",
-        "id": ""
-      },
-      "从逻辑块检查地址边界": {
-        "heading": "从逻辑块检查地址边界",
-        "id": ""
+      "逐题推理": {
+        "heading": "逐题推理",
+        "id": "zhu-ti-tui-li"
       }
     },
     "textbook/07-distributed-primitives.md": {
       "1-多卡解决两个问题": {
         "heading": "1. 多卡解决两个问题",
         "id": "id-1.-duo-ka-jie-jue-liang-ge-wen-ti"
+      },
+      "网络拓扑不是一根统一的网线": {
+        "heading": "网络拓扑不是一根统一的“网线”",
+        "id": "wang-luo-tuo-pu-bu-shi-yi-gen-tong-yi-de-wang-xian"
       },
       "2-rank进程组与通信顺序": {
         "heading": "2. Rank、进程组与通信顺序",
@@ -581,9 +725,17 @@
         "heading": "4. 通信为什么有启动成本和带宽成本",
         "id": "id-4.-tong-xin-wei-shen-me-you-qi-dong-cheng-ben-he-dai-kuan-cheng-ben"
       },
+      "通信性能的数字要说清口径": {
+        "heading": "通信性能的数字要说清口径",
+        "id": "tong-xin-xing-neng-de-shu-zi-yao-shuo-qing-kou-jing"
+      },
       "5-数据并行复制模型划分样本": {
         "heading": "5. 数据并行：复制模型，划分样本",
         "id": "id-5.-shu-ju-bing-xing-fu-zhi-mo-xing-hua-fen-yang-ben"
+      },
+      "教学代码能说明什么不能自动完成什么": {
+        "heading": "教学代码能说明什么，不能自动完成什么",
+        "id": "jiao-xue-dai-ma-neng-shuo-ming-shen-me-bu-neng-zi-dong-wan-cheng-shen-me"
       },
       "6-张量并行分一层的矩阵": {
         "heading": "6. 张量并行：分一层的矩阵",
@@ -617,21 +769,17 @@
         "heading": "通信日志应该记录什么",
         "id": "tong-xin-ri-zhi-ying-gai-ji-lu-shen-me"
       },
+      "独立完成一个小算例": {
+        "heading": "独立完成一个小算例",
+        "id": "du-li-wan-cheng-yi-ge-xiao-suan-li"
+      },
       "9-自测": {
         "heading": "9. 自测",
         "id": "id-9.-zi-ce"
       },
-      "网络拓扑不是一根统一的网线": {
-        "heading": "网络拓扑不是一根统一的“网线”",
-        "id": ""
-      },
-      "通信性能的数字要说清口径": {
-        "heading": "通信性能的数字要说清口径",
-        "id": ""
-      },
-      "教学代码能说明什么不能自动完成什么": {
-        "heading": "教学代码能说明什么，不能自动完成什么",
-        "id": ""
+      "逐题推理": {
+        "heading": "逐题推理",
+        "id": "zhu-ti-tui-li"
       }
     },
     "textbook/08-zero-hybrid-parallelism.md": {
@@ -639,13 +787,37 @@
         "heading": "1. DDP 复制了什么",
         "id": "id-1.-ddp-fu-zhi-le-shen-me"
       },
+      "从数据中心约束到实际配方": {
+        "heading": "从数据中心约束到实际配方",
+        "id": "cong-shu-ju-zhong-xin-yue-shu-dao-shi-ji-pei-fang"
+      },
+      "拓扑与代际": {
+        "heading": "拓扑与代际",
+        "id": "tuo-pu-yu-dai-ji"
+      },
       "2-三个-stage-分别切什么": {
         "heading": "2. 三个 stage 分别切什么",
         "id": "id-2.-san-ge-stage-fen-bie-qie-shen-me"
       },
+      "12-字节容量表不是训练可用容量": {
+        "heading": "12 字节容量表不是训练可用容量",
+        "id": "id-12-zi-jie-rong-liang-biao-bu-shi-xun-lian-ke-yong-rong-liang"
+      },
       "3-为什么前两个-stage-的通信量可以接近-ddp": {
         "heading": "3. 为什么前两个 stage 的通信量可以接近 DDP",
         "id": "id-3.-wei-shen-me-qian-liang-ge-stage-de-tong-xin-liang-ke-yi-jie-jin-ddp"
+      },
+      "zerofsdp-的生命周期补全": {
+        "heading": "ZeRO/FSDP 的生命周期补全",
+        "id": "zerofsdp-de-sheng-ming-zhou-qi-bu-quan"
+      },
+      "collective-与通信账本": {
+        "heading": "collective 与通信账本",
+        "id": "collective-yu-tong-xin-zhang-ben"
+      },
+      "fsdp-的时序图": {
+        "heading": "FSDP 的时序图",
+        "id": "fsdp-de-shi-xu-tu"
       },
       "4-重叠不是发起异步四个字": {
         "heading": "4. 重叠不是“发起异步”四个字",
@@ -655,13 +827,49 @@
         "heading": "5. 流水线的气泡怎样估计",
         "id": "id-5.-liu-shui-xian-de-qi-pao-zen-yang-gu-ji"
       },
+      "流水线中的三个-batch-概念": {
+        "heading": "流水线中的三个 batch 概念",
+        "id": "liu-shui-xian-zhong-de-san-ge-batch-gai-nian"
+      },
+      "反向的两个梯度和-zero-bubble": {
+        "heading": "反向的两个梯度和 zero bubble",
+        "id": "fan-xiang-de-liang-ge-ti-du-he-zero-bubble"
+      },
       "6-tpsp-与-cp-不要混淆": {
         "heading": "6. TP、SP 与 CP 不要混淆",
         "id": "id-6.-tpsp-yu-cp-bu-yao-hun-xiao"
       },
+      "专家分布与激活存储": {
+        "heading": "专家分布与激活存储",
+        "id": "zhuan-jia-fen-bu-yu-ji-huo-cun-chu"
+      },
+      "激活内存公式的适用条件": {
+        "heading": "激活内存公式的适用条件",
+        "id": "ji-huo-nei-cun-gong-shi-de-shi-yong-tiao-jian"
+      },
+      "专家并行与设备组不能机械相乘": {
+        "heading": "专家并行与设备组不能机械相乘",
+        "id": "zhuan-jia-bing-xing-yu-she-bei-zu-bu-neng-ji-xie-xiang-cheng"
+      },
       "7-如何组合并行": {
         "heading": "7. 如何组合并行",
         "id": "id-7.-ru-he-zu-he-bing-xing"
+      },
+      "总览表中的简写要还原": {
+        "heading": "总览表中的简写要还原",
+        "id": "zong-lan-biao-zhong-de-jian-xie-yao-huan-yuan"
+      },
+      "扩展实验的比较条件": {
+        "heading": "扩展实验的比较条件",
+        "id": "kuo-zhan-shi-yan-de-bi-jiao-tiao-jian"
+      },
+      "阶段变化和故障表": {
+        "heading": "阶段变化和故障表",
+        "id": "jie-duan-bian-hua-he-gu-zhang-biao"
+      },
+      "训练实例框架建议与未知项": {
+        "heading": "训练实例、框架建议与未知项",
+        "id": "xun-lian-shi-li-kuang-jia-jian-yi-yu-wei-zhi-xiang"
       },
       "深入算例与补充理解": {
         "heading": "深入算例与补充理解",
@@ -683,69 +891,17 @@
         "heading": "“更省显存”可能怎样提高速度",
         "id": "geng-sheng-xian-cun-ke-neng-zen-yang-ti-gao-su-du"
       },
+      "独立完成一个小算例": {
+        "heading": "独立完成一个小算例",
+        "id": "du-li-wan-cheng-yi-ge-xiao-suan-li"
+      },
       "8-自测与容量练习": {
         "heading": "8. 自测与容量练习",
         "id": "id-8.-zi-ce-yu-rong-liang-lian-xi"
       },
-      "zerofsdp-的生命周期补全": {
-        "heading": "ZeRO/FSDP 的生命周期补全",
-        "id": ""
-      },
-      "专家分布与激活存储": {
-        "heading": "专家分布与激活存储",
-        "id": ""
-      },
-      "从数据中心约束到实际配方": {
-        "heading": "从数据中心约束到实际配方",
-        "id": ""
-      },
-      "collective-与通信账本": {
-        "heading": "collective 与通信账本",
-        "id": "collective-yu-tong-xin-zhang-ben"
-      },
-      "拓扑与代际": {
-        "heading": "拓扑与代际",
-        "id": "tuo-pu-yu-dai-ji"
-      },
-      "fsdp-的时序图": {
-        "heading": "FSDP 的时序图",
-        "id": "fsdp-de-shi-xu-tu"
-      },
-      "12-字节容量表不是训练可用容量": {
-        "heading": "12 字节容量表不是训练可用容量",
-        "id": "id-12-zi-jie-rong-liang-biao-bu-shi-xun-lian-ke-yong-rong-liang"
-      },
-      "流水线中的三个-batch-概念": {
-        "heading": "流水线中的三个 batch 概念",
-        "id": "liu-shui-xian-zhong-de-san-ge-batch-gai-nian"
-      },
-      "反向的两个梯度和-zero-bubble": {
-        "heading": "反向的两个梯度和 zero bubble",
-        "id": "fan-xiang-de-liang-ge-ti-du-he-zero-bubble"
-      },
-      "激活内存公式的适用条件": {
-        "heading": "激活内存公式的适用条件",
-        "id": "ji-huo-nei-cun-gong-shi-de-shi-yong-tiao-jian"
-      },
-      "专家并行与设备组不能机械相乘": {
-        "heading": "专家并行与设备组不能机械相乘",
-        "id": "zhuan-jia-bing-xing-yu-she-bei-zu-bu-neng-ji-xie-xiang-cheng"
-      },
-      "总览表中的简写要还原": {
-        "heading": "总览表中的简写要还原",
-        "id": "zong-lan-biao-zhong-de-jian-xie-yao-huan-yuan"
-      },
-      "扩展实验的比较条件": {
-        "heading": "扩展实验的比较条件",
-        "id": "kuo-zhan-shi-yan-de-bi-jiao-tiao-jian"
-      },
-      "阶段变化和故障表": {
-        "heading": "阶段变化和故障表",
-        "id": "jie-duan-bian-hua-he-gu-zhang-biao"
-      },
-      "训练实例框架建议与未知项": {
-        "heading": "训练实例、框架建议与未知项",
-        "id": "xun-lian-shi-li-kuang-jia-jian-yi-yu-wei-zhi-xiang"
+      "逐题推理": {
+        "heading": "逐题推理",
+        "id": "zhu-ti-tui-li"
       }
     },
     "textbook/09-scaling-laws.md": {
@@ -757,13 +913,57 @@
         "heading": "2. 幂律与不可约损失",
         "id": "id-2.-milyu-bu-ke-yue-sun-shi"
       },
+      "数据学习曲线混合与重复": {
+        "heading": "数据学习曲线、混合与重复",
+        "id": "shu-ju-xue-xi-qu-xian-hun-he-yu-chong-fu"
+      },
+      "历史理论界与经验曲线": {
+        "heading": "历史、理论界与经验曲线",
+        "id": "li-shi-li-lun-jie-yu-jing-yan-qu-xian"
+      },
+      "从均值估计到非参数回归": {
+        "heading": "从均值估计到非参数回归",
+        "id": "cong-jun-zhi-gu-ji-dao-fei-can-shu-hui-gui"
+      },
+      "数据混合重复与尺度": {
+        "heading": "数据混合、重复与尺度",
+        "id": "shu-ju-hun-he-chong-fu-yu-chi-du"
+      },
+      "3-数据重复batch-与学习率": {
+        "heading": "3. 数据重复、batch 与学习率",
+        "id": "id-3.-shu-ju-chong-fu-batch-yu-xue-xi-l"
+      },
+      "critical-batch-的测量定义": {
+        "heading": "Critical batch 的测量定义",
+        "id": "critical-batch-de-ce-liang-ding-yi"
+      },
+      "上游下游与-chinchilla-分歧": {
+        "heading": "上游、下游与 Chinchilla 分歧",
+        "id": "shang-you-xia-you-yu-chinchilla-fen-qi"
+      },
+      "架构与优化器图读的是什么": {
+        "heading": "架构与优化器图读的是什么",
+        "id": "jia-gou-yu-you-hua-qi-tu-du-de-shi-shen-me"
+      },
+      "下游方差与验证集问答": {
+        "heading": "下游、方差与验证集问答",
+        "id": "xia-you-fang-cha-yu-yan-zheng-ji-wen-da"
+      },
       "4-共同拟合参数与数据": {
         "heading": "4. 共同拟合参数与数据",
         "id": "id-4.-gong-tong-ni-he-can-shu-yu-shu-ju"
       },
+      "参数的口径会改变拟合": {
+        "heading": "参数的口径会改变拟合",
+        "id": "can-shu-de-kou-jing-hui-gai-bian-ni-he"
+      },
       "5-三种获得计算最优曲线的方法": {
         "heading": "5. 三种获得计算最优曲线的方法",
         "id": "id-5.-san-zhong-huo-de-ji-suan-zui-you-qu-xian-de-fang-fa"
+      },
+      "三种-chinchilla-图的实验单位": {
+        "heading": "三种 Chinchilla 图的实验单位",
+        "id": "san-zhong-chinchilla-tu-de-shi-yan-dan-wei"
       },
       "6-kaplan-与-chinchilla-为什么不同": {
         "heading": "6. Kaplan 与 Chinchilla 为什么不同",
@@ -772,10 +972,6 @@
       "7-训练最优不等于生命周期最优": {
         "heading": "7. 训练最优不等于生命周期最优",
         "id": "id-7.-xun-lian-zui-you-bu-deng-yu-sheng-ming-zhou-qi-zui-you"
-      },
-      "3-数据重复batch-与学习率": {
-        "heading": "3. 数据重复、batch 与学习率",
-        "id": "id-3.-shu-ju-chong-fu-batch-yu-xue-xi-l"
       },
       "8-一份可信的拟合实验应该留下什么": {
         "heading": "8. 一份可信的拟合实验应该留下什么",
@@ -801,49 +997,17 @@
         "heading": "怎样表达预测的不确定性",
         "id": "zen-yang-biao-da-yu-ce-de-bu-que-ding-xing"
       },
+      "独立完成一个小算例": {
+        "heading": "独立完成一个小算例",
+        "id": "du-li-wan-cheng-yi-ge-xiao-suan-li"
+      },
       "9-自测": {
         "heading": "9. 自测",
         "id": "id-9.-zi-ce"
       },
-      "数据学习曲线混合与重复": {
-        "heading": "数据学习曲线、混合与重复",
-        "id": ""
-      },
-      "critical-batch-的测量定义": {
-        "heading": "Critical batch 的测量定义",
-        "id": ""
-      },
-      "上游下游与-chinchilla-分歧": {
-        "heading": "上游、下游与 Chinchilla 分歧",
-        "id": ""
-      },
-      "历史理论界与经验曲线": {
-        "heading": "历史、理论界与经验曲线",
-        "id": "li-shi-li-lun-jie-yu-jing-yan-qu-xian"
-      },
-      "从均值估计到非参数回归": {
-        "heading": "从均值估计到非参数回归",
-        "id": "cong-jun-zhi-gu-ji-dao-fei-can-shu-hui-gui"
-      },
-      "数据混合重复与尺度": {
-        "heading": "数据混合、重复与尺度",
-        "id": "shu-ju-hun-he-chong-fu-yu-chi-du"
-      },
-      "架构与优化器图读的是什么": {
-        "heading": "架构与优化器图读的是什么",
-        "id": "jia-gou-yu-you-hua-qi-tu-du-de-shi-shen-me"
-      },
-      "参数的口径会改变拟合": {
-        "heading": "参数的口径会改变拟合",
-        "id": "can-shu-de-kou-jing-hui-gai-bian-ni-he"
-      },
-      "下游方差与验证集问答": {
-        "heading": "下游、方差与验证集问答",
-        "id": "xia-you-fang-cha-yu-yan-zheng-ji-wen-da"
-      },
-      "三种-chinchilla-图的实验单位": {
-        "heading": "三种 Chinchilla 图的实验单位",
-        "id": "san-zhong-chinchilla-tu-de-shi-yan-dan-wei"
+      "逐题推理": {
+        "heading": "逐题推理",
+        "id": "zhu-ti-tui-li"
       }
     },
     "textbook/10-inference.md": {
@@ -854,6 +1018,10 @@
       "2-prefill-与-decode-的工作不同": {
         "heading": "2. Prefill 与 decode 的工作不同",
         "id": "id-2.-prefill-yu-decode-de-gong-zuo-bu-tong"
+      },
+      "课堂的完整成本模型": {
+        "heading": "课堂的完整成本模型",
+        "id": "ke-tang-de-wan-zheng-cheng-ben-mo-xing"
       },
       "3-kv-cache-容量手算": {
         "heading": "3. KV cache 容量手算",
@@ -867,9 +1035,17 @@
         "heading": "5. 两类有损节省",
         "id": "id-5.-liang-lei-you-sun-jie-sheng"
       },
+      "kv-节省路线不只-gqa": {
+        "heading": "KV 节省路线不只 GQA",
+        "id": "kv-jie-sheng-lu-xian-bu-zhi-gqa"
+      },
       "6-推测采样为何可以保留目标分布": {
         "heading": "6. 推测采样为何可以保留目标分布",
         "id": "id-6.-tui-ce-cai-yang-wei-he-ke-yi-bao-liu-mu-biao-fen-bu"
+      },
+      "无损推测与服务系统": {
+        "heading": "无损推测与服务系统",
+        "id": "wu-sun-tui-ce-yu-fu-wu-xi-tong"
       },
       "7-continuous-batching-与分页": {
         "heading": "7. Continuous batching 与分页",
@@ -899,21 +1075,17 @@
         "heading": "从容量约束到调度约束",
         "id": "cong-rong-liang-yue-shu-dao-diao-du-yue-shu"
       },
+      "独立完成一个小算例": {
+        "heading": "独立完成一个小算例",
+        "id": "du-li-wan-cheng-yi-ge-xiao-suan-li"
+      },
       "9-自测": {
         "heading": "9. 自测",
         "id": "id-9.-zi-ce"
       },
-      "课堂的完整成本模型": {
-        "heading": "课堂的完整成本模型",
-        "id": ""
-      },
-      "kv-节省路线不只-gqa": {
-        "heading": "KV 节省路线不只 GQA",
-        "id": ""
-      },
-      "无损推测与服务系统": {
-        "heading": "无损推测与服务系统",
-        "id": ""
+      "逐题推理": {
+        "heading": "逐题推理",
+        "id": "zhu-ti-tui-li"
       }
     },
     "textbook/11-scaling-practice.md": {
@@ -925,25 +1097,77 @@
         "heading": "2. 两条超参数迁移路线",
         "id": "id-2.-liang-tiao-chao-can-shu-qian-yi-lu-xian"
       },
+      "公开配方比较的具体结论": {
+        "heading": "公开配方比较的具体结论",
+        "id": "gong-kai-pei-fang-bi-jiao-de-ju-ti-jie-lun"
+      },
+      "minicpm-的缩放表与模型阶梯": {
+        "heading": "MiniCPM 的缩放表与模型阶梯",
+        "id": "minicpm-de-suo-fang-biao-yu-mo-xing-jie-ti"
+      },
+      "学习率谷底与-batch-曲面": {
+        "heading": "学习率谷底与 batch 曲面",
+        "id": "xue-xilgu-di-yu-batch-qu-mian"
+      },
       "3-为什么训练中途停下不等于专门训练到那里": {
         "heading": "3. 为什么训练中途停下不等于专门训练到那里",
         "id": "id-3.-wei-shen-me-xun-lian-zhong-tu-ting-xia-bu-deng-yu-zhuan-men-xun-lian-dao-na-li"
+      },
+      "wsd-的复用不是接着低学习率末尾跑": {
+        "heading": "WSD 的复用不是接着低学习率末尾跑",
+        "id": "wsd-de-fu-yong-bu-shi-jie-zhe-di-xue-xilmo-wei-pao"
+      },
+      "token-比例和拟合单位": {
+        "heading": "token 比例和拟合单位",
+        "id": "token-bi-li-he-ni-he-dan-wei"
+      },
+      "deepseek-热图近最优带和阶梯退火": {
+        "heading": "DeepSeek 热图、近最优带和阶梯退火",
+        "id": "deepseek-re-tu-jin-zui-you-dai-he-jie-ti-tui-huo"
+      },
+      "其他公开配方及后训练问答": {
+        "heading": "其他公开配方及后训练问答",
+        "id": "qi-ta-gong-kai-pei-fang-ji-hou-xun-lian-wen-da"
       },
       "4-公平比较优化器的两个坐标轴": {
         "heading": "4. 公平比较优化器的两个坐标轴",
         "id": "id-4.-gong-ping-bi-jiao-you-hua-qi-de-liang-ge-zuo-biao-zhou"
       },
+      "stepfun-曲面不是全局凸性证明": {
+        "heading": "StepFun 曲面不是全局凸性证明",
+        "id": "stepfun-qu-mian-bu-shi-quan-ju-tu-xing-zheng-ming"
+      },
       "5-muon-为什么把更新当矩阵看": {
         "heading": "5. Muon 为什么把更新当矩阵看",
         "id": "id-5.-muon-wei-shen-me-ba-geng-xin-dang-ju-zhen-kan"
+      },
+      "优化器成功与证明更优是两件事": {
+        "heading": "优化器成功与“证明更优”是两件事",
+        "id": "you-hua-qi-cheng-gong-yu-zheng-ming-geng-you-shi-liang-jian-shi"
+      },
+      "muon-的近似和比较边界": {
+        "heading": "Muon 的近似和比较边界",
+        "id": "muon-de-jin-si-he-bi-jiao-bian-jie"
       },
       "6-μp-首先想保持什么": {
         "heading": "6. μP 首先想保持什么",
         "id": "id-6.p-shou-xian-xiang-bao-chi-shen-me"
       },
+      "μp-推导里哪些是假设": {
+        "heading": "μP 推导里哪些是假设",
+        "id": "p-tui-dao-li-na-xie-shi-jia-she"
+      },
+      "μp-的推导是带条件的量级论证": {
+        "heading": "μP 的推导是带条件的量级论证",
+        "id": "p-de-tui-dao-shi-dai-tiao-jian-de-liang-ji-lun-zheng"
+      },
       "7-如何实际检查迁移是否成立": {
         "heading": "7. 如何实际检查迁移是否成立",
         "id": "id-7.-ru-he-shi-ji-jian-cha-qian-yi-shi-fou-cheng-li"
+      },
+      "μp-压力测试要看整组宽度": {
+        "heading": "μP 压力测试要看整组宽度",
+        "id": "p-ya-li-ce-shi-yao-kan-zheng-zu-kuan-du"
       },
       "8-一份可执行的规模化决策流程": {
         "heading": "8. 一份可执行的规模化决策流程",
@@ -969,61 +1193,17 @@
         "heading": "优化器比较不应只有一张最优曲线",
         "id": "you-hua-qi-bi-jiao-bu-ying-zhi-you-yi-zhang-zui-you-qu-xian"
       },
+      "独立完成一个小算例": {
+        "heading": "独立完成一个小算例",
+        "id": "du-li-wan-cheng-yi-ge-xiao-suan-li"
+      },
       "9-自测": {
         "heading": "9. 自测",
         "id": "id-9.-zi-ce"
       },
-      "公开配方比较的具体结论": {
-        "heading": "公开配方比较的具体结论",
-        "id": ""
-      },
-      "优化器成功与证明更优是两件事": {
-        "heading": "优化器成功与“证明更优”是两件事",
-        "id": ""
-      },
-      "μp-推导里哪些是假设": {
-        "heading": "μP 推导里哪些是假设",
-        "id": ""
-      },
-      "minicpm-的缩放表与模型阶梯": {
-        "heading": "MiniCPM 的缩放表与模型阶梯",
-        "id": "minicpm-de-suo-fang-biao-yu-mo-xing-jie-ti"
-      },
-      "学习率谷底与-batch-曲面": {
-        "heading": "学习率谷底与 batch 曲面",
-        "id": "xue-xilgu-di-yu-batch-qu-mian"
-      },
-      "wsd-的复用不是接着低学习率末尾跑": {
-        "heading": "WSD 的复用不是接着低学习率末尾跑",
-        "id": "wsd-de-fu-yong-bu-shi-jie-zhe-di-xue-xilmo-wei-pao"
-      },
-      "token-比例和拟合单位": {
-        "heading": "token 比例和拟合单位",
-        "id": "token-bi-li-he-ni-he-dan-wei"
-      },
-      "deepseek-热图近最优带和阶梯退火": {
-        "heading": "DeepSeek 热图、近最优带和阶梯退火",
-        "id": "deepseek-re-tu-jin-zui-you-dai-he-jie-ti-tui-huo"
-      },
-      "其他公开配方及后训练问答": {
-        "heading": "其他公开配方及后训练问答",
-        "id": "qi-ta-gong-kai-pei-fang-ji-hou-xun-lian-wen-da"
-      },
-      "stepfun-曲面不是全局凸性证明": {
-        "heading": "StepFun 曲面不是全局凸性证明",
-        "id": "stepfun-qu-mian-bu-shi-quan-ju-tu-xing-zheng-ming"
-      },
-      "muon-的近似和比较边界": {
-        "heading": "Muon 的近似和比较边界",
-        "id": "muon-de-jin-si-he-bi-jiao-bian-jie"
-      },
-      "μp-的推导是带条件的量级论证": {
-        "heading": "μP 的推导是带条件的量级论证",
-        "id": "p-de-tui-dao-shi-dai-tiao-jian-de-liang-ji-lun-zheng"
-      },
-      "μp-压力测试要看整组宽度": {
-        "heading": "μP 压力测试要看整组宽度",
-        "id": "p-ya-li-ce-shi-yao-kan-zheng-zu-kuan-du"
+      "逐题推理": {
+        "heading": "逐题推理",
+        "id": "zhu-ti-tui-li"
       }
     },
     "textbook/12-evaluation.md": {
@@ -1034,6 +1214,10 @@
       "2-交叉熵与-perplexity-要分清": {
         "heading": "2. 交叉熵与 perplexity 要分清",
         "id": "id-2.-jiao-cha-shang-yu-perplexity-yao-fen-qing"
+      },
+      "perplexity-的支持理由与限制": {
+        "heading": "Perplexity 的支持理由与限制",
+        "id": "perplexity-de-zhi-chi-li-you-yu-xian-zhi"
       },
       "3-考试题有清晰答案也有边界": {
         "heading": "3. 考试题有清晰答案，也有边界",
@@ -1055,9 +1239,17 @@
         "heading": "7. 数据污染会怎样误导判断",
         "id": "id-7.-shu-ju-wu-ran-hui-zen-yang-wu-dao-pan-duan"
       },
+      "污染防护与评估本身也会错": {
+        "heading": "污染防护与“评估本身也会错”",
+        "id": "wu-ran-fang-hu-yu-ping-gu-ben-shen-ye-hui-cuo"
+      },
       "8-用统计与失败案例约束结论": {
         "heading": "8. 用统计与失败案例约束结论",
         "id": "id-8.-yong-tong-ji-yu-shi-bai-an-li-yue-shu-jie-lun"
+      },
+      "把不同评估对象放回同一框架": {
+        "heading": "把不同评估对象放回同一框架",
+        "id": "ba-bu-tong-ping-gu-dui-xiang-fang-hui-tong-yi-kuang-jia"
       },
       "深入算例与补充理解": {
         "heading": "深入算例与补充理解",
@@ -1079,21 +1271,17 @@
         "heading": "从失败样本到下一轮实验",
         "id": "cong-shi-bai-yang-ben-dao-xia-yi-lun-shi-yan"
       },
+      "独立完成一个小算例": {
+        "heading": "独立完成一个小算例",
+        "id": "du-li-wan-cheng-yi-ge-xiao-suan-li"
+      },
       "9-自测与评估卡片": {
         "heading": "9. 自测与评估卡片",
         "id": "id-9.-zi-ce-yu-ping-gu-ka-pian"
       },
-      "perplexity-的支持理由与限制": {
-        "heading": "Perplexity 的支持理由与限制",
-        "id": ""
-      },
-      "把不同评估对象放回同一框架": {
-        "heading": "把不同评估对象放回同一框架",
-        "id": ""
-      },
-      "污染防护与评估本身也会错": {
-        "heading": "污染防护与“评估本身也会错”",
-        "id": ""
+      "逐题推理": {
+        "heading": "逐题推理",
+        "id": "zhu-ti-tui-li"
       }
     },
     "textbook/13-data-sources.md": {
@@ -1101,9 +1289,25 @@
         "heading": "1. “训练于互联网”省略了哪些步骤",
         "id": "id-1.-xun-lian-yu-hu-lian-wang-sheng-le-le-na-xie-bu-zhou"
       },
+      "网页获取与不同数据对象": {
+        "heading": "网页获取与不同数据对象",
+        "id": "wang-ye-huo-qu-yu-bu-tong-shu-ju-dui-xiang"
+      },
       "2-保存来源信息是一项技术能力": {
         "heading": "2. 保存来源信息是一项技术能力",
         "id": "id-2.-bao-cun-lai-yuan-xin-xi-shi-yi-xiang-ji-shu-neng-li"
+      },
+      "3-获取许可与使用是不同问题": {
+        "heading": "3. 获取、许可与使用是不同问题",
+        "id": "id-3.-huo-qu-xu-ke-yu-shi-yong-shi-bu-tong-wen-ti"
+      },
+      "不把法律背景压成一句错误结论": {
+        "heading": "不把法律背景压成一句错误结论",
+        "id": "bu-ba-falbei-jing-ya-cheng-yi-ju-cuo-wu-jie-lun"
+      },
+      "权利期限cc-与许可变更问答": {
+        "heading": "权利期限、CC 与许可变更问答",
+        "id": "quan-li-qi-xian-cc-yu-xu-ke-bian-geng-wen-da"
       },
       "4-common-crawl-不是现成的高质量文本": {
         "heading": "4. Common Crawl 不是现成的高质量文本",
@@ -1113,17 +1317,25 @@
         "heading": "5. 专门来源各有什么价值",
         "id": "id-5.-zhuan-men-lai-yuan-ge-you-shen-me-jia-zhi"
       },
+      "数据对象单位和链接要核对": {
+        "heading": "数据对象、单位和链接要核对",
+        "id": "shu-ju-dui-xiang-dan-wei-he-lian-jie-yao-he-dui"
+      },
       "6-经典数据集展示的是不同选择机制": {
         "heading": "6. 经典数据集展示的是不同选择机制",
         "id": "id-6.-jing-dian-shu-ju-ji-zhan-shi-de-shi-bu-tong-xuan-ze-ji-zhi"
       },
+      "数据集演化保留哪些信息": {
+        "heading": "数据集演化保留哪些信息",
+        "id": "shu-ju-ji-yan-hua-bao-liu-na-xie-xin-xi"
+      },
+      "数据集比较不能只看一个-token-数": {
+        "heading": "数据集比较不能只看一个 token 数",
+        "id": "shu-ju-ji-bi-jiao-bu-neng-zhi-kan-yi-ge-token-shu"
+      },
       "7-为什么质量分类器总在定义好": {
         "heading": "7. 为什么质量分类器总在定义“好”",
         "id": "id-7.-wei-shen-me-zhi-liang-fen-lei-qi-zong-zai-ding-yi-hao"
-      },
-      "3-获取许可与使用是不同问题": {
-        "heading": "3. 获取、许可与使用是不同问题",
-        "id": "id-3.-huo-qu-xu-ke-yu-shi-yong-shi-bu-tong-wen-ti"
       },
       "8-从预训练到后训练数据形态会变化": {
         "heading": "8. 从预训练到后训练，数据形态会变化",
@@ -1149,33 +1361,17 @@
         "heading": "数据消融应怎样控制成本",
         "id": "shu-ju-xiao-rong-ying-zen-yang-kong-zhi-cheng-ben"
       },
+      "独立完成一个小算例": {
+        "heading": "独立完成一个小算例",
+        "id": "du-li-wan-cheng-yi-ge-xiao-suan-li"
+      },
       "9-自测与实践": {
         "heading": "9. 自测与实践",
         "id": "id-9.-zi-ce-yu-shi-jian"
       },
-      "网页获取与不同数据对象": {
-        "heading": "网页获取与不同数据对象",
-        "id": ""
-      },
-      "数据集演化保留哪些信息": {
-        "heading": "数据集演化保留哪些信息",
-        "id": ""
-      },
-      "不把法律背景压成一句错误结论": {
-        "heading": "不把法律背景压成一句错误结论",
-        "id": ""
-      },
-      "权利期限cc-与许可变更问答": {
-        "heading": "权利期限、CC 与许可变更问答",
-        "id": "quan-li-qi-xian-cc-yu-xu-ke-bian-geng-wen-da"
-      },
-      "数据对象单位和链接要核对": {
-        "heading": "数据对象、单位和链接要核对",
-        "id": "shu-ju-dui-xiang-dan-wei-he-lian-jie-yao-he-dui"
-      },
-      "数据集比较不能只看一个-token-数": {
-        "heading": "数据集比较不能只看一个 token 数",
-        "id": "shu-ju-ji-bi-jiao-bu-neng-zhi-kan-yi-ge-token-shu"
+      "逐题推理": {
+        "heading": "逐题推理",
+        "id": "zhu-ti-tui-li"
       }
     },
     "textbook/14-data-processing.md": {
@@ -1191,13 +1387,29 @@
         "heading": "3. 过滤是一个目标分布迁移问题",
         "id": "id-3.-guolshi-yi-ge-mu-biao-fen-bu-qian-yi-wen-ti"
       },
+      "转换与过滤的具体例子": {
+        "heading": "转换与过滤的具体例子",
+        "id": "zhuan-huan-yu-guolde-ju-ti-li-zi"
+      },
+      "过滤分数需要解释名称和概率也要校正": {
+        "heading": "过滤分数需要解释，名称和概率也要校正",
+        "id": "guolfen-shu-xu-yao-jie-shi-ming-cheng-he-gailye-yao-jiao-zheng"
+      },
       "4-精确去重先定义什么叫同一条": {
         "heading": "4. 精确去重：先定义什么叫同一条",
         "id": "id-4.-jing-que-qu-zhong-xian-ding-yi-shen-me-jiao-tong-yi-tiao"
       },
+      "精确去重示例的哈希冲突与复杂度": {
+        "heading": "精确去重示例的哈希冲突与复杂度",
+        "id": "jing-que-qu-zhong-shi-li-de-ha-xi-chong-tu-yu-fu-za-du"
+      },
       "5-jaccard-与-minhash-的直觉": {
         "heading": "5. Jaccard 与 MinHash 的直觉",
         "id": "id-5.-jaccard-yu-minhash-de-zhi-jue"
+      },
+      "去重算法保留的条件": {
+        "heading": "去重算法保留的条件",
+        "id": "qu-zhong-suan-fa-bao-liu-de-tiao-jian"
       },
       "6-lsh-怎样避免两两比较": {
         "heading": "6. LSH 怎样避免两两比较",
@@ -1207,6 +1419,14 @@
         "heading": "7. 混合权重必须换算成 epoch",
         "id": "id-7.-hun-he-quan-zhong-bi-xu-huan-suan-cheng-epoch"
       },
+      "混合外推与合成代码任务": {
+        "heading": "混合外推与合成代码任务",
+        "id": "hun-he-wai-tui-yu-he-cheng-dai-ma-ren-wu"
+      },
+      "混合比例必须带单位": {
+        "heading": "混合比例必须带单位",
+        "id": "hun-he-bi-li-bi-xu-dai-dan-wei"
+      },
       "8-小模型选配方怎样防止外推失真": {
         "heading": "8. 小模型选配方，怎样防止外推失真",
         "id": "id-8.-xiao-mo-xing-xuan-pei-fang-zen-yang-fang-zhi-wai-tui-shi-zhen"
@@ -1214,6 +1434,10 @@
       "9-合成数据从任务设计开始": {
         "heading": "9. 合成数据从任务设计开始",
         "id": "id-9.-he-cheng-shu-ju-cong-ren-wu-she-ji-kai-shi"
+      },
+      "合成问题数与轨迹数不能互换": {
+        "heading": "合成问题数与轨迹数不能互换",
+        "id": "he-cheng-wen-ti-shu-yu-gui-ji-shu-bu-neng-hu-huan"
       },
       "深入算例与补充理解": {
         "heading": "深入算例与补充理解",
@@ -1235,37 +1459,17 @@
         "heading": "合成数据要保存的不只是答案",
         "id": "he-cheng-shu-ju-yao-bao-cun-de-bu-zhi-shi-da-an"
       },
+      "独立完成一个小算例": {
+        "heading": "独立完成一个小算例",
+        "id": "du-li-wan-cheng-yi-ge-xiao-suan-li"
+      },
       "10-自测": {
         "heading": "10. 自测",
         "id": "id-10.-zi-ce"
       },
-      "转换与过滤的具体例子": {
-        "heading": "转换与过滤的具体例子",
-        "id": ""
-      },
-      "去重算法保留的条件": {
-        "heading": "去重算法保留的条件",
-        "id": ""
-      },
-      "混合外推与合成代码任务": {
-        "heading": "混合外推与合成代码任务",
-        "id": ""
-      },
-      "过滤分数需要解释名称和概率也要校正": {
-        "heading": "过滤分数需要解释，名称和概率也要校正",
-        "id": "guolfen-shu-xu-yao-jie-shi-ming-cheng-he-gailye-yao-jiao-zheng"
-      },
-      "精确去重示例的哈希冲突与复杂度": {
-        "heading": "精确去重示例的哈希冲突与复杂度",
-        "id": "jing-que-qu-zhong-shi-li-de-ha-xi-chong-tu-yu-fu-za-du"
-      },
-      "混合比例必须带单位": {
-        "heading": "混合比例必须带单位",
-        "id": "hun-he-bi-li-bi-xu-dai-dan-wei"
-      },
-      "合成问题数与轨迹数不能互换": {
-        "heading": "合成问题数与轨迹数不能互换",
-        "id": "he-cheng-wen-ti-shu-yu-gui-ji-shu-bu-neng-hu-huan"
+      "逐题推理": {
+        "heading": "逐题推理",
+        "id": "zhu-ti-tui-li"
       }
     },
     "textbook/15-sft-rlhf-dpo.md": {
@@ -1273,17 +1477,25 @@
         "heading": "1. Base model 为什么还不够像助手",
         "id": "id-1.-base-model-wei-shen-me-hai-bu-gou-xiang-zhu-shou"
       },
-      "4-sft-的目标与-mask": {
-        "heading": "4. SFT 的目标与 mask",
-        "id": "id-4.-sft-de-mu-biao-yu-mask"
-      },
       "2-一条示范同时教很多东西": {
         "heading": "2. 一条示范同时教很多东西",
         "id": "id-2.-yi-tiao-shi-fan-tong-shi-jiao-hen-duo-dong-xi"
       },
+      "sft-数据的演化与知道自己不知道": {
+        "heading": "SFT 数据的演化与“知道自己不知道”",
+        "id": "sft-shu-ju-de-yan-hua-yu-zhi-dao-zi-ji-bu-zhi-dao"
+      },
+      "示例正确性标注方式与人口调查的边界": {
+        "heading": "示例正确性、标注方式与人口调查的边界",
+        "id": "shi-li-zheng-que-xing-biao-zhu-fang-shi-yu-ren-kou-diao-cha-de-bian-jie"
+      },
       "3-知识诚实与安全行为": {
         "heading": "3. 知识、诚实与安全行为",
         "id": "id-3.-zhi-shi-cheng-shi-yu-an-quan-xing-wei"
+      },
+      "4-sft-的目标与-mask": {
+        "heading": "4. SFT 的目标与 mask",
+        "id": "id-4.-sft-de-mu-biao-yu-mask"
       },
       "5-mid-training-为什么放在两者之间": {
         "heading": "5. Mid-training 为什么放在两者之间",
@@ -1293,9 +1505,25 @@
         "heading": "6. 为什么“写出好答案”与“挑出好答案”不同",
         "id": "id-6.-wei-shen-me-xie-chu-hao-da-an-yu-tiao-chu-hao-da-an-bu-tong"
       },
+      "偏好数据为何占据半讲": {
+        "heading": "偏好数据为何占据半讲",
+        "id": "pian-hao-shu-ju-wei-he-zhan-ju-ban-jiang"
+      },
+      "评审相关性数据消融与生成判断差距": {
+        "heading": "评审相关性、数据消融与生成判断差距",
+        "id": "ping-shen-xiang-guan-xing-shu-ju-xiao-rong-yu-sheng-cheng-pan-duan-cha-ju"
+      },
       "7-从偏好训练奖励模型": {
         "heading": "7. 从偏好训练奖励模型",
         "id": "id-7.-cong-pian-hao-xun-lian-jiang-li-mo-xing"
+      },
+      "从策略梯度到-dpo-的课堂桥梁": {
+        "heading": "从策略梯度到 DPO 的课堂桥梁",
+        "id": "cong-ce-le-ti-du-dao-dpo-de-ke-tang-qiao-liang"
+      },
+      "ppodpo-与课上跳过的实验页": {
+        "heading": "PPO、DPO 与课上跳过的实验页",
+        "id": "ppodpo-yu-ke-shang-tiao-guo-de-shi-yan-ye"
       },
       "8-dpo-的推导为什么能省掉显式奖励模型": {
         "heading": "8. DPO 的推导为什么能省掉显式奖励模型",
@@ -1325,33 +1553,17 @@
         "heading": "SFT／DPO 实现检查清单的用途",
         "id": "sftdpo-shi-xian-jian-cha-qing-dan-de-yong-tu"
       },
+      "独立完成一个小算例": {
+        "heading": "独立完成一个小算例",
+        "id": "du-li-wan-cheng-yi-ge-xiao-suan-li"
+      },
       "10-自测": {
         "heading": "10. 自测",
         "id": "id-10.-zi-ce"
       },
-      "sft-数据的演化与知道自己不知道": {
-        "heading": "SFT 数据的演化与“知道自己不知道”",
-        "id": ""
-      },
-      "偏好数据为何占据半讲": {
-        "heading": "偏好数据为何占据半讲",
-        "id": ""
-      },
-      "从策略梯度到-dpo-的课堂桥梁": {
-        "heading": "从策略梯度到 DPO 的课堂桥梁",
-        "id": ""
-      },
-      "示例正确性标注方式与人口调查的边界": {
-        "heading": "示例正确性、标注方式与人口调查的边界",
-        "id": "shi-li-zheng-que-xing-biao-zhu-fang-shi-yu-ren-kou-diao-cha-de-bian-jie"
-      },
-      "评审相关性数据消融与生成判断差距": {
-        "heading": "评审相关性、数据消融与生成判断差距",
-        "id": "ping-shen-xiang-guan-xing-shu-ju-xiao-rong-yu-sheng-cheng-pan-duan-cha-ju"
-      },
-      "ppodpo-与课上跳过的实验页": {
-        "heading": "PPO、DPO 与课上跳过的实验页",
-        "id": "ppodpo-yu-ke-shang-tiao-guo-de-shi-yan-ye"
+      "逐题推理": {
+        "heading": "逐题推理",
+        "id": "zhu-ti-tui-li"
       }
     },
     "textbook/16-rlvr-grpo.md": {
@@ -1367,6 +1579,14 @@
         "heading": "3. PPO 在限制什么",
         "id": "id-3.-ppo-zai-xian-zhi-shen-me"
       },
+      "ppogrpo-的实现与梯度边界": {
+        "heading": "PPO/GRPO 的实现与梯度边界",
+        "id": "ppogrpo-de-shi-xian-yu-ti-du-bian-jie"
+      },
+      "ppo-实现页不能照抄成数学定义": {
+        "heading": "PPO 实现页不能照抄成数学定义",
+        "id": "ppo-shi-xian-ye-bu-neng-zhao-chao-cheng-shu-xue-ding-yi"
+      },
       "4-grpo-怎样省掉-value-model": {
         "heading": "4. GRPO 怎样省掉 value model",
         "id": "id-4.-grpo-zen-yang-sheng-diao-value-model"
@@ -1375,9 +1595,21 @@
         "heading": "5. “简单”不代表目标没有偏差",
         "id": "id-5.-jian-dan-bu-dai-biao-mu-biao-mei-you-pian-cha"
       },
+      "grpo-的有限组无偏性和长度权重": {
+        "heading": "GRPO 的有限组、无偏性和长度权重",
+        "id": "grpo-de-you-xian-zu-wu-pian-xing-he-chang-du-quan-zhong"
+      },
       "6-从-r1-zero-到完整后训练流程": {
         "heading": "6. 从 R1-Zero 到完整后训练流程",
         "id": "id-6.-cong-r1zero-dao-wan-zheng-hou-xun-lian-liu-cheng"
+      },
+      "r1-的阶段与训练信号": {
+        "heading": "R1 的阶段与训练信号",
+        "id": "r1-de-jie-duan-yu-xun-lian-xin-hao"
+      },
+      "r1kimi-和-qwen-的配方各有边界": {
+        "heading": "R1、Kimi 和 Qwen 的配方各有边界",
+        "id": "r1kimi-he-qwen-de-pei-fang-ge-you-bian-jie"
       },
       "7-难度验证器与课程安排": {
         "heading": "7. 难度、验证器与课程安排",
@@ -1390,6 +1622,14 @@
       "9-rl-的系统成本": {
         "heading": "9. RL 的系统成本",
         "id": "id-9.-rl-de-xi-tong-cheng-ben"
+      },
+      "agent-rl-与系统扩展": {
+        "heading": "Agent RL 与系统扩展",
+        "id": "agent-rl-yu-xi-tong-kuo-zhan"
+      },
+      "agent-专家是训练分支验证器也需要验证": {
+        "heading": "Agent 专家是训练分支，验证器也需要验证",
+        "id": "agent-zhuan-jia-shi-xun-lian-fen-zhi-yan-zheng-qi-ye-xu-yao-yan-zheng"
       },
       "深入算例与补充理解": {
         "heading": "深入算例与补充理解",
@@ -1411,37 +1651,17 @@
         "heading": "一个可复现的 RL 小实验应控制什么",
         "id": "yi-ge-ke-fu-xian-de-rl-xiao-shi-yan-ying-kong-zhi-shen-me"
       },
+      "独立完成一个小算例": {
+        "heading": "独立完成一个小算例",
+        "id": "du-li-wan-cheng-yi-ge-xiao-suan-li"
+      },
       "10-自测": {
         "heading": "10. 自测",
         "id": "id-10.-zi-ce"
       },
-      "ppogrpo-的实现与梯度边界": {
-        "heading": "PPO/GRPO 的实现与梯度边界",
-        "id": ""
-      },
-      "r1-的阶段与训练信号": {
-        "heading": "R1 的阶段与训练信号",
-        "id": ""
-      },
-      "agent-rl-与系统扩展": {
-        "heading": "Agent RL 与系统扩展",
-        "id": ""
-      },
-      "ppo-实现页不能照抄成数学定义": {
-        "heading": "PPO 实现页不能照抄成数学定义",
-        "id": "ppo-shi-xian-ye-bu-neng-zhao-chao-cheng-shu-xue-ding-yi"
-      },
-      "grpo-的有限组无偏性和长度权重": {
-        "heading": "GRPO 的有限组、无偏性和长度权重",
-        "id": "grpo-de-you-xian-zu-wu-pian-xing-he-chang-du-quan-zhong"
-      },
-      "r1kimi-和-qwen-的配方各有边界": {
-        "heading": "R1、Kimi 和 Qwen 的配方各有边界",
-        "id": "r1kimi-he-qwen-de-pei-fang-ge-you-bian-jie"
-      },
-      "agent-专家是训练分支验证器也需要验证": {
-        "heading": "Agent 专家是训练分支，验证器也需要验证",
-        "id": "agent-zhuan-jia-shi-xun-lian-fen-zhi-yan-zheng-qi-ye-xu-yao-yan-zheng"
+      "逐题推理": {
+        "heading": "逐题推理",
+        "id": "zhu-ti-tui-li"
       }
     },
     "textbook/17-multimodality.md": {
@@ -1453,6 +1673,14 @@
         "heading": "2. CLIP 学的是什么",
         "id": "id-2.-clip-xue-de-shi-shen-me"
       },
+      "clipsiglip-的课堂细节": {
+        "heading": "CLIP/SigLIP 的课堂细节",
+        "id": "clipsiglip-de-ke-tang-xi-jie"
+      },
+      "clip-的图像向量与-vlm-的视觉序列不同": {
+        "heading": "CLIP 的图像向量与 VLM 的视觉序列不同",
+        "id": "clip-de-tu-xiang-xiang-liang-yu-vlm-de-shi-jue-xu-lie-bu-tong"
+      },
       "3-vit-如何把图像变成序列": {
         "heading": "3. ViT 如何把图像变成序列",
         "id": "id-3.-vit-ru-he-ba-tu-xiang-bian-cheng-xu-lie"
@@ -1461,13 +1689,25 @@
         "heading": "4. SigLIP 为什么改变损失",
         "id": "id-4.-siglip-wei-shen-me-gai-bian-sun-shi"
       },
+      "siglip-的独立配对目标与效率口径": {
+        "heading": "SigLIP 的独立配对目标与效率口径",
+        "id": "siglip-de-du-li-pei-dui-mu-biao-yu-xiaolkou-jing"
+      },
       "5-llava视觉编码器--projector--lm": {
         "heading": "5. LLaVA：视觉编码器 + projector + LM",
         "id": "id-5.-llava-shi-jue-bian-ma-qi--projector--lm"
       },
+      "视觉语言模型演进不只是接一个-projector": {
+        "heading": "视觉语言模型演进不只是“接一个 projector”",
+        "id": "shi-jue-yu-yan-mo-xing-yan-jin-bu-zhi-shi-jie-yi-ge-projector"
+      },
       "6-高分辨率视频与动态长度": {
         "heading": "6. 高分辨率、视频与动态长度",
         "id": "id-6.-gao-fen-bianl-shi-pin-yu-dong-tai-chang-du"
+      },
+      "动态分辨率位置与多阶段训练": {
+        "heading": "动态分辨率、位置与多阶段训练",
+        "id": "dong-tai-fen-bianl-wei-zhi-yu-duo-jie-duan-xun-lian"
       },
       "7-多模态训练为什么要平衡损失": {
         "heading": "7. 多模态训练为什么要平衡损失",
@@ -1476,6 +1716,14 @@
       "8-看图回答与生成图片是不同方向": {
         "heading": "8. 看图回答与生成图片是不同方向",
         "id": "id-8.-kan-tu-hui-da-yu-sheng-cheng-tu-pian-shi-bu-tong-fang-xiang"
+      },
+      "chameleon-与理解生成的不对称": {
+        "heading": "Chameleon 与理解/生成的不对称",
+        "id": "chameleon-yu-li-jie-sheng-cheng-de-bu-dui-chen"
+      },
+      "离散码本与生成的边界": {
+        "heading": "离散码本与生成的边界",
+        "id": "li-san-ma-ben-yu-sheng-cheng-de-bian-jie"
       },
       "深入算例与补充理解": {
         "heading": "深入算例与补充理解",
@@ -1497,37 +1745,17 @@
         "heading": "多模态评估也要拆分错误来源",
         "id": "duo-mo-tai-ping-gu-ye-yao-chai-fen-cuo-wu-lai-yuan"
       },
+      "独立完成一个小算例": {
+        "heading": "独立完成一个小算例",
+        "id": "du-li-wan-cheng-yi-ge-xiao-suan-li"
+      },
       "9-自测与最小实验": {
         "heading": "9. 自测与最小实验",
         "id": "id-9.-zi-ce-yu-zui-xiao-shi-yan"
       },
-      "clipsiglip-的课堂细节": {
-        "heading": "CLIP/SigLIP 的课堂细节",
-        "id": ""
-      },
-      "视觉语言模型演进不只是接一个-projector": {
-        "heading": "视觉语言模型演进不只是“接一个 projector”",
-        "id": ""
-      },
-      "chameleon-与理解生成的不对称": {
-        "heading": "Chameleon 与理解/生成的不对称",
-        "id": ""
-      },
-      "clip-的图像向量与-vlm-的视觉序列不同": {
-        "heading": "CLIP 的图像向量与 VLM 的视觉序列不同",
-        "id": "clip-de-tu-xiang-xiang-liang-yu-vlm-de-shi-jue-xu-lie-bu-tong"
-      },
-      "siglip-的独立配对目标与效率口径": {
-        "heading": "SigLIP 的独立配对目标与效率口径",
-        "id": "siglip-de-du-li-pei-dui-mu-biao-yu-xiaolkou-jing"
-      },
-      "动态分辨率位置与多阶段训练": {
-        "heading": "动态分辨率、位置与多阶段训练",
-        "id": "dong-tai-fen-bianl-wei-zhi-yu-duo-jie-duan-xun-lian"
-      },
-      "离散码本与生成的边界": {
-        "heading": "离散码本与生成的边界",
-        "id": "li-san-ma-ben-yu-sheng-cheng-de-bian-jie"
+      "逐题推理": {
+        "heading": "逐题推理",
+        "id": "zhu-ti-tui-li"
       }
     },
     "textbook/18-daniel-selsam-material-gap.md": {},
@@ -1540,6 +1768,10 @@
         "heading": "2. 真实流量是一种分布",
         "id": "id-2.-zhen-shi-liu-liang-shi-yi-zhong-fen-bu"
       },
+      "请求缓存与正确性": {
+        "heading": "请求、缓存与正确性",
+        "id": "qing-qiu-huan-cun-yu-zheng-que-xing"
+      },
       "3-prefilldecode-分离的收益与成本": {
         "heading": "3. Prefill/decode 分离的收益与成本",
         "id": "id-3.-prefilldecode-fen-li-de-shou-yi-yu-cheng-ben"
@@ -1548,6 +1780,10 @@
         "heading": "4. 独立 kernel 的边界可能造成浪费",
         "id": "id-4.-du-li-kernel-de-bian-jie-ke-neng-zao-cheng-lang-fei"
       },
+      "megakernel-的收益与工程代价": {
+        "heading": "Megakernel 的收益与工程代价",
+        "id": "megakernel-de-shou-yi-yu-gong-cheng-dai-jia"
+      },
       "5-设备侧调度为什么困难": {
         "heading": "5. 设备侧调度为什么困难",
         "id": "id-5.-she-bei-ce-diao-du-wei-shen-me-kun-nan"
@@ -1555,6 +1791,10 @@
       "6-参数复用用循环增加计算深度": {
         "heading": "6. 参数复用：用循环增加计算深度",
         "id": "id-6.-can-shu-fu-yong-yong-xun-huan-zeng-jia-ji-suan-shen-du"
+      },
+      "parcae实验简化与未知": {
+        "heading": "Parcae：实验、简化与未知",
+        "id": "parcae-shi-yan-jian-hua-yu-wei-zhi"
       },
       "7-稳定性谱半径不是另一种范数": {
         "heading": "7. 稳定性：谱半径不是“另一种范数”",
@@ -1588,21 +1828,17 @@
         "heading": "线性稳定性算例的边界",
         "id": "xian-xing-wen-ding-xing-suan-li-de-bian-jie"
       },
+      "独立完成一个小算例": {
+        "heading": "独立完成一个小算例",
+        "id": "du-li-wan-cheng-yi-ge-xiao-suan-li"
+      },
       "10-自测": {
         "heading": "10. 自测",
         "id": "id-10.-zi-ce"
       },
-      "请求缓存与正确性": {
-        "heading": "请求、缓存与正确性",
-        "id": ""
-      },
-      "megakernel-的收益与工程代价": {
-        "heading": "Megakernel 的收益与工程代价",
-        "id": ""
-      },
-      "parcae实验简化与未知": {
-        "heading": "Parcae：实验、简化与未知",
-        "id": ""
+      "逐题推理": {
+        "heading": "逐题推理",
+        "id": "zhu-ti-tui-li"
       }
     }
   }

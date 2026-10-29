@@ -222,6 +222,7 @@ assert encode("the hat") == [258, 104, 97, 116]
 2. 用下面给定的三条规则编码“the hat”：先 t+h，再 th+e，再 the+空格，顺序影响最终边界；每条规则都只作非重叠替换。
 3. 对中文比较码点数与 UTF-8 字节数；对组合字符进一步检查一个字形是否含多个码点。空字符串的 bytes/token 比值无定义，需要单独处理。
 4. 每 token perplexity 的分母随分词改变；应先统一原始文本与归一化单位，再比较模型概率。
+
 ---
 
 [返回教材目录](README.md) · [材料与编写说明](21-jiao-cai-cai-liao-yu-bian-xie-shuo-ming.md)

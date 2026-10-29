@@ -567,6 +567,7 @@ $$
 完成后，应能拿到新的张量计算，先写形状与 dtype，再数存储、FLOPs 和字节流量，最后用测量检验预测。结果不符时，这些账本帮助定位问题，而不是只留下“GPU 没跑满”。
 
 来源与进一步查阅：[课堂代码](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_02.py)、[einops 命名轴接口](https://einops.rocks/api/einsum/)、[PyTorch 混合精度](https://docs.pytorch.org/docs/stable/amp.html)、[PyTorch 激活检查点](https://docs.pytorch.org/docs/stable/checkpoint.html)。这些资料供深入查阅，理解正文不要求先读它们。
+
 ---
 
 [返回教材目录](README.md) · [材料与编写说明](../sources/textbook-evidence.md)
