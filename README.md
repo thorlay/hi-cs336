@@ -6,7 +6,7 @@
 
 [GitBook 在线阅读](https://niuniu.gitbook.io/cs336-cong-ling-gou-jian-yu-yan-mo-xing/00-cs336-spring-2026-zhu-jiang-zhong-wen-jiao-cai) · [GitHub 教材目录](textbook/README.md)
 
-已生成 [Spring 2026 中文教材](textbook/README.md)：覆盖现有文字稿的 18 讲，按课堂 flow 改写，章内解释必要背景、符号、推导和完整算例，附自测与逐题推理。L18 缺原始材料，单独标记待补；正文不是逐字稿，尚未逐句对照视频。
+已生成 [Spring 2026 中文教材](textbook/README.md)：覆盖现有文字稿的 18 讲，按课程推进顺序直接讲解，章内解释必要背景、符号、推导和完整算例，附自测与逐题推理。L18 缺原始材料，单独标记待补；正文不是逐字稿，尚未逐句对照视频。
 
 ## 逐页三方对照
 

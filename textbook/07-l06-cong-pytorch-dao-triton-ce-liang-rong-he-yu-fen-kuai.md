@@ -1,8 +1,6 @@
 # L06｜从 PyTorch 到 Triton：测量、融合与分块
 
-> Spring 2026。以用户提供的完整 lecture-06.txt 为主线，按课堂讨论顺序展开。结合[同年官方讲义](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_06.py)核对公式、图表与代码。未逐句回听音频。
-
-本章只预设基本 Python、矩阵运算和概率/求导知识；第一次用到的课程术语在正文解释。课堂先复习 GPU 资源约束，随后测量程序，再从逐元素融合走向 Triton、归约与矩阵分块；正确性检查贯穿每个演示。
+本章只需要基本 Python、矩阵运算和概率/求导知识，新的术语会在使用时解释。我们先复习 GPU 资源约束，随后测量程序，再从逐元素融合走向 Triton、归约与矩阵分块；正确性检查贯穿每个演示。
 
 ## 1. 正确性模型与性能模型
 
@@ -14,9 +12,9 @@ PyTorch 让我们描述张量运算，Triton 让我们描述一块数据如何�
 
 同一段逻辑可能有很多执行方式。例如逐元素 GELU 可以每一步都调用独立算子，也可以融合成一次加载、一次输出。数学没变，显存往返却不同。
 
-### 硬件约束的课堂算例
+### 硬件资源约束的算例
 
-课堂区分 warp occupancy 与尾波利用率。以每 block 128 线程、每线程 160 个寄存器、每 SM 65,536 个寄存器、最大 64 个 warp 为简化假设：每 block 需 20,480 个寄存器，寄存器容量至多容纳 3 个 block，即 12 个 warp，occupancy 约 18.75%。实际还有寄存器分配粒度、共享内存与 block 上限等约束。Occupancy 低不自动意味着慢：thread coarsening 让每线程处理多个元素，也可能减少调度开销。
+要区分 warp occupancy 与尾波利用率：前者衡量驻留 warp 的数量，后者衡量最后一轮任务能否填满设备。以每 block 128 线程、每线程 160 个寄存器、每 SM 65,536 个寄存器、最大 64 个 warp 为简化假设：每 block 需 20,480 个寄存器，寄存器容量至多容纳 3 个 block，即 12 个 warp，occupancy 约 18.75%。实际还有寄存器分配粒度、共享内存与 block 上限等约束。Occupancy 低不自动意味着慢：thread coarsening 让每线程处理多个元素，也可能减少调度开销。
 
 Shared-memory bank conflict 与 HBM 不合并访存是两个层次的问题。前者涉及同一 bank 不同地址的竞争，可借 padding、swizzling 等缓解；同地址广播又有例外。后者涉及 warp 地址能否合并成较少内存事务。尾波例子中的“148 个 SM、160 个 block”只是单 block/SM 的简化模型，不能推断硬件永远不允许多个 block 共享 SM。
 
@@ -26,13 +24,13 @@ Shared-memory bank conflict 与 HBM 不合并访存是两个层次的问题。�
 
 benchmark 回答指定范围用了多久，profiler 则分解时间花在什么算子、访存或等待上。GPU 提交通常异步，CPU 函数返回不等于设备已完成。CUDA event 在设备时间线上计时，常返回毫秒；主机时钟若测完成时间，需要相应同步。第一次编译、预热、分配和稳定执行应区分。优化前保存基线，改动后用相同输入、精度和计时范围复测。
 
-课堂用矩阵尺寸扫描展示耗时变化：小矩阵常被固定启动开销主导，规模变大后计算和带宽才更明显。一个输入上更快，不代表所有输入更快。
+用矩阵尺寸扫描展示耗时变化：小矩阵常被固定启动开销主导，规模变大后计算和带宽才更明显。一个输入上更快，不代表所有输入更快。
 
 ### 从测量到生成代码
 
 Benchmark 关注端到端时间及分布，profiler 关注时间花在哪里。应把输入生成、编译与预热的范围写清，再用 CUDA events 或正确同步的计时测重复调用。Profiler 中同样的 `@` 在不同形状下可能选择不同 tile 的 kernel；kernel 名称中的架构、dtype 和 tile 信息有助于理解分派，不是一个名称对应永恒实现。
 
-课堂比较手写 PyTorch GELU、库内置 GELU 和 `torch.compile`：前者多个 kernel，后两者能融合，但编译版不保证快过内置版。它还强调核对采用精确 GELU 还是 tanh 近似，避免拿不同函数做“加速”比较。
+比较手写 PyTorch GELU、库内置 GELU 和 `torch.compile`：前者多个 kernel，后两者能融合，但编译版不保证快过内置版。还要核对采用精确 GELU 还是 tanh 近似，避免拿不同函数做“加速”比较。
 
 Triton 的 program 描述一块逻辑数据的操作，不是 Python 解释器在 GPU 上逐行运行。编译器决定元素如何分配给线程、寄存器和共享内存。PTX 是中间指令表示，还需生成设备执行的机器指令，不能把 PTX 本身说成硬件最终 ISA。示例中可观察到单线程处理多个元素；具体调度到哪个 SM 并未由 Python 源码指定。
 
@@ -59,7 +57,7 @@ masked_store(output + offsets, y, valid)
 
 ### 从逻辑块检查地址边界
 
-8000 个元素按 1024 个逻辑元素划分，需要 8 个 program，最后一块只有 832 个有效元素；字幕说“整除”是口误。`offset < n` 必须同时保护 load/store。Triton 的逻辑 `BLOCK_SIZE` 也**不等于 CUDA block 的物理线程数**，两者由编译布局及 `num_warps` 等联系起来。
+8000 个元素按 1024 个逻辑元素划分，需要 8 个 program，最后一块只有 832 个有效元素。`offset < n` 必须同时保护 load/store。Triton 的逻辑 `BLOCK_SIZE` 也**不等于 CUDA block 的物理线程数**，两者由编译布局及 `num_warps` 等联系起来。
 
 **program 不等于线程。** `BLOCK_SIZE=1024` 表示这个 Triton program 的逻辑元素数，不保证启动 1024 个 CUDA 线程；编译器可让一个线程处理多项。`tl.load` 的值也不自动全部经过显式 shared memory，标量/向量可能驻留寄存器，归约可用 warp shuffle。PTX 是中间指令表示，还不是最终机器指令的逐项性能证明。
 
@@ -111,7 +109,7 @@ Softmax kernel 传了 row stride，却默认列 stride=1；行求和更直接使
 
 共享内存的 bank conflict 和全局内存的 coalescing 不是同一件事：前者关心片上并行访问是否争抢 bank，后者关心 HBM 请求是否被有效合并。优化其中一个，不一定同时改善另一个。
 
-Matmul 则是一 program 负责一个输出 tile，沿 K 遍历对应 A/B tile，在片上累积，最后融合 ReLU 等 epilogue 再写回。累加器经常由寄存器等承载，不应把口述“在 shared memory”当成编译器所有布局的保证。
+Matmul 则是一 program 负责一个输出 tile，沿 K 遍历对应 A/B tile，在片上累积，最后融合 ReLU 等 epilogue 再写回。累加器经常由寄存器等承载，具体存储位置取决于编译器布局，不能假设所有中间值都在 shared memory。
 
 ## 8. 最小调优流程
 
@@ -119,7 +117,7 @@ Matmul 则是一 program 负责一个输出 tile，沿 K 遍历对应 A/B tile�
 
 occupancy 高不一定性能最好：低 occupancy 可能换来更多数据复用；高 occupancy 也可能伴随重复搬运。最终判断应来自端到端测量和 profiler 证据。
 
-课堂结尾提到 CUDA、PTX、ThunderKittens、CuTe 等不同层次的选择，重点是表达能力、控制与开发成本的取舍；对于抽象的高维张量，没有脱离具体算子的唯一最佳分块方案。
+CUDA、PTX、ThunderKittens、CuTe 提供不同层次的表达方式，选择时要权衡表达能力、控制与开发成本的取舍；对于抽象的高维张量，没有脱离具体算子的唯一最佳分块方案。
 
 ## 深入算例与补充理解
 
@@ -166,6 +164,8 @@ occupancy 高不一定性能最好：低 occupancy 可能换来更多数据复�
 2. 行求和无效项填 0，softmax 需让无效项的指数贡献为零，通常在分数处填 −∞；全遮罩行另定行为。
 3. 只同步末尾时，开始前排队的旧工作可能进入耗时；两端同步有助隔离任务，但同步本身及主机时间边界也需一致。
 4. 分别看寄存器使用、spill、实际访存和工作规模；融合若降低并发或制造额外复制，减少一次启动也未必更快。
+
+参考资料：[CS336 Spring 2026 资料](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_06.py)
 
 ---
 

@@ -1,8 +1,6 @@
 # L07｜多 GPU 的语言：集合通信与三种基本并行
 
-> Spring 2026。以用户提供的完整 lecture-07.txt 为主线，按课堂讨论顺序展开。结合[同年官方讲义](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_07.py)核对公式、图表与代码。未逐句回听音频。
-
-本章只预设基本 Python、矩阵运算和概率/求导知识；第一次用到的课程术语在正文解释。课堂先把设备放进真实网络拓扑，接着建立进程与集合通信的语言，测量其代价，最后讨论数据、张量和流水并行。
+本章只需要基本 Python、矩阵运算和概率/求导知识，新的术语会在使用时解释。我们先把设备放进真实网络拓扑，接着建立进程与集合通信的语言，测量其代价，最后讨论数据、张量和流水并行。
 
 ## 1. 多卡解决两个问题
 
@@ -16,13 +14,13 @@
 
 ### 网络拓扑不是一根统一的“网线”
 
-课堂的层级是片上存储→HBM→NVLink/NVSwitch 域→跨节点网络，越远通常越贵；并非所有集群都严格采用同一种层级。较大的 NVLink 域、InfiniBand、Ethernet 和 RoCE 都是具体配置选项。
+所讨论的层级是片上存储→HBM→NVLink/NVSwitch 域→跨节点网络，越远通常越贵；并非所有集群都严格采用同一种层级。较大的 NVLink 域、InfiniBand、Ethernet 和 RoCE 都是具体配置选项。
 
 RDMA 描述远端直接内存访问能力，InfiniBand 和 RoCE 是实现相关网络路线，不能把 RDMA 当成另一种与它们平行的线缆。实际 GPU 直连传输还取决于设备、驱动和 GPUDirect 等路径。NCCL 把 collective 映射到拓扑和通信算法；PyTorch distributed 提供接口，初始化时的协调连接不等于训练张量都经由该连接传送。
 
 Broadcast 是把某 rank 的张量复制出去，不是 NumPy 广播维度；gather 拼接，reduce 逐元素聚合，all 表示结果分发到所有相关 rank。All-to-all 的均衡等大小示例像转置，MoE 动态路由则可能需要不同的发送/接收分片大小。All-reduce 可分解为 reduce-scatter + all-gather，这是语义分解，不保证底层总采用相同的环算法。
 
-**硬件口径更正。** 代码与口述把 NVL72 说成 9 个、每个 8 GPU 的 tray。NVIDIA 的 [GB200 系统配置说明](https://docs.nvidia.com/multi-node-nvlink-systems/multi-node-tuning-guide/system.html)列出的是 18 个计算 tray、每个 4 GPU，另有交换 tray；保留 72 GPU 的域概念，同时更正物理托盘数。课堂的 256 节点 pod 明确是示意值，不是硬件标准。NVLink/InfiniBand/RoCE 是不同互联方案，RDMA 是内存访问机制；“无需 CPU”主要指相应数据通路，不表示初始化和控制完全不用 CPU。
+**先明确互联域。** NVIDIA 的 [GB200 系统配置说明](https://docs.nvidia.com/multi-node-nvlink-systems/multi-node-tuning-guide/system.html)列出 18 个计算 tray、每个 4 GPU，共 72 GPU，另有交换 tray。下面的 256 节点 pod 只作示意；实际规模和拓扑依系统而定。NVLink、InfiniBand、RoCE 是不同互联方案，RDMA 是远程内存访问机制；数据通路减少 CPU 参与，不表示初始化和控制完全不用 CPU。
 
 ## 2. Rank、进程组与通信顺序
 
@@ -52,7 +50,7 @@ reduce-scatter 后再 all-gather，可以实现相同语义的 all-reduce。它�
 
 All-to-all 常用于 MoE，因为 token 原本按数据分布，专家却按设备分布；必须把 token 搬到专家所在处，再把结果还回去。
 
-**通信结果与运行展示。** `all_reduce` 修改输入本身，`reduce_scatter_tensor` 写入独立输出；`torch.empty` 中碰巧出现的零或其他值不是有效初始结果。课堂追踪模式关闭了真实通信，仅帮助浏览代码；它不能用来验证多进程结果和性能。这里 rank 按一进程一 GPU 使用，更一般的 rank 是进程组内的进程标识。
+**核对通信结果。** `all_reduce` 修改输入本身，`reduce_scatter_tensor` 写入独立输出；`torch.empty` 中碰巧出现的零或其他值不是有效初始结果。单进程浏览代码或关闭真实通信的模拟，只能帮助理解调用顺序；多进程结果与性能需要在实际进程组上验证。这里按一进程一 GPU 使用 rank，更一般的 rank 是进程组内的进程标识。
 
 ## 4. 通信为什么有启动成本和带宽成本
 
@@ -100,9 +98,9 @@ DDP 在各 rank 的不同样本上前向/反向，再平均梯度；保持同样
 
 流水并行示例用点对点 send/recv 传递 microbatch 激活，真实训练还需反向梯度、正确顺序与缓冲生命周期。非阻塞传输与反向就绪即发送的梯度 bucket，可以把通信藏在计算后，但要付出更细的依赖管理。TP 一般需要更紧密的低延迟网络，PP 较能容忍较慢链接，DP 的扩展则还受全局 batch 和临界 batch 限制。具体方案应根据拓扑选择，不能无限添加卡而假定等比例加速。
 
-课堂最后对比“手工安排 collective”与“声明张量分片、由编译器插入通信”：后者降低开发负担，前者帮助理解机制。两者都在重复存储/计算与数据移动之间做交换。
+再比较“手工安排 collective”与“声明张量分片、由编译器插入通信”：后者降低开发负担，前者帮助理解机制。两者都在重复存储/计算与数据移动之间做交换。
 
-**DDP 的等价条件。** 课堂口述一次说“averages parameters”，实际代码平均的是梯度。同样大小的本地 batch、同样归约方式、同样初始参数及 optimizer state 才对应这个简单等价论证。样本数不齐时不能直接平均各 rank 的均值；padding 还需 mask 与正确分母。示例默认只运行一步，没有在循环里清梯度；若改成多步，应在适当位置清除旧梯度，否则会意外累加。初始化辅助函数每次重置同一个随机种子，因此不同层可能得到重复的初始矩阵，它是演示简化，不是推荐初始化方案。
+**DDP 的等价条件。** DDP 聚合的是梯度。各 rank 的本地 batch 大小相同、归约方式一致、初始参数与 optimizer state 相同，才对应这里的简单等价论证。样本数不齐时，应按样本数加权；padding 还需 mask 与正确分母。将单步示例扩成多步训练时，要在适当位置清除旧梯度，避免意外累加。初始化时也不要对每层反复重置同一个种子，否则同形状的层可能得到重复矩阵。
 
 ## 6. 张量并行：分一层的矩阵
 
@@ -173,6 +171,8 @@ rank0 只有 1 个样本，其平均梯度为 2；rank1 有 3 个样本，平均
 2. reduce-scatter 把聚合梯度直接交给其参数/状态片的所有者，适合在本地完成该片优化更新。
 3. 两卡各 8 对应全局 16；只有正确平均、同参数与相应训练条件下才可与单卡 batch 16 比较，不等于原来的 8。
 4. 第九卡可能跨过节点或互联域边界，增加慢链路同步；还可能使分工不均，新增算力被通信抵消。
+
+参考资料：[CS336 Spring 2026 资料](https://github.com/stanford-cs336/lectures/blob/de53a9f979a6ee35f7d13a5e1aadee5ea1afc58e/lecture_07.py)
 
 ---
 

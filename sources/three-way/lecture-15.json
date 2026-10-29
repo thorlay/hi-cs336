@@ -338,119 +338,119 @@
   {
     "page": 49,
     "transcript": "63:00–78:00",
-    "section": "PPO、DPO 与课上跳过的实验页",
+    "section": "PPO、DPO 与过度优化实验",
     "note": "切换算法，不忽略前面的数据假设",
     "review": "已对照页面、完整字幕与教材"
   },
   {
     "page": 50,
     "transcript": "63:00–78:00",
-    "section": "PPO、DPO 与课上跳过的实验页",
+    "section": "PPO、DPO 与过度优化实验",
     "note": "策略仍是概率分布，目标改变",
     "review": "已对照页面、完整字幕与教材"
   },
   {
     "page": 51,
     "transcript": "63:00–78:00",
-    "section": "PPO、DPO 与课上跳过的实验页",
+    "section": "PPO、DPO 与过度优化实验",
     "note": "PPO-ptx 的额外项不是 PPO 必选",
     "review": "已对照页面、完整字幕与教材"
   },
   {
     "page": 52,
     "transcript": "63:00–78:00",
-    "section": "PPO、DPO 与课上跳过的实验页",
+    "section": "PPO、DPO 与过度优化实验",
     "note": "奖励模型与 KL 参照背景",
     "review": "已对照页面、完整字幕与教材"
   },
   {
     "page": 53,
     "transcript": "63:00–78:00",
-    "section": "PPO、DPO 与课上跳过的实验页",
+    "section": "PPO、DPO 与过度优化实验",
     "note": "策略梯度→TRPO→PPO；两种参照不同",
     "review": "已对照页面、完整字幕与教材"
   },
   {
     "page": 54,
     "transcript": "63:00–78:00",
-    "section": "PPO、DPO 与课上跳过的实验页",
+    "section": "PPO、DPO 与过度优化实验",
     "note": "替代方案是历史尝试，不概括为永远无效",
     "review": "已对照页面、完整字幕与教材"
   },
   {
     "page": 55,
     "transcript": "63:00–78:00",
-    "section": "PPO、DPO 与课上跳过的实验页",
+    "section": "PPO、DPO 与过度优化实验",
     "note": "标准 DPO 内层无显式 RM/rollout",
     "review": "已对照页面、完整字幕与教材"
   },
   {
     "page": 56,
     "transcript": "63:00–78:00",
-    "section": "PPO、DPO 与课上跳过的实验页",
+    "section": "PPO、DPO 与过度优化实验",
     "note": "指数倾斜最优策略的支持与可积性条件",
     "review": "已对照页面、完整字幕与教材"
   },
   {
     "page": 57,
     "transcript": "63:00–78:00",
-    "section": "PPO、DPO 与课上跳过的实验页",
+    "section": "PPO、DPO 与过度优化实验",
     "note": "代入偏好似然；提示有限参数/数据局限",
     "review": "已对照页面、完整字幕与教材"
   },
   {
     "page": 58,
     "transcript": "63:00–78:00",
-    "section": "PPO、DPO 与课上跳过的实验页",
+    "section": "PPO、DPO 与过度优化实验",
     "note": "权重取决于隐式奖励差",
     "review": "已对照页面、完整字幕与教材"
   },
   {
     "page": 59,
     "transcript": "63:00–78:00",
-    "section": "PPO、DPO 与课上跳过的实验页",
+    "section": "PPO、DPO 与过度优化实验",
     "note": "DPO 可以嵌入重采样外循环",
     "review": "已对照页面、完整字幕与教材"
   },
   {
     "page": 60,
     "transcript": "63:00–78:00",
-    "section": "PPO、DPO 与课上跳过的实验页",
+    "section": "PPO、DPO 与过度优化实验",
     "note": "SimPO 有长度归一化和 margin；区分 DPO-norm",
     "review": "已对照页面、完整字幕与教材"
   },
   {
     "page": 61,
     "transcript": "63:00–78:00",
-    "section": "PPO、DPO 与课上跳过的实验页",
+    "section": "PPO、DPO 与过度优化实验",
     "note": "算法优劣依赖数据、模型和调参设定",
     "review": "已对照页面、完整字幕与教材"
   },
   {
     "page": 62,
     "transcript": "75:00–结束；p63 为课件补充",
-    "section": "PPO、DPO 与课上跳过的实验页",
+    "section": "PPO、DPO 与过度优化实验",
     "note": "代理奖励过拟合与熵/校准是不同问题",
     "review": "已对照页面、完整字幕与教材"
   },
   {
     "page": 63,
     "transcript": "75:00–结束；p63 为课件补充",
-    "section": "PPO、DPO 与课上跳过的实验页",
+    "section": "PPO、DPO 与过度优化实验",
     "note": "课堂明确跳过的实验页，教材作为课件补充",
     "review": "已对照页面、完整字幕与教材"
   },
   {
     "page": 64,
     "transcript": "75:00–结束；p63 为课件补充",
-    "section": "PPO、DPO 与课上跳过的实验页",
+    "section": "PPO、DPO 与过度优化实验",
     "note": "温度重校准是图中案例，不是通用保证",
     "review": "已对照页面、完整字幕与教材"
   },
   {
     "page": 65,
     "transcript": "75:00–结束；p63 为课件补充",
-    "section": "PPO、DPO 与课上跳过的实验页",
+    "section": "PPO、DPO 与过度优化实验",
     "note": "总结数据、算法、过度优化并连接下一讲",
     "review": "已对照页面、完整字幕与教材"
   }

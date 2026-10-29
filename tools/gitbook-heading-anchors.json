@@ -309,10 +309,6 @@
         "heading": "6. 超参数规则是起点，不是定律",
         "id": "id-6.-chao-can-shu-gui-ze-shi-qi-dian-bu-shi-ding-l"
       },
-      "超参数的具体范围与课堂问答": {
-        "heading": "超参数的具体范围与课堂问答",
-        "id": "chao-can-shu-de-ju-ti-fan-wei-yu-ke-tang-wen-da"
-      },
       "超参数图表怎么读": {
         "heading": "超参数图表怎么读",
         "id": "chao-can-shu-tu-biao-zen-me-du"
@@ -388,6 +384,10 @@
       "逐题推理": {
         "heading": "逐题推理",
         "id": "zhu-ti-tui-li"
+      },
+      "超参数的范围与选择": {
+        "heading": "超参数的范围与选择",
+        "id": ""
       }
     },
     "textbook/04-linear-attention-moe.md": {
@@ -410,10 +410,6 @@
       "线性化递推与稀疏选择不是同一件事": {
         "heading": "线性化、递推与稀疏选择不是同一件事",
         "id": "xian-xing-hua-di-tui-yu-xi-shu-xuan-ze-bu-shi-tong-yi-jian-shi"
-      },
-      "混合模型的图不能证明纯线性复杂度": {
-        "heading": "混合模型的图不能证明纯线性复杂度",
-        "id": "hun-he-mo-xing-de-tu-bu-neng-zheng-ming-chun-xian-xing-fu-za-du"
       },
       "稀疏选择保留了哪些代价": {
         "heading": "稀疏选择保留了哪些代价",
@@ -438,10 +434,6 @@
       "top-k-的顺序权重与梯度": {
         "heading": "top-k 的顺序、权重与梯度",
         "id": "topk-de-shun-xu-quan-zhong-yu-ti-du"
-      },
-      "噪声离散选择与截图不一致": {
-        "heading": "噪声、离散选择与截图不一致",
-        "id": "zao-sheng-li-san-xuan-ze-yu-jie-tu-bu-yi-zhi"
       },
       "均衡损失设备目标与偏置": {
         "heading": "均衡损失、设备目标与偏置",
@@ -475,10 +467,6 @@
         "heading": "小数据微调与 upcycling",
         "id": "xiao-shu-ju-wei-tiao-yu-upcycling"
       },
-      "deepseek-配置中的课件疑点": {
-        "heading": "DeepSeek 配置中的课件疑点",
-        "id": "deepseek-pei-zhi-zhong-de-ke-jian-yi-dian"
-      },
       "深入算例与补充理解": {
         "heading": "深入算例与补充理解",
         "id": "shen-ru-suan-li-yu-bu-chong-li-jie"
@@ -510,6 +498,18 @@
       "逐题推理": {
         "heading": "逐题推理",
         "id": "zhu-ti-tui-li"
+      },
+      "路由公式与版本配置的边界": {
+        "heading": "路由公式与版本配置的边界",
+        "id": ""
+      },
+      "混合模型仍有哪些二次成本": {
+        "heading": "混合模型仍有哪些二次成本",
+        "id": ""
+      },
+      "噪声探索与离散选择": {
+        "heading": "噪声探索与离散选择",
+        "id": ""
       }
     },
     "textbook/05-gpu-flashattention.md": {
@@ -631,10 +631,6 @@
         "heading": "1. 正确性模型与性能模型",
         "id": "id-1.-zheng-que-xing-mo-xing-yu-xing-neng-mo-xing"
       },
-      "硬件约束的课堂算例": {
-        "heading": "硬件约束的课堂算例",
-        "id": "ying-jian-yue-shu-de-ke-tang-suan-li"
-      },
       "2-benchmark-和-profiler-各回答什么": {
         "heading": "2. Benchmark 和 profiler 各回答什么",
         "id": "id-2.-benchmark-he-profiler-ge-hui-da-shen-me"
@@ -702,6 +698,10 @@
       "逐题推理": {
         "heading": "逐题推理",
         "id": "zhu-ti-tui-li"
+      },
+      "硬件资源约束的算例": {
+        "heading": "硬件资源约束的算例",
+        "id": ""
       }
     },
     "textbook/07-distributed-primitives.md": {
@@ -1125,10 +1125,6 @@
         "heading": "DeepSeek 热图、近最优带和阶梯退火",
         "id": "deepseek-re-tu-jin-zui-you-dai-he-jie-ti-tui-huo"
       },
-      "其他公开配方及后训练问答": {
-        "heading": "其他公开配方及后训练问答",
-        "id": "qi-ta-gong-kai-pei-fang-ji-hou-xun-lian-wen-da"
-      },
       "4-公平比较优化器的两个坐标轴": {
         "heading": "4. 公平比较优化器的两个坐标轴",
         "id": "id-4.-gong-ping-bi-jiao-you-hua-qi-de-liang-ge-zuo-biao-zhou"
@@ -1204,6 +1200,10 @@
       "逐题推理": {
         "heading": "逐题推理",
         "id": "zhu-ti-tui-li"
+      },
+      "其他公开配方与后训练迁移": {
+        "heading": "其他公开配方与后训练迁移",
+        "id": ""
       }
     },
     "textbook/12-evaluation.md": {
@@ -1517,14 +1517,6 @@
         "heading": "7. 从偏好训练奖励模型",
         "id": "id-7.-cong-pian-hao-xun-lian-jiang-li-mo-xing"
       },
-      "从策略梯度到-dpo-的课堂桥梁": {
-        "heading": "从策略梯度到 DPO 的课堂桥梁",
-        "id": "cong-ce-le-ti-du-dao-dpo-de-ke-tang-qiao-liang"
-      },
-      "ppodpo-与课上跳过的实验页": {
-        "heading": "PPO、DPO 与课上跳过的实验页",
-        "id": "ppodpo-yu-ke-shang-tiao-guo-de-shi-yan-ye"
-      },
       "8-dpo-的推导为什么能省掉显式奖励模型": {
         "heading": "8. DPO 的推导为什么能省掉显式奖励模型",
         "id": "id-8.-dpo-de-tui-dao-wei-shen-me-neng-sheng-diao-xian-shi-jiang-li-mo-xing"
@@ -1564,6 +1556,14 @@
       "逐题推理": {
         "heading": "逐题推理",
         "id": "zhu-ti-tui-li"
+      },
+      "从策略梯度到-dpo": {
+        "heading": "从策略梯度到 DPO",
+        "id": ""
+      },
+      "ppodpo-与过度优化实验": {
+        "heading": "PPO、DPO 与过度优化实验",
+        "id": ""
       }
     },
     "textbook/16-rlvr-grpo.md": {
@@ -1673,10 +1673,6 @@
         "heading": "2. CLIP 学的是什么",
         "id": "id-2.-clip-xue-de-shi-shen-me"
       },
-      "clipsiglip-的课堂细节": {
-        "heading": "CLIP/SigLIP 的课堂细节",
-        "id": "clipsiglip-de-ke-tang-xi-jie"
-      },
       "clip-的图像向量与-vlm-的视觉序列不同": {
         "heading": "CLIP 的图像向量与 VLM 的视觉序列不同",
         "id": "clip-de-tu-xiang-xiang-liang-yu-vlm-de-shi-jue-xu-lie-bu-tong"
@@ -1756,6 +1752,10 @@
       "逐题推理": {
         "heading": "逐题推理",
         "id": "zhu-ti-tui-li"
+      },
+      "clipsiglip-的关键细节": {
+        "heading": "CLIP/SigLIP 的关键细节",
+        "id": ""
       }
     },
     "textbook/18-daniel-selsam-material-gap.md": {},
