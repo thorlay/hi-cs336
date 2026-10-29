@@ -19,7 +19,7 @@
     "start": 60,
     "end": 105,
     "transcript": "03:00–18:00",
-    "section": "代码讲义核验补充",
+    "section": "2. 交叉熵与 perplexity 要分清",
     "note": "PPL/熵与条件 PPL 公式更正；自报概率须有效",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -27,7 +27,7 @@
     "start": 108,
     "end": 152,
     "transcript": "18:00–33:00",
-    "section": "代码讲义核验补充",
+    "section": "3. 考试题有清晰答案，也有边界",
     "note": "MMLU/Pro、GPQA、HLE；Diamond 判据按原论文校正",
     "review": "已对照代码讲义、完整字幕与教材"
   },

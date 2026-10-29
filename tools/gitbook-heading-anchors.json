@@ -33,29 +33,29 @@
         "heading": "1. 为什么“从零构建”仍然值得学",
         "id": "id-1.-wei-shen-me-cong-ling-gou-jian-reng-ran-zhi-de-xue"
       },
-      "2-语言模型究竟预测什么": {
-        "heading": "2. 语言模型究竟预测什么",
-        "id": "id-2.-yu-yan-mo-xing-jiu-jing-yu-ce-shen-me"
+      "3-语言模型究竟预测什么": {
+        "heading": "3. 语言模型究竟预测什么",
+        "id": "id-3.-yu-yan-mo-xing-jiu-jing-yu-ce-shen-me"
       },
-      "3-字符字节和-token-不要混为一谈": {
-        "heading": "3. 字符、字节和 token 不要混为一谈",
-        "id": "id-3.-zi-fu-zi-jie-he-token-bu-yao-hun-wei-yi-tan"
+      "4-字符字节和-token-不要混为一谈": {
+        "heading": "4. 字符、字节和 token 不要混为一谈",
+        "id": "id-4.-zi-fu-zi-jie-he-token-bu-yao-hun-wei-yi-tan"
       },
-      "4-用一次手算理解-bpe": {
-        "heading": "4. 用一次手算理解 BPE",
-        "id": "id-4.-yong-yi-ci-shou-suan-li-jie-bpe"
+      "5-用一次手算理解-bpe": {
+        "heading": "5. 用一次手算理解 BPE",
+        "id": "id-5.-yong-yi-ci-shou-suan-li-jie-bpe"
       },
-      "5-为什么压缩率会影响训练成本": {
-        "heading": "5. 为什么压缩率会影响训练成本",
-        "id": "id-5.-wei-shen-me-ya-suolhui-ying-xiang-xun-lian-cheng-ben"
+      "6-为什么压缩率会影响训练成本": {
+        "heading": "6. 为什么压缩率会影响训练成本",
+        "id": "id-6.-wei-shen-me-ya-suolhui-ying-xiang-xun-lian-cheng-ben"
       },
-      "6-从教学-bpe-到工程-bpe": {
-        "heading": "6. 从教学 BPE 到工程 BPE",
-        "id": "id-6.-cong-jiao-xue-bpe-dao-gong-cheng-bpe"
+      "7-从教学-bpe-到工程-bpe": {
+        "heading": "7. 从教学 BPE 到工程 BPE",
+        "id": "id-7.-cong-jiao-xue-bpe-dao-gong-cheng-bpe"
       },
-      "7-这门课接下来怎样展开": {
-        "heading": "7. 这门课接下来怎样展开",
-        "id": "id-7.-zhe-men-ke-jie-xia-lai-zen-yang-zhan-kai"
+      "2-这门课接下来怎样展开": {
+        "heading": "2. 这门课接下来怎样展开",
+        "id": "id-2.-zhe-men-ke-jie-xia-lai-zen-yang-zhan-kai"
       },
       "深入算例与补充理解": {
         "heading": "深入算例与补充理解",
@@ -81,25 +81,17 @@
         "heading": "8. 自测与最小实验",
         "id": "id-8.-zi-ce-yu-zui-xiao-shi-yan"
       },
-      "transcript-对照补遗": {
-        "heading": "Transcript 对照补遗",
-        "id": "transcript-dui-zhao-bu-yi"
+      "课程背景与小模型能教会我们什么": {
+        "heading": "课程背景与“小模型能教会我们什么”",
+        "id": ""
       },
-      "课程背景与小模型能教会我们什么0005约-1900": {
-        "heading": "课程背景与“小模型能教会我们什么”（00:05–约 19:00）",
-        "id": "ke-cheng-bei-jing-yu-xiao-mo-xing-neng-jiao-hui-wo-men-shen-me-0005-yue-1900"
+      "五个单元各自解决什么问题": {
+        "heading": "五个单元各自解决什么问题",
+        "id": ""
       },
-      "五个单元各自解决什么问题约-27006400": {
-        "heading": "五个单元各自解决什么问题（约 27:00–64:00）",
-        "id": "wu-ge-dan-yuan-ge-zi-jie-jue-shen-me-wen-ti-yue-27006400"
-      },
-      "分词还承担自适应计算的职责约-270030006500结尾": {
-        "heading": "分词还承担“自适应计算”的职责（约 27:00–30:00；65:00–结尾）",
-        "id": "fen-ci-hai-cheng-dan-zi-shi-ying-ji-suan-de-zhi-ze-yue-270030006500-jie-wei"
-      },
-      "代码讲义核验补充": {
-        "heading": "代码讲义核验补充",
-        "id": "dai-ma-jiang-yi-he-yan-bu-chong"
+      "分词还承担自适应计算的职责": {
+        "heading": "分词还承担“自适应计算”的职责",
+        "id": ""
       }
     },
     "textbook/02-pytorch-resource-accounting.md": {
@@ -119,17 +111,17 @@
         "heading": "4. 为什么一次矩阵乘法约为 2mnk FLOPs",
         "id": "id-4.-wei-shen-me-yi-ci-ju-zhen-cheng-fa-yue-wei-2mnk-flops"
       },
-      "5-roofline算得慢还是搬得慢": {
-        "heading": "5. Roofline：算得慢，还是搬得慢",
-        "id": "id-5.-roofline-suan-de-man-hai-shi-ban-de-man"
+      "6-roofline算得慢还是搬得慢": {
+        "heading": "6. Roofline：算得慢，还是搬得慢",
+        "id": "id-6.-roofline-suan-de-man-hai-shi-ban-de-man"
       },
-      "6-mfu-应该怎样读": {
-        "heading": "6. MFU 应该怎样读",
-        "id": "id-6.-mfu-ying-gai-zen-yang-du"
+      "5-mfu-应该怎样读": {
+        "heading": "5. MFU 应该怎样读",
+        "id": "id-5.-mfu-ying-gai-zen-yang-du"
       },
-      "7-显存不足时两种不同的交换": {
-        "heading": "7. 显存不足时，两种不同的交换",
-        "id": "id-7.-xian-cun-bu-zu-shi-liang-zhong-bu-tong-de-jiao-huan"
+      "8-显存不足时两种不同的交换": {
+        "heading": "8. 显存不足时，两种不同的交换",
+        "id": "id-8.-xian-cun-bu-zu-shi-liang-zhong-bu-tong-de-jiao-huan"
       },
       "深入算例与补充理解": {
         "heading": "深入算例与补充理解",
@@ -151,9 +143,9 @@
         "heading": "为什么“只差一个转置”也可能很贵",
         "id": "wei-shen-me-zhi-cha-yi-ge-zhuan-zhi-ye-ke-neng-hen-gui"
       },
-      "8-动手核算与自测": {
-        "heading": "8. 动手核算与自测",
-        "id": "id-8.-dong-shou-he-suan-yu-zi-ce"
+      "9-动手核算与自测": {
+        "heading": "9. 动手核算与自测",
+        "id": "id-9.-dong-shou-he-suan-yu-zi-ce"
       }
     },
     "textbook/03-architectures.md": {
@@ -213,25 +205,17 @@
         "heading": "9. 自测与设计练习",
         "id": "id-9.-zi-ce-yu-she-ji-lian-xi"
       },
-      "transcript-对照补遗": {
-        "heading": "Transcript 对照补遗",
-        "id": "transcript-dui-zhao-bu-yi"
+      "归一化位置的其他选择": {
+        "heading": "归一化位置的其他选择",
+        "id": ""
       },
-      "初版压缩掉的架构选择约-12004300": {
-        "heading": "初版压缩掉的架构选择（约 12:00–43:00）",
-        "id": "chu-ban-ya-suo-diao-de-jia-gou-xuan-ze-yue-12004300"
+      "超参数的具体范围与课堂问答": {
+        "heading": "超参数的具体范围与课堂问答",
+        "id": ""
       },
-      "超参数的具体范围与课堂问答约-43006500": {
-        "heading": "超参数的具体范围与课堂问答（约 43:00–65:00）",
-        "id": "chao-can-shu-de-ju-ti-fan-wei-yu-ke-tang-wen-da-yue-43006500"
-      },
-      "稳定性与推理的补充边界约-6500结尾": {
-        "heading": "稳定性与推理的补充边界（约 65:00–结尾）",
-        "id": "wen-ding-xing-yu-tui-li-de-bu-chong-bian-jie-yue-6500-jie-wei"
-      },
-      "逐页核验补充": {
-        "heading": "逐页核验补充",
-        "id": "zhu-ye-he-yan-bu-chong"
+      "稳定性与推理的补充边界": {
+        "heading": "稳定性与推理的补充边界",
+        "id": ""
       },
       "如何读稳定性图": {
         "heading": "如何读稳定性图",
@@ -347,25 +331,17 @@
         "heading": "9. 自测",
         "id": "id-9.-zi-ce"
       },
-      "transcript-对照补遗": {
-        "heading": "Transcript 对照补遗",
-        "id": "transcript-dui-zhao-bu-yi"
+      "线性化递推与稀疏选择不是同一件事": {
+        "heading": "线性化、递推与稀疏选择不是同一件事",
+        "id": ""
       },
-      "线性化递推与稀疏选择不是同一件事0000约-3300": {
-        "heading": "线性化、递推与稀疏选择不是同一件事（00:00–约 33:00）",
-        "id": "xian-xing-hua-di-tui-yu-xi-shu-xuan-ze-bu-shi-tong-yi-jian-shi-0000-yue-3300"
+      "router-的完整设计空间": {
+        "heading": "Router 的完整设计空间",
+        "id": ""
       },
-      "router-的完整设计空间约-33006300": {
-        "heading": "Router 的完整设计空间（约 33:00–63:00）",
-        "id": "router-de-wan-zheng-she-ji-kong-jian-yue-33006300"
-      },
-      "均衡目标的作用和系统细节约-6300结尾": {
-        "heading": "均衡目标的作用和系统细节（约 63:00–结尾）",
-        "id": "jun-heng-mu-biao-di-zuo-yong-he-xi-tong-xi-jie-yue-6300-jie-wei"
-      },
-      "逐页核验补充": {
-        "heading": "逐页核验补充",
-        "id": "zhu-ye-he-yan-bu-chong"
+      "均衡目标的作用和系统细节": {
+        "heading": "均衡目标的作用和系统细节",
+        "id": ""
       },
       "混合模型的图不能证明纯线性复杂度": {
         "heading": "混合模型的图不能证明纯线性复杂度",
@@ -465,29 +441,21 @@
         "heading": "8. 自测与实验",
         "id": "id-8.-zi-ce-yu-shi-yan"
       },
-      "transcript-对照补遗": {
-        "heading": "Transcript 对照补遗",
-        "id": "transcript-dui-zhao-bu-yi"
+      "硬件执行与存储的具体限制": {
+        "heading": "硬件执行与存储的具体限制",
+        "id": ""
       },
-      "文字稿完整性与硬件补充0000约-3000": {
-        "heading": "文字稿完整性与硬件补充（00:00–约 30:00）",
-        "id": "wen-zi-gao-wan-zheng-xing-yu-ying-jian-bu-chong-0000-yue-3000"
+      "低精度重计算与访存的具体限制": {
+        "heading": "低精度、重计算与访存的具体限制",
+        "id": ""
       },
-      "低精度重计算与访存的具体限制约-30006600": {
-        "heading": "低精度、重计算与访存的具体限制（约 30:00–66:00）",
-        "id": "di-jing-du-zhong-ji-suan-yu-fang-cun-de-ju-ti-xian-zhi-yue-30006600"
+      "为什么矩阵稍大反而吞吐骤降": {
+        "heading": "为什么矩阵稍大反而吞吐骤降",
+        "id": ""
       },
-      "为什么矩阵稍大反而吞吐骤降约-60007200": {
-        "heading": "为什么矩阵稍大反而吞吐骤降（约 60:00–72:00）",
-        "id": "wei-shen-me-ju-zhen-shao-da-fan-er-tun-tu-zhou-jiang-yue-60007200"
-      },
-      "flashattention-的精确性说到哪一层约-7200结尾": {
-        "heading": "FlashAttention 的精确性说到哪一层（约 72:00–结尾）",
-        "id": "flashattention-de-jing-que-xing-shuo-dao-na-yi-ceng-yue-7200-jie-wei"
-      },
-      "逐页核验补充": {
-        "heading": "逐页核验补充",
-        "id": "zhu-ye-he-yan-bu-chong"
+      "flashattention-的精确性说到哪一层": {
+        "heading": "FlashAttention 的精确性说到哪一层",
+        "id": ""
       },
       "硬件计数和内存术语": {
         "heading": "硬件计数和内存术语",
@@ -583,25 +551,17 @@
         "heading": "9. 自测",
         "id": "id-9.-zi-ce"
       },
-      "transcript-对照补遗": {
-        "heading": "Transcript 对照补遗",
-        "id": "transcript-dui-zhao-bu-yi"
+      "硬件约束的课堂算例": {
+        "heading": "硬件约束的课堂算例",
+        "id": ""
       },
-      "硬件约束的课堂算例0000约-2200": {
-        "heading": "硬件约束的课堂算例（00:00–约 22:00）",
-        "id": "ying-jian-yue-shu-de-ke-tang-suan-li-0000-yue-2200"
+      "从测量到生成代码": {
+        "heading": "从测量到生成代码",
+        "id": ""
       },
-      "从测量到生成代码约-22005700": {
-        "heading": "从测量到生成代码（约 22:00–57:00）",
-        "id": "cong-ce-liang-dao-sheng-cheng-dai-ma-yue-22005700"
-      },
-      "必须补上的边界与实现区别约-3900结尾": {
-        "heading": "必须补上的边界与实现区别（约 39:00–结尾）",
-        "id": "bi-xu-bu-shang-de-bian-jie-yu-shi-xian-qu-bie-yue-3900-jie-wei"
-      },
-      "代码讲义核验补充": {
-        "heading": "代码讲义核验补充",
-        "id": "dai-ma-jiang-yi-he-yan-bu-chong"
+      "从逻辑块检查地址边界": {
+        "heading": "从逻辑块检查地址边界",
+        "id": ""
       }
     },
     "textbook/07-distributed-primitives.md": {
@@ -661,25 +621,17 @@
         "heading": "9. 自测",
         "id": "id-9.-zi-ce"
       },
-      "transcript-对照补遗": {
-        "heading": "Transcript 对照补遗",
-        "id": "transcript-dui-zhao-bu-yi"
+      "网络拓扑不是一根统一的网线": {
+        "heading": "网络拓扑不是一根统一的“网线”",
+        "id": ""
       },
-      "网络拓扑不是一根统一的网线0000约-3600": {
-        "heading": "网络拓扑不是一根统一的“网线”（00:00–约 36:00）",
-        "id": "wang-luo-tuo-pu-bu-shi-yi-gen-tong-yi-de-wang-xian-0000-yue-3600"
+      "通信性能的数字要说清口径": {
+        "heading": "通信性能的数字要说清口径",
+        "id": ""
       },
-      "通信性能的数字要说清口径约-36005500": {
-        "heading": "通信性能的数字要说清口径（约 36:00–55:00）",
-        "id": "tong-xin-xing-neng-de-shu-zi-yao-shuo-qing-kou-jing-yue-36005500"
-      },
-      "教学代码能说明什么不能自动完成什么约-5500结尾": {
-        "heading": "教学代码能说明什么，不能自动完成什么（约 55:00–结尾）",
-        "id": "jiao-xue-dai-ma-neng-shuo-ming-shen-me-bu-neng-zi-dong-wan-cheng-shen-me-yue-5500-jie-wei"
-      },
-      "代码讲义核验补充": {
-        "heading": "代码讲义核验补充",
-        "id": "dai-ma-jiang-yi-he-yan-bu-chong"
+      "教学代码能说明什么不能自动完成什么": {
+        "heading": "教学代码能说明什么，不能自动完成什么",
+        "id": ""
       }
     },
     "textbook/08-zero-hybrid-parallelism.md": {
@@ -735,25 +687,17 @@
         "heading": "8. 自测与容量练习",
         "id": "id-8.-zi-ce-yu-rong-liang-lian-xi"
       },
-      "transcript-对照补遗": {
-        "heading": "Transcript 对照补遗",
-        "id": "transcript-dui-zhao-bu-yi"
+      "zerofsdp-的生命周期补全": {
+        "heading": "ZeRO/FSDP 的生命周期补全",
+        "id": ""
       },
-      "zerofsdp-的生命周期补全约-12003000": {
-        "heading": "ZeRO/FSDP 的生命周期补全（约 12:00–30:00）",
-        "id": "zerofsdp-de-sheng-ming-zhou-qi-bu-quan-yue-12003000"
+      "专家分布与激活存储": {
+        "heading": "专家分布与激活存储",
+        "id": ""
       },
-      "稀疏专家与激活内存的未展开细节约-36006300": {
-        "heading": "稀疏专家与激活内存的未展开细节（约 36:00–63:00）",
-        "id": "xi-shu-zhuan-jia-yu-ji-huo-nei-cun-de-wei-zhan-kai-xi-jie-yue-36006300"
-      },
-      "从数据中心约束到实际配方00001200约-6300结尾": {
-        "heading": "从数据中心约束到实际配方（00:00–12:00；约 63:00–结尾）",
-        "id": "cong-shu-ju-zhong-xin-yue-shu-dao-shi-ji-pei-fang-00001200-yue-6300-jie-wei"
-      },
-      "逐页核验补充": {
-        "heading": "逐页核验补充",
-        "id": "zhu-ye-he-yan-bu-chong"
+      "从数据中心约束到实际配方": {
+        "heading": "从数据中心约束到实际配方",
+        "id": ""
       },
       "collective-与通信账本": {
         "heading": "collective 与通信账本",
@@ -813,25 +757,25 @@
         "heading": "2. 幂律与不可约损失",
         "id": "id-2.-milyu-bu-ke-yue-sun-shi"
       },
-      "3-共同拟合参数与数据": {
-        "heading": "3. 共同拟合参数与数据",
-        "id": "id-3.-gong-tong-ni-he-can-shu-yu-shu-ju"
+      "4-共同拟合参数与数据": {
+        "heading": "4. 共同拟合参数与数据",
+        "id": "id-4.-gong-tong-ni-he-can-shu-yu-shu-ju"
       },
-      "4-三种获得计算最优曲线的方法": {
-        "heading": "4. 三种获得计算最优曲线的方法",
-        "id": "id-4.-san-zhong-huo-de-ji-suan-zui-you-qu-xian-de-fang-fa"
+      "5-三种获得计算最优曲线的方法": {
+        "heading": "5. 三种获得计算最优曲线的方法",
+        "id": "id-5.-san-zhong-huo-de-ji-suan-zui-you-qu-xian-de-fang-fa"
       },
-      "5-kaplan-与-chinchilla-为什么不同": {
-        "heading": "5. Kaplan 与 Chinchilla 为什么不同",
-        "id": "id-5.-kaplan-yu-chinchilla-wei-shen-me-bu-tong"
+      "6-kaplan-与-chinchilla-为什么不同": {
+        "heading": "6. Kaplan 与 Chinchilla 为什么不同",
+        "id": "id-6.-kaplan-yu-chinchilla-wei-shen-me-bu-tong"
       },
-      "6-训练最优不等于生命周期最优": {
-        "heading": "6. 训练最优不等于生命周期最优",
-        "id": "id-6.-xun-lian-zui-you-bu-deng-yu-sheng-ming-zhou-qi-zui-you"
+      "7-训练最优不等于生命周期最优": {
+        "heading": "7. 训练最优不等于生命周期最优",
+        "id": "id-7.-xun-lian-zui-you-bu-deng-yu-sheng-ming-zhou-qi-zui-you"
       },
-      "7-数据重复batch-与学习率": {
-        "heading": "7. 数据重复、batch 与学习率",
-        "id": "id-7.-shu-ju-chong-fu-batch-yu-xue-xi-l"
+      "3-数据重复batch-与学习率": {
+        "heading": "3. 数据重复、batch 与学习率",
+        "id": "id-3.-shu-ju-chong-fu-batch-yu-xue-xi-l"
       },
       "8-一份可信的拟合实验应该留下什么": {
         "heading": "8. 一份可信的拟合实验应该留下什么",
@@ -861,25 +805,17 @@
         "heading": "9. 自测",
         "id": "id-9.-zi-ce"
       },
-      "transcript-对照补遗": {
-        "heading": "Transcript 对照补遗",
-        "id": "transcript-dui-zhao-bu-yi"
+      "数据学习曲线混合与重复": {
+        "heading": "数据学习曲线、混合与重复",
+        "id": ""
       },
-      "数据-scaling-被初版省略的分支0000约-3000": {
-        "heading": "数据 scaling 被初版省略的分支（00:00–约 30:00）",
-        "id": "shu-ju-scaling-bei-chu-ban-sheng-le-de-fen-zhi-0000-yue-3000"
+      "critical-batch-的测量定义": {
+        "heading": "Critical batch 的测量定义",
+        "id": ""
       },
-      "critical-batch-的测量定义约-39005100": {
-        "heading": "Critical batch 的测量定义（约 39:00–51:00）",
-        "id": "critical-batch-de-ce-liang-ding-yi-yue-39005100"
-      },
-      "上游下游与-chinchilla-分歧约-300039005100结尾": {
-        "heading": "上游、下游与 Chinchilla 分歧（约 30:00–39:00；51:00–结尾）",
-        "id": "shang-you-xia-you-yu-chinchilla-fen-qi-yue-300039005100-jie-wei"
-      },
-      "逐页核验补充": {
-        "heading": "逐页核验补充",
-        "id": "zhu-ye-he-yan-bu-chong"
+      "上游下游与-chinchilla-分歧": {
+        "heading": "上游、下游与 Chinchilla 分歧",
+        "id": ""
       },
       "历史理论界与经验曲线": {
         "heading": "历史、理论界与经验曲线",
@@ -967,25 +903,17 @@
         "heading": "9. 自测",
         "id": "id-9.-zi-ce"
       },
-      "transcript-对照补遗": {
-        "heading": "Transcript 对照补遗",
-        "id": "transcript-dui-zhao-bu-yi"
+      "课堂的完整成本模型": {
+        "heading": "课堂的完整成本模型",
+        "id": ""
       },
-      "课堂的完整成本模型0000约-4500": {
-        "heading": "课堂的完整成本模型（00:00–约 45:00）",
-        "id": "ke-tang-de-wan-zheng-cheng-ben-mo-xing-0000-yue-4500"
+      "kv-节省路线不只-gqa": {
+        "heading": "KV 节省路线不只 GQA",
+        "id": ""
       },
-      "kv-节省路线不只-gqa约-45007000": {
-        "heading": "KV 节省路线不只 GQA（约 45:00–70:00）",
-        "id": "kv-jie-sheng-lu-xian-bu-zhi-gqa-yue-45007000"
-      },
-      "无损推测与服务系统约-7000结尾": {
-        "heading": "无损推测与服务系统（约 70:00–结尾）",
-        "id": "wu-sun-tui-ce-yu-fu-wu-xi-tong-yue-7000-jie-wei"
-      },
-      "代码讲义核验补充": {
-        "heading": "代码讲义核验补充",
-        "id": "dai-ma-jiang-yi-he-yan-bu-chong"
+      "无损推测与服务系统": {
+        "heading": "无损推测与服务系统",
+        "id": ""
       }
     },
     "textbook/11-scaling-practice.md": {
@@ -1045,25 +973,17 @@
         "heading": "9. 自测",
         "id": "id-9.-zi-ce"
       },
-      "transcript-对照补遗": {
-        "heading": "Transcript 对照补遗",
-        "id": "transcript-dui-zhao-bu-yi"
+      "公开配方比较的具体结论": {
+        "heading": "公开配方比较的具体结论",
+        "id": ""
       },
-      "公开配方比较的具体结论0000约-3900": {
-        "heading": "公开配方比较的具体结论（00:00–约 39:00）",
-        "id": "gong-kai-pei-fang-bi-jiao-de-ju-ti-jie-lun-0000-yue-3900"
+      "优化器成功与证明更优是两件事": {
+        "heading": "优化器成功与“证明更优”是两件事",
+        "id": ""
       },
-      "优化器成功与证明更优是两件事约-39005700": {
-        "heading": "优化器成功与“证明更优”是两件事（约 39:00–57:00）",
-        "id": "you-hua-qi-cheng-gong-yu-zheng-ming-geng-you-shi-liang-jian-shi-yue-39005700"
-      },
-      "μp-推导里哪些是假设约-5700结尾": {
-        "heading": "μP 推导里哪些是假设（约 57:00–结尾）",
-        "id": "p-tui-dao-li-na-xie-shi-jia-she-yue-5700-jie-wei"
-      },
-      "逐页核验补充": {
-        "heading": "逐页核验补充",
-        "id": "zhu-ye-he-yan-bu-chong"
+      "μp-推导里哪些是假设": {
+        "heading": "μP 推导里哪些是假设",
+        "id": ""
       },
       "minicpm-的缩放表与模型阶梯": {
         "heading": "MiniCPM 的缩放表与模型阶梯",
@@ -1163,25 +1083,17 @@
         "heading": "9. 自测与评估卡片",
         "id": "id-9.-zi-ce-yu-ping-gu-ka-pian"
       },
-      "transcript-对照补遗": {
-        "heading": "Transcript 对照补遗",
-        "id": "transcript-dui-zhao-bu-yi"
+      "perplexity-的支持理由与限制": {
+        "heading": "Perplexity 的支持理由与限制",
+        "id": ""
       },
-      "perplexity-的支持理由与限制约-03001800": {
-        "heading": "Perplexity 的支持理由与限制（约 03:00–18:00）",
-        "id": "perplexity-de-zhi-chi-li-you-yu-xian-zhi-yue-03001800"
+      "把不同评估对象放回同一框架": {
+        "heading": "把不同评估对象放回同一框架",
+        "id": ""
       },
-      "初版未逐项展开的评估对象约-18006600": {
-        "heading": "初版未逐项展开的评估对象（约 18:00–66:00）",
-        "id": "chu-ban-wei-zhu-xiang-zhan-kai-de-ping-gu-dui-xiang-yue-18006600"
-      },
-      "污染防护与评估本身也会错约-6600结尾": {
-        "heading": "污染防护与“评估本身也会错”（约 66:00–结尾）",
-        "id": "wu-ran-fang-hu-yu-ping-gu-ben-shen-ye-hui-cuo-yue-6600-jie-wei"
-      },
-      "代码讲义核验补充": {
-        "heading": "代码讲义核验补充",
-        "id": "dai-ma-jiang-yi-he-yan-bu-chong"
+      "污染防护与评估本身也会错": {
+        "heading": "污染防护与“评估本身也会错”",
+        "id": ""
       }
     },
     "textbook/13-data-sources.md": {
@@ -1193,25 +1105,25 @@
         "heading": "2. 保存来源信息是一项技术能力",
         "id": "id-2.-bao-cun-lai-yuan-xin-xi-shi-yi-xiang-ji-shu-neng-li"
       },
-      "3-common-crawl-不是现成的高质量文本": {
-        "heading": "3. Common Crawl 不是现成的高质量文本",
-        "id": "id-3.-common-crawl-bu-shi-xian-cheng-de-gao-zhi-liang-wen-ben"
+      "4-common-crawl-不是现成的高质量文本": {
+        "heading": "4. Common Crawl 不是现成的高质量文本",
+        "id": "id-4.-common-crawl-bu-shi-xian-cheng-de-gao-zhi-liang-wen-ben"
       },
-      "4-专门来源各有什么价值": {
-        "heading": "4. 专门来源各有什么价值",
-        "id": "id-4.-zhuan-men-lai-yuan-ge-you-shen-me-jia-zhi"
+      "5-专门来源各有什么价值": {
+        "heading": "5. 专门来源各有什么价值",
+        "id": "id-5.-zhuan-men-lai-yuan-ge-you-shen-me-jia-zhi"
       },
-      "5-经典数据集展示的是不同选择机制": {
-        "heading": "5. 经典数据集展示的是不同选择机制",
-        "id": "id-5.-jing-dian-shu-ju-ji-zhan-shi-de-shi-bu-tong-xuan-ze-ji-zhi"
+      "6-经典数据集展示的是不同选择机制": {
+        "heading": "6. 经典数据集展示的是不同选择机制",
+        "id": "id-6.-jing-dian-shu-ju-ji-zhan-shi-de-shi-bu-tong-xuan-ze-ji-zhi"
       },
-      "6-为什么质量分类器总在定义好": {
-        "heading": "6. 为什么质量分类器总在定义“好”",
-        "id": "id-6.-wei-shen-me-zhi-liang-fen-lei-qi-zong-zai-ding-yi-hao"
+      "7-为什么质量分类器总在定义好": {
+        "heading": "7. 为什么质量分类器总在定义“好”",
+        "id": "id-7.-wei-shen-me-zhi-liang-fen-lei-qi-zong-zai-ding-yi-hao"
       },
-      "7-获取许可与使用是不同问题": {
-        "heading": "7. 获取、许可与使用是不同问题",
-        "id": "id-7.-huo-qu-xu-ke-yu-shi-yong-shi-bu-tong-wen-ti"
+      "3-获取许可与使用是不同问题": {
+        "heading": "3. 获取、许可与使用是不同问题",
+        "id": "id-3.-huo-qu-xu-ke-yu-shi-yong-shi-bu-tong-wen-ti"
       },
       "8-从预训练到后训练数据形态会变化": {
         "heading": "8. 从预训练到后训练，数据形态会变化",
@@ -1241,25 +1153,17 @@
         "heading": "9. 自测与实践",
         "id": "id-9.-zi-ce-yu-shi-jian"
       },
-      "transcript-对照补遗": {
-        "heading": "Transcript 对照补遗",
-        "id": "transcript-dui-zhao-bu-yi"
+      "网页获取与不同数据对象": {
+        "heading": "网页获取与不同数据对象",
+        "id": ""
       },
-      "获取网页与数据格式的遗漏细节0000约-4500": {
-        "heading": "获取网页与数据格式的遗漏细节（00:00–约 45:00）",
-        "id": "huo-qu-wang-ye-yu-shu-ju-ge-shi-de-yi-lou-xi-jie-0000-yue-4500"
+      "数据集演化保留哪些信息": {
+        "heading": "数据集演化保留哪些信息",
+        "id": ""
       },
-      "数据集演化保留哪些信息约-4500结尾": {
-        "heading": "数据集演化保留哪些信息（约 45:00–结尾）",
-        "id": "shu-ju-ji-yan-hua-bao-liu-na-xie-xin-xi-yue-4500-jie-wei"
-      },
-      "不把法律背景压成一句错误结论约-12003000": {
-        "heading": "不把法律背景压成一句错误结论（约 12:00–30:00）",
-        "id": "bu-ba-falbei-jing-ya-cheng-yi-ju-cuo-wu-jie-lun-yue-12003000"
-      },
-      "代码讲义核验补充": {
-        "heading": "代码讲义核验补充",
-        "id": "dai-ma-jiang-yi-he-yan-bu-chong"
+      "不把法律背景压成一句错误结论": {
+        "heading": "不把法律背景压成一句错误结论",
+        "id": ""
       },
       "权利期限cc-与许可变更问答": {
         "heading": "权利期限、CC 与许可变更问答",
@@ -1335,25 +1239,17 @@
         "heading": "10. 自测",
         "id": "id-10.-zi-ce"
       },
-      "transcript-对照补遗": {
-        "heading": "Transcript 对照补遗",
-        "id": "transcript-dui-zhao-bu-yi"
+      "转换与过滤的具体例子": {
+        "heading": "转换与过滤的具体例子",
+        "id": ""
       },
-      "转换与过滤的具体例子0000约-2200": {
-        "heading": "转换与过滤的具体例子（00:00–约 22:00）",
-        "id": "zhuan-huan-yu-guolde-ju-ti-li-zi-0000-yue-2200"
+      "去重算法保留的条件": {
+        "heading": "去重算法保留的条件",
+        "id": ""
       },
-      "去重算法保留的条件约-22004900": {
-        "heading": "去重算法保留的条件（约 22:00–49:00）",
-        "id": "qu-zhong-suan-fa-bao-liu-de-tiao-jian-yue-22004900"
-      },
-      "混合外推与合成代码任务约-4900结尾": {
-        "heading": "混合外推与合成代码任务（约 49:00–结尾）",
-        "id": "hun-he-wai-tui-yu-he-cheng-dai-ma-ren-wu-yue-4900-jie-wei"
-      },
-      "代码讲义核验补充": {
-        "heading": "代码讲义核验补充",
-        "id": "dai-ma-jiang-yi-he-yan-bu-chong"
+      "混合外推与合成代码任务": {
+        "heading": "混合外推与合成代码任务",
+        "id": ""
       },
       "过滤分数需要解释名称和概率也要校正": {
         "heading": "过滤分数需要解释，名称和概率也要校正",
@@ -1377,17 +1273,17 @@
         "heading": "1. Base model 为什么还不够像助手",
         "id": "id-1.-base-model-wei-shen-me-hai-bu-gou-xiang-zhu-shou"
       },
-      "2-sft-的目标与-mask": {
-        "heading": "2. SFT 的目标与 mask",
-        "id": "id-2.-sft-de-mu-biao-yu-mask"
+      "4-sft-的目标与-mask": {
+        "heading": "4. SFT 的目标与 mask",
+        "id": "id-4.-sft-de-mu-biao-yu-mask"
       },
-      "3-一条示范同时教很多东西": {
-        "heading": "3. 一条示范同时教很多东西",
-        "id": "id-3.-yi-tiao-shi-fan-tong-shi-jiao-hen-duo-dong-xi"
+      "2-一条示范同时教很多东西": {
+        "heading": "2. 一条示范同时教很多东西",
+        "id": "id-2.-yi-tiao-shi-fan-tong-shi-jiao-hen-duo-dong-xi"
       },
-      "4-知识诚实与安全行为": {
-        "heading": "4. 知识、诚实与安全行为",
-        "id": "id-4.-zhi-shi-cheng-shi-yu-an-quan-xing-wei"
+      "3-知识诚实与安全行为": {
+        "heading": "3. 知识、诚实与安全行为",
+        "id": "id-3.-zhi-shi-cheng-shi-yu-an-quan-xing-wei"
       },
       "5-mid-training-为什么放在两者之间": {
         "heading": "5. Mid-training 为什么放在两者之间",
@@ -1433,25 +1329,17 @@
         "heading": "10. 自测",
         "id": "id-10.-zi-ce"
       },
-      "transcript-对照补遗": {
-        "heading": "Transcript 对照补遗",
-        "id": "transcript-dui-zhao-bu-yi"
+      "sft-数据的演化与知道自己不知道": {
+        "heading": "SFT 数据的演化与“知道自己不知道”",
+        "id": ""
       },
-      "sft-数据的演化与知道自己不知道0000约-4200": {
-        "heading": "SFT 数据的演化与“知道自己不知道”（00:00–约 42:00）",
-        "id": "sft-shu-ju-de-yan-hua-yu-zhi-dao-zi-ji-bu-zhi-dao-0000-yue-4200"
+      "偏好数据为何占据半讲": {
+        "heading": "偏好数据为何占据半讲",
+        "id": ""
       },
-      "偏好数据为何占据半讲约-42006500": {
-        "heading": "偏好数据为何占据半讲（约 42:00–65:00）",
-        "id": "pian-hao-shu-ju-wei-he-zhan-ju-ban-jiang-yue-42006500"
-      },
-      "从策略梯度到-dpo-的课堂桥梁约-6500结尾": {
-        "heading": "从策略梯度到 DPO 的课堂桥梁（约 65:00–结尾）",
-        "id": "cong-ce-le-ti-du-dao-dpo-de-ke-tang-qiao-liang-yue-6500-jie-wei"
-      },
-      "逐页核验补充": {
-        "heading": "逐页核验补充",
-        "id": "zhu-ye-he-yan-bu-chong"
+      "从策略梯度到-dpo-的课堂桥梁": {
+        "heading": "从策略梯度到 DPO 的课堂桥梁",
+        "id": ""
       },
       "示例正确性标注方式与人口调查的边界": {
         "heading": "示例正确性、标注方式与人口调查的边界",
@@ -1527,25 +1415,17 @@
         "heading": "10. 自测",
         "id": "id-10.-zi-ce"
       },
-      "transcript-对照补遗": {
-        "heading": "Transcript 对照补遗",
-        "id": "transcript-dui-zhao-bu-yi"
+      "ppogrpo-的实现与梯度边界": {
+        "heading": "PPO/GRPO 的实现与梯度边界",
+        "id": ""
       },
-      "ppogrpo-的实现与梯度边界0000约-2600": {
-        "heading": "PPO/GRPO 的实现与梯度边界（00:00–约 26:00）",
-        "id": "ppogrpo-de-shi-xian-yu-ti-du-bian-jie-0000-yue-2600"
+      "r1-的阶段与训练信号": {
+        "heading": "R1 的阶段与训练信号",
+        "id": ""
       },
-      "案例中的独立信息约-26005100": {
-        "heading": "案例中的独立信息（约 26:00–51:00）",
-        "id": "an-li-zhong-de-du-li-xin-xi-yue-26005100"
-      },
-      "agent-rl-与系统扩展约-5100结尾": {
-        "heading": "Agent RL 与系统扩展（约 51:00–结尾）",
-        "id": "agent-rl-yu-xi-tong-kuo-zhan-yue-5100-jie-wei"
-      },
-      "逐页核验补充": {
-        "heading": "逐页核验补充",
-        "id": "zhu-ye-he-yan-bu-chong"
+      "agent-rl-与系统扩展": {
+        "heading": "Agent RL 与系统扩展",
+        "id": ""
       },
       "ppo-实现页不能照抄成数学定义": {
         "heading": "PPO 实现页不能照抄成数学定义",
@@ -1621,25 +1501,17 @@
         "heading": "9. 自测与最小实验",
         "id": "id-9.-zi-ce-yu-zui-xiao-shi-yan"
       },
-      "transcript-对照补遗": {
-        "heading": "Transcript 对照补遗",
-        "id": "transcript-dui-zhao-bu-yi"
+      "clipsiglip-的课堂细节": {
+        "heading": "CLIP/SigLIP 的课堂细节",
+        "id": ""
       },
-      "clipsiglip-的课堂细节0000约-2800": {
-        "heading": "CLIP/SigLIP 的课堂细节（00:00–约 28:00）",
-        "id": "clipsiglip-de-ke-tang-xi-jie-0000-yue-2800"
+      "视觉语言模型演进不只是接一个-projector": {
+        "heading": "视觉语言模型演进不只是“接一个 projector”",
+        "id": ""
       },
-      "视觉语言模型演进不只是接一个-projector约-28006600": {
-        "heading": "视觉语言模型演进不只是“接一个 projector”（约 28:00–66:00）",
-        "id": "shi-jue-yu-yan-mo-xing-yan-jin-bu-zhi-shi-jie-yi-ge-projector-yue-28006600"
-      },
-      "chameleon-与理解生成的不对称约-6600结尾": {
-        "heading": "Chameleon 与理解/生成的不对称（约 66:00–结尾）",
-        "id": "chameleon-yu-li-jie-sheng-cheng-de-bu-dui-chen-yue-6600-jie-wei"
-      },
-      "代码讲义核验补充": {
-        "heading": "代码讲义核验补充",
-        "id": "dai-ma-jiang-yi-he-yan-bu-chong"
+      "chameleon-与理解生成的不对称": {
+        "heading": "Chameleon 与理解/生成的不对称",
+        "id": ""
       },
       "clip-的图像向量与-vlm-的视觉序列不同": {
         "heading": "CLIP 的图像向量与 VLM 的视觉序列不同",
@@ -1720,21 +1592,17 @@
         "heading": "10. 自测",
         "id": "id-10.-zi-ce"
       },
-      "transcript-对照补遗": {
-        "heading": "Transcript 对照补遗",
-        "id": "transcript-dui-zhao-bu-yi"
+      "请求缓存与正确性": {
+        "heading": "请求、缓存与正确性",
+        "id": ""
       },
-      "请求缓存与正确性0000约-3300": {
-        "heading": "请求、缓存与正确性（00:00–约 33:00）",
-        "id": "qing-qiu-huan-cun-yu-zheng-que-xing-0000-yue-3300"
+      "megakernel-的收益与工程代价": {
+        "heading": "Megakernel 的收益与工程代价",
+        "id": ""
       },
-      "megakernel-的收益与工程代价约-330042006300结尾": {
-        "heading": "Megakernel 的收益与工程代价（约 33:00–42:00；63:00–结尾）",
-        "id": "megakernel-de-shou-yi-yu-gong-cheng-dai-jia-yue-330042006300-jie-wei"
-      },
-      "parcae实验简化与未知约-4200结尾": {
-        "heading": "Parcae：实验、简化与未知（约 42:00–结尾）",
-        "id": "parcae-shi-yan-jian-hua-yu-wei-zhi-yue-4200-jie-wei"
+      "parcae实验简化与未知": {
+        "heading": "Parcae：实验、简化与未知",
+        "id": ""
       }
     }
   }

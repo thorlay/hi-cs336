@@ -27,7 +27,7 @@
     "start": 150,
     "end": 238,
     "transcript": "12:00–33:00",
-    "section": "代码讲义核验补充",
+    "section": "3. 获取、许可与使用是不同问题",
     "note": "期限、CC、公有领域、四因素与个案界限；续行许可时间问答",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -35,7 +35,7 @@
     "start": 241,
     "end": 271,
     "transcript": "30:00–36:00",
-    "section": "3. Common Crawl 不是现成的高质量文本",
+    "section": "4. Common Crawl 不是现成的高质量文本",
     "note": "队列、重访、WARC/WET 与有损转换",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -43,7 +43,7 @@
     "start": 274,
     "end": 294,
     "transcript": "36:00–39:00",
-    "section": "4. 专门来源各有什么价值",
+    "section": "5. 专门来源各有什么价值",
     "note": "百科范围、dumps、贡献分布与投毒风险",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -51,7 +51,7 @@
     "start": 297,
     "end": 315,
     "transcript": "39:00–42:00",
-    "section": "代码讲义核验补充",
+    "section": "5. 专门来源各有什么价值",
     "note": "仓库与事件元数据分开；GitHub Archive 链接写错",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -59,7 +59,7 @@
     "start": 318,
     "end": 327,
     "transcript": "42:00–45:00",
-    "section": "4. 专门来源各有什么价值",
+    "section": "5. 专门来源各有什么价值",
     "note": "arXiv PDF/LaTeX/metadata 不同对象与许可",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -67,7 +67,7 @@
     "start": 330,
     "end": 350,
     "transcript": "45:00–48:00",
-    "section": "5. 经典数据集展示的是不同选择机制",
+    "section": "6. 经典数据集展示的是不同选择机制",
     "note": "BERT 文档序列、BookCorpus 免费获取不等于使用许可",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -75,7 +75,7 @@
     "start": 353,
     "end": 361,
     "transcript": "45:00–48:00",
-    "section": "5. 经典数据集展示的是不同选择机制",
+    "section": "6. 经典数据集展示的是不同选择机制",
     "note": "WebText 外链代理和 OpenWebText 复现",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -83,7 +83,7 @@
     "start": 364,
     "end": 376,
     "transcript": "48:00–51:00",
-    "section": "5. 经典数据集展示的是不同选择机制",
+    "section": "6. 经典数据集展示的是不同选择机制",
     "note": "CCNet 去重、语言、Wikipedia 5-gram 过滤",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -91,7 +91,7 @@
     "start": 379,
     "end": 404,
     "transcript": "48:00–54:00",
-    "section": "5. 经典数据集展示的是不同选择机制",
+    "section": "6. 经典数据集展示的是不同选择机制",
     "note": "C4 规则会排除代码与部分语言风格；17GB 不等于完整复现",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -99,7 +99,7 @@
     "start": 407,
     "end": 418,
     "transcript": "51:00–54:00",
-    "section": "5. 经典数据集展示的是不同选择机制",
+    "section": "6. 经典数据集展示的是不同选择机制",
     "note": "GPT-3 Books1/2 来源不充分公开；不替作者猜来源",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -107,7 +107,7 @@
     "start": 421,
     "end": 465,
     "transcript": "54:00–60:00",
-    "section": "5. 经典数据集展示的是不同选择机制",
+    "section": "6. 经典数据集展示的是不同选择机制",
     "note": "Pile/Gutenberg/Books3/StackExchange；数据构成、监督格式与权利分开",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -115,7 +115,7 @@
     "start": 469,
     "end": 486,
     "transcript": "57:00–60:00",
-    "section": "5. 经典数据集展示的是不同选择机制",
+    "section": "6. 经典数据集展示的是不同选择机制",
     "note": "MassiveText 与实际训练 tokens 非同一口径",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -123,7 +123,7 @@
     "start": 489,
     "end": 501,
     "transcript": "57:00–63:00",
-    "section": "代码讲义核验补充",
+    "section": "6. 经典数据集展示的是不同选择机制",
     "note": "LLaMA 引用源分类；RedPajama/SlimPajama 复现非同一原始集",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -131,7 +131,7 @@
     "start": 504,
     "end": 520,
     "transcript": "60:00–63:00",
-    "section": "5. 经典数据集展示的是不同选择机制",
+    "section": "6. 经典数据集展示的是不同选择机制",
     "note": "RefinedWeb/FineWeb 规则与去重；规则同样有偏",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -139,7 +139,7 @@
     "start": 523,
     "end": 537,
     "transcript": "63:00–66:00",
-    "section": "5. 经典数据集展示的是不同选择机制",
+    "section": "6. 经典数据集展示的是不同选择机制",
     "note": "Dolma 多源、规则/分类器各用途与 Bloom 去重",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -147,7 +147,7 @@
     "start": 539,
     "end": 556,
     "transcript": "63:00–69:00",
-    "section": "6. 为什么质量分类器总在定义“好”",
+    "section": "7. 为什么质量分类器总在定义“好”",
     "note": "DCLM 正负例定义；负例不是人工认定全部坏",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -155,7 +155,7 @@
     "start": 559,
     "end": 575,
     "transcript": "66:00–72:00",
-    "section": "代码讲义核验补充",
+    "section": "7. 为什么质量分类器总在定义“好”",
     "note": "Nemotron 质量/数量折中、改写与合成；unique vs sampled tokens",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -163,7 +163,7 @@
     "start": 578,
     "end": 597,
     "transcript": "69:00–75:00",
-    "section": "代码讲义核验补充",
+    "section": "5. 专门来源各有什么价值",
     "note": "The Stack/StarCoder2 训练配方边界；PR 线性化与 LLVM 成对数据",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -171,7 +171,7 @@
     "start": 600,
     "end": 622,
     "transcript": "72:00–结束",
-    "section": "7. 获取、许可与使用是不同问题",
+    "section": "3. 获取、许可与使用是不同问题",
     "note": "CommonPile、许可漂白与集合许可；结尾不把合成当自动洗清来源",
     "review": "已对照代码讲义、完整字幕与教材"
   }

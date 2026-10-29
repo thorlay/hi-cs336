@@ -11,7 +11,7 @@
     "start": 48,
     "end": 95,
     "transcript": "03:00–24:00",
-    "section": "代码讲义核验补充",
+    "section": "2. CLIP 学的是什么",
     "note": "CLIP 对比目标、假负例、裁剪、ResNet/ViT pooling 区别",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -19,7 +19,7 @@
     "start": 98,
     "end": 121,
     "transcript": "21:00–28:00",
-    "section": "代码讲义核验补充",
+    "section": "4. SigLIP 为什么改变损失",
     "note": "SigLIP 二元目标与负例比例；硬件比较不能混同芯片/核心",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -43,7 +43,7 @@
     "start": 195,
     "end": 211,
     "transcript": "45:00–49:00",
-    "section": "代码讲义核验补充",
+    "section": "6. 高分辨率、视频与动态长度",
     "note": "Qwen-VL 固定 256 与三阶段模块范围",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -51,7 +51,7 @@
     "start": 214,
     "end": 233,
     "transcript": "48:00–54:00",
-    "section": "代码讲义核验补充",
+    "section": "6. 高分辨率、视频与动态长度",
     "note": "Qwen2-VL 动态分辨率、64+2 token、MRoPE、DFN 初始化",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -59,7 +59,7 @@
     "start": 236,
     "end": 265,
     "transcript": "51:00–66:00",
-    "section": "代码讲义核验补充",
+    "section": "7. 多模态训练为什么要平衡损失",
     "note": "Qwen3-VL 频率交错、显式时间戳、DeepStack 和长上下文阶段",
     "review": "已对照代码讲义、完整字幕与教材"
   },

@@ -51,7 +51,7 @@
     "start": 338,
     "end": 431,
     "transcript": "约 36:00–49:00",
-    "section": "5. Roofline：算得慢，还是搬得慢",
+    "section": "6. Roofline：算得慢，还是搬得慢",
     "note": "ReLU/GELU/点积逐项字节和计算，重叠为理想假设",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -59,7 +59,7 @@
     "start": 434,
     "end": 481,
     "transcript": "约 45:00–57:00",
-    "section": "5. Roofline：算得慢，还是搬得慢",
+    "section": "6. Roofline：算得慢，还是搬得慢",
     "note": "GEMV/GEMM、精度与 roofline 上界",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -67,7 +67,7 @@
     "start": 484,
     "end": 556,
     "transcript": "约 57:00–69:00",
-    "section": "4. 为什么一次矩阵乘法约为 2mnk FLOPs",
+    "section": "从矩阵求导到训练循环",
     "note": "标量梯度、两矩阵反向与 6ND 近似条件",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -91,7 +91,7 @@
     "start": 718,
     "end": 787,
     "transcript": "约 72:00–结束",
-    "section": "7. 显存不足时，两种不同的交换",
+    "section": "8. 显存不足时，两种不同的交换",
     "note": "累积与重计算；L/s+s 空间模型与特定逐层示例分开",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -99,7 +99,7 @@
     "start": 791,
     "end": 856,
     "transcript": "贯穿计时与内存示例，未单独讲授",
-    "section": "6. MFU 应该怎样读",
+    "section": "5. MFU 应该怎样读",
     "note": "工具函数：逻辑字节数不是allocator峰值；GPU峰值表和同步计时",
     "review": "已对照代码讲义、完整字幕与教材"
   }

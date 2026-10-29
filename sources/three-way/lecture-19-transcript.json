@@ -13,13 +13,13 @@
   },
   {
     "transcript": "18:00–24:00",
-    "section": "Transcript 对照补遗：请求、缓存与正确性",
+    "section": "请求、缓存与正确性",
     "note": "KV 命中、分离部署与模型输出之外的系统行为",
     "review": "已对照完整文字稿与教材；无独立课件"
   },
   {
     "transcript": "24:00–30:00",
-    "section": "Transcript 对照补遗：请求、缓存与正确性",
+    "section": "请求、缓存与正确性",
     "note": "异常循环、未初始化内容、GPU/DRAM/SSD 缓存层与预取",
     "review": "已对照完整文字稿与教材；无独立课件"
   },
@@ -55,13 +55,13 @@
   },
   {
     "transcript": "60:00–66:00",
-    "section": "Transcript 对照补遗：Megakernel 的收益与工程代价",
+    "section": "Megakernel 的收益与工程代价",
     "note": "片上循环块是设想；形状/硬件/多GPU/部分融合的工程代价与问答",
     "review": "已对照完整文字稿与教材；无独立课件"
   },
   {
     "transcript": "66:00–结束",
-    "section": "Transcript 对照补遗：Parcae：实验、简化与未知",
+    "section": "Parcae：实验、简化与未知",
     "note": "量化、workflow、batch表示提取 vs 自回归；初步循环观察和未知解释",
     "review": "已对照完整文字稿与教材；无独立课件"
   }

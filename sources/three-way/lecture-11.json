@@ -37,224 +37,224 @@
   {
     "page": 6,
     "transcript": "03:00–07:00",
-    "section": "逐页核验补充：MiniCPM 的缩放表与模型阶梯",
+    "section": "MiniCPM 的缩放表与模型阶梯",
     "note": "embedding/residual/init/LR/head五处；约5倍外推不是已覆盖任意大尺度。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 7,
     "transcript": "03:00–07:00",
-    "section": "逐页核验补充：MiniCPM 的缩放表与模型阶梯",
+    "section": "MiniCPM 的缩放表与模型阶梯",
     "note": "embedding/residual/init/LR/head五处；约5倍外推不是已覆盖任意大尺度。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 8,
     "transcript": "03:00–07:00",
-    "section": "逐页核验补充：MiniCPM 的缩放表与模型阶梯",
+    "section": "MiniCPM 的缩放表与模型阶梯",
     "note": "embedding/residual/init/LR/head五处；约5倍外推不是已覆盖任意大尺度。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 9,
     "transcript": "03:00–07:00",
-    "section": "逐页核验补充：MiniCPM 的缩放表与模型阶梯",
+    "section": "MiniCPM 的缩放表与模型阶梯",
     "note": "embedding/residual/init/LR/head五处；约5倍外推不是已覆盖任意大尺度。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 10,
     "transcript": "06:00–10:00",
-    "section": "逐页核验补充：学习率谷底与 batch 曲面",
+    "section": "学习率谷底与 batch 曲面",
     "note": "x=LR/batch、纵=data、颜色loss；固定LR取值不是全部实际步长相等。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 11,
     "transcript": "06:00–10:00",
-    "section": "逐页核验补充：学习率谷底与 batch 曲面",
+    "section": "学习率谷底与 batch 曲面",
     "note": "x=LR/batch、纵=data、颜色loss；固定LR取值不是全部实际步长相等。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 12,
     "transcript": "06:00–10:00",
-    "section": "逐页核验补充：学习率谷底与 batch 曲面",
+    "section": "学习率谷底与 batch 曲面",
     "note": "x=LR/batch、纵=data、颜色loss；固定LR取值不是全部实际步长相等。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 13,
     "transcript": "09:00–14:00",
-    "section": "逐页核验补充：WSD 的复用不是接着低学习率末尾跑",
+    "section": "WSD 的复用不是接着低学习率末尾跑",
     "note": "从stable checkpoint分叉退火，衰减长度/终值区分。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 14,
     "transcript": "09:00–14:00",
-    "section": "逐页核验补充：WSD 的复用不是接着低学习率末尾跑",
+    "section": "WSD 的复用不是接着低学习率末尾跑",
     "note": "从stable checkpoint分叉退火，衰减长度/终值区分。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 15,
     "transcript": "09:00–14:00",
-    "section": "逐页核验补充：WSD 的复用不是接着低学习率末尾跑",
+    "section": "WSD 的复用不是接着低学习率末尾跑",
     "note": "从stable checkpoint分叉退火，衰减长度/终值区分。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 16,
     "transcript": "13:00–16:00",
-    "section": "逐页核验补充：token 比例和拟合单位",
+    "section": "token 比例和拟合单位",
     "note": "非embedding/bytes等计数决定比例；讲者保留对高ratio的怀疑。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 17,
     "transcript": "13:00–16:00",
-    "section": "逐页核验补充：token 比例和拟合单位",
+    "section": "token 比例和拟合单位",
     "note": "非embedding/bytes等计数决定比例；讲者保留对高ratio的怀疑。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 18,
     "transcript": "13:00–16:00",
-    "section": "逐页核验补充：token 比例和拟合单位",
+    "section": "token 比例和拟合单位",
     "note": "非embedding/bytes等计数决定比例；讲者保留对高ratio的怀疑。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 19,
     "transcript": "15:00–22:00",
-    "section": "逐页核验补充：DeepSeek 热图、近最优带和阶梯退火",
+    "section": "DeepSeek 热图、近最优带和阶梯退火",
     "note": "nearoptimal0.25%非唯一最优；80/90%处降到31.6/10%不是每次减10%。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 20,
     "transcript": "15:00–22:00",
-    "section": "逐页核验补充：DeepSeek 热图、近最优带和阶梯退火",
+    "section": "DeepSeek 热图、近最优带和阶梯退火",
     "note": "nearoptimal0.25%非唯一最优；80/90%处降到31.6/10%不是每次减10%。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 21,
     "transcript": "15:00–22:00",
-    "section": "逐页核验补充：DeepSeek 热图、近最优带和阶梯退火",
+    "section": "DeepSeek 热图、近最优带和阶梯退火",
     "note": "nearoptimal0.25%非唯一最优；80/90%处降到31.6/10%不是每次减10%。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 22,
     "transcript": "15:00–22:00",
-    "section": "逐页核验补充：DeepSeek 热图、近最优带和阶梯退火",
+    "section": "DeepSeek 热图、近最优带和阶梯退火",
     "note": "nearoptimal0.25%非唯一最优；80/90%处降到31.6/10%不是每次减10%。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 23,
     "transcript": "15:00–22:00",
-    "section": "逐页核验补充：DeepSeek 热图、近最优带和阶梯退火",
+    "section": "DeepSeek 热图、近最优带和阶梯退火",
     "note": "nearoptimal0.25%非唯一最优；80/90%处降到31.6/10%不是每次减10%。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 24,
     "transcript": "15:00–22:00",
-    "section": "逐页核验补充：DeepSeek 热图、近最优带和阶梯退火",
+    "section": "DeepSeek 热图、近最优带和阶梯退火",
     "note": "nearoptimal0.25%非唯一最优；80/90%处降到31.6/10%不是每次减10%。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 25,
     "transcript": "21:00–30:00",
-    "section": "逐页核验补充：其他公开配方及后训练问答",
+    "section": "其他公开配方及后训练问答",
     "note": "稀疏度、D/activeN、下游映射；没有集成后训练的通用答案。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 26,
     "transcript": "21:00–30:00",
-    "section": "逐页核验补充：其他公开配方及后训练问答",
+    "section": "其他公开配方及后训练问答",
     "note": "稀疏度、D/activeN、下游映射；没有集成后训练的通用答案。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 27,
     "transcript": "21:00–30:00",
-    "section": "逐页核验补充：其他公开配方及后训练问答",
+    "section": "其他公开配方及后训练问答",
     "note": "稀疏度、D/activeN、下游映射；没有集成后训练的通用答案。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 28,
     "transcript": "21:00–30:00",
-    "section": "逐页核验补充：其他公开配方及后训练问答",
+    "section": "其他公开配方及后训练问答",
     "note": "稀疏度、D/activeN、下游映射；没有集成后训练的通用答案。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 29,
     "transcript": "21:00–30:00",
-    "section": "逐页核验补充：其他公开配方及后训练问答",
+    "section": "其他公开配方及后训练问答",
     "note": "稀疏度、D/activeN、下游映射；没有集成后训练的通用答案。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 30,
     "transcript": "21:00–30:00",
-    "section": "逐页核验补充：其他公开配方及后训练问答",
+    "section": "其他公开配方及后训练问答",
     "note": "稀疏度、D/activeN、下游映射；没有集成后训练的通用答案。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 31,
     "transcript": "30:00–39:30",
-    "section": "逐页核验补充：StepFun 曲面不是全局凸性证明",
+    "section": "StepFun 曲面不是全局凸性证明",
     "note": "候选变量不同；fixedN,D切片与共同缩放不混同；数据变化会漂移。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 32,
     "transcript": "30:00–39:30",
-    "section": "逐页核验补充：StepFun 曲面不是全局凸性证明",
+    "section": "StepFun 曲面不是全局凸性证明",
     "note": "候选变量不同；fixedN,D切片与共同缩放不混同；数据变化会漂移。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 33,
     "transcript": "30:00–39:30",
-    "section": "逐页核验补充：StepFun 曲面不是全局凸性证明",
+    "section": "StepFun 曲面不是全局凸性证明",
     "note": "候选变量不同；fixedN,D切片与共同缩放不混同；数据变化会漂移。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 34,
     "transcript": "30:00–39:30",
-    "section": "逐页核验补充：StepFun 曲面不是全局凸性证明",
+    "section": "StepFun 曲面不是全局凸性证明",
     "note": "候选变量不同；fixedN,D切片与共同缩放不混同；数据变化会漂移。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 35,
     "transcript": "30:00–39:30",
-    "section": "逐页核验补充：StepFun 曲面不是全局凸性证明",
+    "section": "StepFun 曲面不是全局凸性证明",
     "note": "候选变量不同；fixedN,D切片与共同缩放不混同；数据变化会漂移。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 36,
     "transcript": "30:00–39:30",
-    "section": "逐页核验补充：StepFun 曲面不是全局凸性证明",
+    "section": "StepFun 曲面不是全局凸性证明",
     "note": "候选变量不同；fixedN,D切片与共同缩放不混同；数据变化会漂移。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 37,
     "transcript": "30:00–39:30",
-    "section": "逐页核验补充：StepFun 曲面不是全局凸性证明",
+    "section": "StepFun 曲面不是全局凸性证明",
     "note": "候选变量不同；fixedN,D切片与共同缩放不混同；数据变化会漂移。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
@@ -289,14 +289,14 @@
   {
     "page": 42,
     "transcript": "49:00–57:00",
-    "section": "逐页核验补充：Muon 的近似和比较边界",
+    "section": "Muon 的近似和比较边界",
     "note": "NS非精确SVD；大规模可训练非优于Adam的消融证明；向量参数另处理。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 43,
     "transcript": "49:00–57:00",
-    "section": "逐页核验补充：Muon 的近似和比较边界",
+    "section": "Muon 的近似和比较边界",
     "note": "NS非精确SVD；大规模可训练非优于Adam的消融证明；向量参数另处理。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
@@ -324,77 +324,77 @@
   {
     "page": 47,
     "transcript": "62:00–72:00",
-    "section": "逐页核验补充：μP 的推导是带条件的量级论证",
+    "section": "μP 的推导是带条件的量级论证",
     "note": "谱范数上界、rank1单样本、非抵消和Taylor假设；std/variance区别。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 48,
     "transcript": "62:00–72:00",
-    "section": "逐页核验补充：μP 的推导是带条件的量级论证",
+    "section": "μP 的推导是带条件的量级论证",
     "note": "谱范数上界、rank1单样本、非抵消和Taylor假设；std/variance区别。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 49,
     "transcript": "62:00–72:00",
-    "section": "逐页核验补充：μP 的推导是带条件的量级论证",
+    "section": "μP 的推导是带条件的量级论证",
     "note": "谱范数上界、rank1单样本、非抵消和Taylor假设；std/variance区别。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 50,
     "transcript": "62:00–72:00",
-    "section": "逐页核验补充：μP 的推导是带条件的量级论证",
+    "section": "μP 的推导是带条件的量级论证",
     "note": "谱范数上界、rank1单样本、非抵消和Taylor假设；std/variance区别。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 51,
     "transcript": "71:00–74:00",
-    "section": "逐页核验补充：μP 压力测试要看整组宽度",
+    "section": "μP 压力测试要看整组宽度",
     "note": "参数类型、attention温度、baseLR/实际LR及扫描网格。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 52,
     "transcript": "71:00–74:00",
-    "section": "逐页核验补充：μP 压力测试要看整组宽度",
+    "section": "μP 压力测试要看整组宽度",
     "note": "参数类型、attention温度、baseLR/实际LR及扫描网格。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 53,
     "transcript": "73:00–76:00",
-    "section": "逐页核验补充：μP 压力测试要看整组宽度",
+    "section": "μP 压力测试要看整组宽度",
     "note": "RMSgain/Lion/strongWD失败为具体设置；SP此处是standardparam。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 54,
     "transcript": "73:00–76:00",
-    "section": "逐页核验补充：μP 压力测试要看整组宽度",
+    "section": "μP 压力测试要看整组宽度",
     "note": "RMSgain/Lion/strongWD失败为具体设置；SP此处是standardparam。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 55,
     "transcript": "73:00–76:00",
-    "section": "逐页核验补充：μP 压力测试要看整组宽度",
+    "section": "μP 压力测试要看整组宽度",
     "note": "RMSgain/Lion/strongWD失败为具体设置；SP此处是standardparam。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 56,
     "transcript": "73:00–76:00",
-    "section": "逐页核验补充：μP 压力测试要看整组宽度",
+    "section": "μP 压力测试要看整组宽度",
     "note": "RMSgain/Lion/strongWD失败为具体设置；SP此处是standardparam。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 57,
     "transcript": "73:00–76:00",
-    "section": "逐页核验补充：μP 压力测试要看整组宽度",
+    "section": "μP 压力测试要看整组宽度",
     "note": "RMSgain/Lion/strongWD失败为具体设置；SP此处是standardparam。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },

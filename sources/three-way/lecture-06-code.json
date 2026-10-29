@@ -11,7 +11,7 @@
     "start": 39,
     "end": 142,
     "transcript": "00:00–22:00",
-    "section": "代码讲义核验补充",
+    "section": "1. 正确性模型与性能模型",
     "note": "warp、占用率、bank/coalescing、wave；128线程算例与64线程文字不同",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -19,7 +19,7 @@
     "start": 145,
     "end": 205,
     "transcript": "约 22:00–30:00",
-    "section": "代码讲义核验补充",
+    "section": "2. Benchmark 和 profiler 各回答什么",
     "note": "warmup、CUDA event、测量单位 ms 与端到端边界",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -43,7 +43,7 @@
     "start": 306,
     "end": 390,
     "transcript": "约 36:00–57:00",
-    "section": "代码讲义核验补充",
+    "section": "3. 一个 Triton program 的生命周期",
     "note": "Triton program/grid、元素块≠线程数、mask、exp形式tanh边界",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -51,7 +51,7 @@
     "start": 393,
     "end": 485,
     "transcript": "约 57:00–66:00",
-    "section": "代码讲义核验补充",
+    "section": "5. 从逐元素走到行 softmax",
     "note": "row softmax、-inf补齐、输入列stride限制与读写计数",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -75,7 +75,7 @@
     "start": 680,
     "end": 745,
     "transcript": "贯穿上述演示；未独立讲授",
-    "section": "代码讲义核验补充",
+    "section": "8. 最小调优流程",
     "note": "输入生成、近似GELU参照、随机allclose与PTX输出工具；不代表已在本机GPU复跑",
     "review": "已对照代码讲义、完整字幕与教材"
   }

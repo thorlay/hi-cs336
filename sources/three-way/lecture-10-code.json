@@ -35,7 +35,7 @@
     "start": 162,
     "end": 260,
     "transcript": "约 21:00–36:00",
-    "section": "代码讲义核验补充",
+    "section": "2. Prefill 与 decode 的工作不同",
     "note": "无缓存立方主项、KV两阶段、MLP与MHA注意力IO模型限定",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -43,7 +43,7 @@
     "start": 263,
     "end": 329,
     "transcript": "约 30:00–45:00",
-    "section": "代码讲义核验补充",
+    "section": "3. KV cache 容量手算",
     "note": "参数元素数、权重字节、KV字节、理想延迟与Llama配置",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -59,7 +59,7 @@
     "start": 371,
     "end": 446,
     "transcript": "约 45:00–65:00",
-    "section": "代码讲义核验补充",
+    "section": "5. 两类有损节省",
     "note": "GQA/MLA/CLA/local/hybrid/压缩注意力；同batch GQA文字标签错误",
     "review": "已对照代码讲义、完整字幕与教材"
   },
@@ -67,7 +67,7 @@
     "start": 449,
     "end": 487,
     "transcript": "约 63:00–70:00",
-    "section": "代码讲义核验补充",
+    "section": "5. 两类有损节省",
     "note": "量化单位、QAT/PTQ/GPTQ/AWQ；缩放不等于保留全部FP16重要通道",
     "review": "已对照代码讲义、完整字幕与教材"
   },

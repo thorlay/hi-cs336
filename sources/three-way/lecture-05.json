@@ -58,42 +58,42 @@
   {
     "page": 9,
     "transcript": "09:00–17:00；27:00–30:00",
-    "section": "逐页核验补充：硬件计数和内存术语",
+    "section": "硬件计数和内存术语",
     "note": "完整GA100128SM与A100108SM区分；local是线程作用域不代表片上存储。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 10,
     "transcript": "09:00–17:00；27:00–30:00",
-    "section": "逐页核验补充：硬件计数和内存术语",
+    "section": "硬件计数和内存术语",
     "note": "完整GA100128SM与A100108SM区分；local是线程作用域不代表片上存储。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 11,
     "transcript": "09:00–17:00；27:00–30:00",
-    "section": "逐页核验补充：硬件计数和内存术语",
+    "section": "硬件计数和内存术语",
     "note": "完整GA100128SM与A100108SM区分；local是线程作用域不代表片上存储。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 12,
     "transcript": "09:00–17:00；27:00–30:00",
-    "section": "逐页核验补充：硬件计数和内存术语",
+    "section": "硬件计数和内存术语",
     "note": "完整GA100128SM与A100108SM区分；local是线程作用域不代表片上存储。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 13,
     "transcript": "17:00–22:00",
-    "section": "逐页核验补充：TPU 对照表的适用范围",
+    "section": "TPU 对照表的适用范围",
     "note": "H100与TPUv5p指定配置；命名层级不同，不泛化到所有芯片。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 14,
     "transcript": "17:00–22:00",
-    "section": "逐页核验补充：TPU 对照表的适用范围",
+    "section": "TPU 对照表的适用范围",
     "note": "H100与TPUv5p指定配置；命名层级不同，不泛化到所有芯片。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
@@ -163,42 +163,42 @@
   {
     "page": 24,
     "transcript": "34:00–39:00",
-    "section": "逐页核验补充：ReLU 算术强度的单位",
+    "section": "ReLU 算术强度的单位",
     "note": "p25bytes/FLOP是算术强度倒数；读写固定假设；混合精度累加。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 25,
     "transcript": "34:00–39:00",
-    "section": "逐页核验补充：ReLU 算术强度的单位",
+    "section": "ReLU 算术强度的单位",
     "note": "p25bytes/FLOP是算术强度倒数；读写固定假设；混合精度累加。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 26,
     "transcript": "34:00–39:00",
-    "section": "逐页核验补充：ReLU 算术强度的单位",
+    "section": "ReLU 算术强度的单位",
     "note": "p25bytes/FLOP是算术强度倒数；读写固定假设；混合精度累加。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 27,
     "transcript": "38:00–43:00",
-    "section": "逐页核验补充：四位格式名称与块缩放",
+    "section": "四位格式名称与块缩放",
     "note": "MXFP8每32元素E8M0；转置量化开销，不是全部模型张量8位。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 28,
     "transcript": "38:00–43:00",
-    "section": "逐页核验补充：四位格式名称与块缩放",
+    "section": "四位格式名称与块缩放",
     "note": "MXFP8每32元素E8M0；转置量化开销，不是全部模型张量8位。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 29,
     "transcript": "42:00–47:00",
-    "section": "逐页核验补充：四位格式名称与块缩放",
+    "section": "四位格式名称与块缩放",
     "note": "标题MXFP4但16元素E4M3缩放对应NVFP4；外部官方资料交叉确认。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
@@ -233,42 +233,42 @@
   {
     "page": 34,
     "transcript": "50:00–53:00",
-    "section": "逐页核验补充：8 次访存如何变为 5 次",
+    "section": "8 次访存如何变为 5 次",
     "note": "前反向账本及x/dout/dx；多算换少读写。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 35,
     "transcript": "50:00–53:00",
-    "section": "逐页核验补充：8 次访存如何变为 5 次",
+    "section": "8 次访存如何变为 5 次",
     "note": "前反向账本及x/dout/dx；多算换少读写。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 36,
     "transcript": "50:00–53:00",
-    "section": "逐页核验补充：8 次访存如何变为 5 次",
+    "section": "8 次访存如何变为 5 次",
     "note": "前反向账本及x/dout/dx；多算换少读写。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 37,
     "transcript": "53:00–58:00",
-    "section": "逐页核验补充：画出 lane 的地址再谈合并",
+    "section": "画出 lane 的地址再谈合并",
     "note": "DRAM示意不是整行免费；相邻lane同行相邻列才连续。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 38,
     "transcript": "53:00–58:00",
-    "section": "逐页核验补充：画出 lane 的地址再谈合并",
+    "section": "画出 lane 的地址再谈合并",
     "note": "DRAM示意不是整行免费；相邻lane同行相邻列才连续。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 39,
     "transcript": "53:00–58:00",
-    "section": "逐页核验补充：画出 lane 的地址再谈合并",
+    "section": "画出 lane 的地址再谈合并",
     "note": "DRAM示意不是整行免费；相邻lane同行相邻列才连续。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
@@ -296,70 +296,70 @@
   {
     "page": 43,
     "transcript": "61:00–65:00",
-    "section": "逐页核验补充：边缘 tile 与对齐",
+    "section": "边缘 tile 与对齐",
     "note": "256到257的二维输出块应4变9；课件文字六块是另一维设置。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 44,
     "transcript": "61:00–65:00",
-    "section": "逐页核验补充：边缘 tile 与对齐",
+    "section": "边缘 tile 与对齐",
     "note": "256到257的二维输出块应4变9；课件文字六块是另一维设置。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 45,
     "transcript": "64:00–72:00",
-    "section": "逐页核验补充：吞吐锯齿图和 wave quantization",
+    "section": "吞吐锯齿图和 wave quantization",
     "note": "padding实例、按整除染色、98到120块跨108SM；并非所有尺寸保证。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 46,
     "transcript": "64:00–72:00",
-    "section": "逐页核验补充：吞吐锯齿图和 wave quantization",
+    "section": "吞吐锯齿图和 wave quantization",
     "note": "padding实例、按整除染色、98到120块跨108SM；并非所有尺寸保证。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 47,
     "transcript": "64:00–72:00",
-    "section": "逐页核验补充：吞吐锯齿图和 wave quantization",
+    "section": "吞吐锯齿图和 wave quantization",
     "note": "padding实例、按整除染色、98到120块跨108SM；并非所有尺寸保证。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 48,
     "transcript": "64:00–72:00",
-    "section": "逐页核验补充：吞吐锯齿图和 wave quantization",
+    "section": "吞吐锯齿图和 wave quantization",
     "note": "padding实例、按整除染色、98到120块跨108SM；并非所有尺寸保证。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 49,
     "transcript": "64:00–72:00",
-    "section": "逐页核验补充：吞吐锯齿图和 wave quantization",
+    "section": "吞吐锯齿图和 wave quantization",
     "note": "padding实例、按整除染色、98到120块跨108SM；并非所有尺寸保证。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 50,
     "transcript": "71:00–74:00",
-    "section": "逐页核验补充：FlashAttention 图表中的增算减 IO",
+    "section": "FlashAttention 图表中的增算减 IO",
     "note": "66.6到75.2GFLOPs但40.3到4.4GB；attention核内两次matmul不是三次。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 51,
     "transcript": "71:00–74:00",
-    "section": "逐页核验补充：FlashAttention 图表中的增算减 IO",
+    "section": "FlashAttention 图表中的增算减 IO",
     "note": "66.6到75.2GFLOPs但40.3到4.4GB；attention核内两次matmul不是三次。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
   {
     "page": 52,
     "transcript": "71:00–74:00",
-    "section": "逐页核验补充：FlashAttention 图表中的增算减 IO",
+    "section": "FlashAttention 图表中的增算减 IO",
     "note": "66.6到75.2GFLOPs但40.3到4.4GB；attention核内两次matmul不是三次。",
     "review": "已对照页面图像与完整文字稿（含续行）"
   },
