@@ -15,7 +15,7 @@
 | 讲次 | 本次补充/修正 | 状态 |
 | --- | --- | --- |
 | [L01](02-l01-cong-hui-yong-mo-xing-dao-hui-zao-mo-xing-zong-lan-yu-fen-ci.md) | 课程背景、规模迁移限制、五单元/作业目标与自适应计算 | 文字稿已对照；音频未复核 |
-| [L02](03-l02-ba-zhang-liang-xian-cun-he-flops-suan-ming-bai.md) | 低精度位分配、课堂成本算例、算术强度表、AdaGrad 与检查点边界 | 文字稿已对照；音频未复核 |
+| [L02](03-l02-ba-zhang-liang-xian-cun-he-flops-suan-ming-bai.md) | 已重写为可独立阅读的正文：训练基础、形状、反向、资源账本及完整算例；7 段 CPU 示例通过 | 文字稿已对照；音频未复核；未测 GPU 性能 |
 | [L03](04-l03-xian-dai-transformer-cong-jie-gou-dao-xun-lian-wen-ding-xing.md) | 并行残差、超参数范围、位置方案、z-loss 与 KV 口误 | 文字稿已对照；音频未复核 |
 | [L04](05-l04-zhang-shang-xia-wen-yu-moe-gai-bian-ji-suan-de-zu-zhi-fang-shi.md) | 递推等价条件、DSA 索引成本、路由设计空间、均衡与系统细节 | 文字稿已对照；音频未复核 |
 | [L05](06-l05gpu-zen-yang-gong-zuo-flashattention-wei-shen-me-geng-kuai.md) | 硬件层级、低精度转换、tile/wave 效应与 FlashAttention 边界 | 全文及续行已对照；音频未复核 |

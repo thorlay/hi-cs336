@@ -15,7 +15,7 @@
 | 讲次 | 本次补充/修正 | 状态 |
 | --- | --- | --- |
 | [L01](../textbook/01-overview-tokenization.md) | 课程背景、规模迁移限制、五单元/作业目标与自适应计算 | 文字稿已对照；音频未复核 |
-| [L02](../textbook/02-pytorch-resource-accounting.md) | 低精度位分配、课堂成本算例、算术强度表、AdaGrad 与检查点边界 | 文字稿已对照；音频未复核 |
+| [L02](../textbook/02-pytorch-resource-accounting.md) | 已重写为可独立阅读的正文：训练基础、形状、反向、资源账本及完整算例；7 段 CPU 示例通过 | 文字稿已对照；音频未复核；未测 GPU 性能 |
 | [L03](../textbook/03-architectures.md) | 并行残差、超参数范围、位置方案、z-loss 与 KV 口误 | 文字稿已对照；音频未复核 |
 | [L04](../textbook/04-linear-attention-moe.md) | 递推等价条件、DSA 索引成本、路由设计空间、均衡与系统细节 | 文字稿已对照；音频未复核 |
 | [L05](../textbook/05-gpu-flashattention.md) | 硬件层级、低精度转换、tile/wave 效应与 FlashAttention 边界 | 全文及续行已对照；音频未复核 |

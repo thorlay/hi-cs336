@@ -154,30 +154,6 @@
       "8-动手核算与自测": {
         "heading": "8. 动手核算与自测",
         "id": "id-8.-dong-shou-he-suan-yu-zi-ce"
-      },
-      "transcript-对照补遗": {
-        "heading": "Transcript 对照补遗",
-        "id": "transcript-dui-zhao-bu-yi"
-      },
-      "保留课堂的两个端到端估算0000约-0400": {
-        "heading": "保留课堂的两个端到端估算（00:00–约 04:00）",
-        "id": "bao-liu-ke-tang-de-liang-ge-duan-dao-duan-gu-suan-0000-yue-0400"
-      },
-      "低精度不是把所有值独立截成四位约-06001700": {
-        "heading": "低精度不是把所有值独立截成四位（约 06:00–17:00）",
-        "id": "di-jing-du-bu-shi-ba-suo-you-zhi-du-li-jie-cheng-si-wei-yue-06001700"
-      },
-      "把算子放到同一张-roofline-账单上约-18005700": {
-        "heading": "把算子放到同一张 Roofline 账单上（约 18:00–57:00）",
-        "id": "ba-suan-zi-fang-dao-tong-yi-zhang-roofline-zhang-dan-shang-yue-18005700"
-      },
-      "为什么讲-adagrad以及检查点的复杂度边界约-5700结尾": {
-        "heading": "为什么讲 AdaGrad，以及检查点的复杂度边界（约 57:00–结尾）",
-        "id": "wei-shen-me-jiang-adagrad-yi-ji-jian-cha-dian-de-fu-za-du-bian-jie-yue-5700-jie-wei"
-      },
-      "代码讲义核验补充": {
-        "heading": "代码讲义核验补充",
-        "id": "dai-ma-jiang-yi-he-yan-bu-chong"
       }
     },
     "textbook/03-architectures.md": {
