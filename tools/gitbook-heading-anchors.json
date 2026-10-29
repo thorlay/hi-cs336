@@ -387,7 +387,7 @@
       },
       "超参数的范围与选择": {
         "heading": "超参数的范围与选择",
-        "id": ""
+        "id": "chao-can-shu-de-fan-wei-yu-xuan-ze"
       }
     },
     "textbook/04-linear-attention-moe.md": {
@@ -501,15 +501,15 @@
       },
       "路由公式与版本配置的边界": {
         "heading": "路由公式与版本配置的边界",
-        "id": ""
+        "id": "lu-you-gong-shi-yu-ban-ben-pei-zhi-de-bian-jie"
       },
       "混合模型仍有哪些二次成本": {
         "heading": "混合模型仍有哪些二次成本",
-        "id": ""
+        "id": "hun-he-mo-xing-reng-you-na-xie-er-ci-cheng-ben"
       },
       "噪声探索与离散选择": {
         "heading": "噪声探索与离散选择",
-        "id": ""
+        "id": "zao-sheng-tan-suo-yu-li-san-xuan-ze"
       }
     },
     "textbook/05-gpu-flashattention.md": {
@@ -701,7 +701,7 @@
       },
       "硬件资源约束的算例": {
         "heading": "硬件资源约束的算例",
-        "id": ""
+        "id": "ying-jian-zi-yuan-yue-shu-de-suan-li"
       }
     },
     "textbook/07-distributed-primitives.md": {
@@ -1203,7 +1203,7 @@
       },
       "其他公开配方与后训练迁移": {
         "heading": "其他公开配方与后训练迁移",
-        "id": ""
+        "id": "qi-ta-gong-kai-pei-fang-yu-hou-xun-lian-qian-yi"
       }
     },
     "textbook/12-evaluation.md": {
@@ -1559,11 +1559,11 @@
       },
       "从策略梯度到-dpo": {
         "heading": "从策略梯度到 DPO",
-        "id": ""
+        "id": "cong-ce-le-ti-du-dao-dpo"
       },
       "ppodpo-与过度优化实验": {
         "heading": "PPO、DPO 与过度优化实验",
-        "id": ""
+        "id": "ppodpo-yu-guo-du-you-hua-shi-yan"
       }
     },
     "textbook/16-rlvr-grpo.md": {
@@ -1755,7 +1755,7 @@
       },
       "clipsiglip-的关键细节": {
         "heading": "CLIP/SigLIP 的关键细节",
-        "id": ""
+        "id": "clipsiglip-de-guan-jian-xi-jie"
       }
     },
     "textbook/18-daniel-selsam-material-gap.md": {},
